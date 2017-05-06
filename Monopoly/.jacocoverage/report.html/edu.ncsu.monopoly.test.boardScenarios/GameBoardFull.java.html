@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GameBoardFull.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.test.boardScenarios</a> &gt; <span class="el_source">GameBoardFull.java</span></div><h1>GameBoardFull.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly.test.boardScenarios;
+
+import edu.ncsu.monopoly.Card;
+import edu.ncsu.monopoly.CardCell;
+import edu.ncsu.monopoly.FreeParkingCell;
+import edu.ncsu.monopoly.GameBoard;
+import edu.ncsu.monopoly.GoToJailCell;
+import edu.ncsu.monopoly.JailCard;
+import edu.ncsu.monopoly.JailCell;
+import edu.ncsu.monopoly.MoneyCard;
+import edu.ncsu.monopoly.MovePlayerCard;
+import edu.ncsu.monopoly.PropertyCell;
+import edu.ncsu.monopoly.RailRoadCell;
+import edu.ncsu.monopoly.UtilityCell;
+
+public class GameBoardFull extends GameBoard {
+    public GameBoardFull() {
+<span class="fc" id="L18">        super();</span>
+<span class="fc" id="L19">        PropertyCell dp1 = new PropertyCell();</span>
+<span class="fc" id="L20">        CardCell cc1 = new CardCell(Card.TYPE_CC, &quot;Community Chest 1&quot;);</span>
+<span class="fc" id="L21">        PropertyCell dp2 = new PropertyCell();</span>
+<span class="fc" id="L22">        PropertyCell dp3 = new PropertyCell();</span>
+<span class="fc" id="L23">        RailRoadCell rr1 = new RailRoadCell();</span>
+<span class="fc" id="L24">        PropertyCell lb1 = new PropertyCell();</span>
+<span class="fc" id="L25">        CardCell c1 = new CardCell(Card.TYPE_CHANCE, &quot;Chance 1&quot;);</span>
+<span class="fc" id="L26">        PropertyCell lb2 = new PropertyCell();</span>
+<span class="fc" id="L27">        PropertyCell lb3 = new PropertyCell();</span>
+<span class="fc" id="L28">        JailCell jail = new JailCell();</span>
+<span class="fc" id="L29">        PropertyCell p1 = new PropertyCell();</span>
+<span class="fc" id="L30">        UtilityCell u1 = new UtilityCell();</span>
+<span class="fc" id="L31">        PropertyCell p2 = new PropertyCell();</span>
+<span class="fc" id="L32">        PropertyCell p3 = new PropertyCell();</span>
+<span class="fc" id="L33">        RailRoadCell rr2 = new RailRoadCell();</span>
+<span class="fc" id="L34">        PropertyCell o1 = new PropertyCell();</span>
+<span class="fc" id="L35">        CardCell cc2 = new CardCell(Card.TYPE_CC, &quot;Community Chest 2&quot;);</span>
+<span class="fc" id="L36">        PropertyCell o2 = new PropertyCell();</span>
+<span class="fc" id="L37">        PropertyCell o3 = new PropertyCell();</span>
+<span class="fc" id="L38">        FreeParkingCell fp = new FreeParkingCell();</span>
+<span class="fc" id="L39">        PropertyCell r1 = new PropertyCell();</span>
+<span class="fc" id="L40">        CardCell c2 = new CardCell(Card.TYPE_CHANCE, &quot;Chance 2&quot;);</span>
+<span class="fc" id="L41">        PropertyCell r2 = new PropertyCell();</span>
+<span class="fc" id="L42">        PropertyCell r3 = new PropertyCell();</span>
+<span class="fc" id="L43">        RailRoadCell rr3 = new RailRoadCell();</span>
+<span class="fc" id="L44">        PropertyCell y1 = new PropertyCell();</span>
+<span class="fc" id="L45">        PropertyCell y2 = new PropertyCell();</span>
+<span class="fc" id="L46">        UtilityCell u2 = new UtilityCell();</span>
+<span class="fc" id="L47">        PropertyCell y3 = new PropertyCell();</span>
+<span class="fc" id="L48">        GoToJailCell goToJail = new GoToJailCell();</span>
+<span class="fc" id="L49">        PropertyCell g1 = new PropertyCell();</span>
+<span class="fc" id="L50">        PropertyCell g2 = new PropertyCell();</span>
+<span class="fc" id="L51">        CardCell cc3 = new CardCell(Card.TYPE_CC, &quot;Community Chest 3&quot;);</span>
+<span class="fc" id="L52">        PropertyCell g3 = new PropertyCell();</span>
+<span class="fc" id="L53">        RailRoadCell rr4 = new RailRoadCell();</span>
+<span class="fc" id="L54">        CardCell c3 = new CardCell(Card.TYPE_CHANCE, &quot;Chance 3&quot;);</span>
+<span class="fc" id="L55">        PropertyCell db1 = new PropertyCell();</span>
+<span class="fc" id="L56">        PropertyCell db2 = new PropertyCell();</span>
+<span class="fc" id="L57">        PropertyCell db3 = new PropertyCell();</span>
+        
+
+<span class="fc" id="L60">        dp1.setPrice(60);</span>
+<span class="fc" id="L61">        dp1.setColorGroup(&quot;purple&quot;);</span>
+<span class="fc" id="L62">        dp1.setHousePrice(50);</span>
+<span class="fc" id="L63">        dp1.setName(&quot;Mediterranean Avenue&quot;);</span>
+<span class="fc" id="L64">        dp1.setRent(2);</span>
+        
+<span class="fc" id="L66">        dp2.setPrice(60);</span>
+<span class="fc" id="L67">        dp2.setColorGroup(&quot;purple&quot;);</span>
+<span class="fc" id="L68">        dp2.setHousePrice(50);</span>
+<span class="fc" id="L69">        dp2.setName(&quot;Baltic Avenue&quot;);</span>
+<span class="fc" id="L70">        dp2.setRent(4);</span>
+        
+<span class="fc" id="L72">        dp3.setPrice(60);</span>
+<span class="fc" id="L73">        dp3.setColorGroup(&quot;purple&quot;);</span>
+<span class="fc" id="L74">        dp3.setHousePrice(50);</span>
+<span class="fc" id="L75">        dp3.setName(&quot;Sarah Avenue&quot;);</span>
+<span class="fc" id="L76">        dp3.setRent(4);</span>
+        
+<span class="fc" id="L78">        lb1.setPrice(100);</span>
+<span class="fc" id="L79">        lb1.setColorGroup(&quot;aqua&quot;);</span>
+<span class="fc" id="L80">        lb1.setHousePrice(50);</span>
+<span class="fc" id="L81">        lb1.setName(&quot;Oriental Avenue&quot;);</span>
+<span class="fc" id="L82">        lb1.setRent(6);</span>
+
+<span class="fc" id="L84">        lb2.setPrice(100);</span>
+<span class="fc" id="L85">        lb2.setColorGroup(&quot;aqua&quot;);</span>
+<span class="fc" id="L86">        lb2.setHousePrice(50);</span>
+<span class="fc" id="L87">        lb2.setName(&quot;Vermont Avenue&quot;);</span>
+<span class="fc" id="L88">        lb2.setRent(6);</span>
+
+<span class="fc" id="L90">        lb3.setPrice(120);</span>
+<span class="fc" id="L91">        lb3.setColorGroup(&quot;aqua&quot;);</span>
+<span class="fc" id="L92">        lb3.setHousePrice(50);</span>
+<span class="fc" id="L93">        lb3.setName(&quot;Connecticut Avenue&quot;);</span>
+<span class="fc" id="L94">        lb3.setRent(8);</span>
+        
+<span class="fc" id="L96">        p1.setPrice(140);</span>
+<span class="fc" id="L97">        p1.setColorGroup(&quot;fuchsia&quot;);</span>
+<span class="fc" id="L98">        p1.setHousePrice(100);</span>
+<span class="fc" id="L99">        p1.setName(&quot;St. Charles Place&quot;);</span>
+<span class="fc" id="L100">        p1.setRent(10);</span>
+        
+<span class="fc" id="L102">        p2.setPrice(140);</span>
+<span class="fc" id="L103">        p2.setColorGroup(&quot;fuchsia&quot;);</span>
+<span class="fc" id="L104">        p2.setHousePrice(100);</span>
+<span class="fc" id="L105">        p2.setName(&quot;States Avenue&quot;);</span>
+<span class="fc" id="L106">        p2.setRent(10);</span>
+        
+<span class="fc" id="L108">        p3.setPrice(160);</span>
+<span class="fc" id="L109">        p3.setColorGroup(&quot;fuchsia&quot;);</span>
+<span class="fc" id="L110">        p3.setHousePrice(100);</span>
+<span class="fc" id="L111">        p3.setName(&quot;Virginia Avenue&quot;);</span>
+<span class="fc" id="L112">        p3.setRent(12);</span>
+        
+<span class="fc" id="L114">        o1.setPrice(180);</span>
+<span class="fc" id="L115">        o1.setColorGroup(&quot;maroon&quot;);</span>
+<span class="fc" id="L116">        o1.setHousePrice(100);</span>
+<span class="fc" id="L117">        o1.setName(&quot;St. James Avenue&quot;);</span>
+<span class="fc" id="L118">        o1.setRent(14);</span>
+        
+<span class="fc" id="L120">        o2.setPrice(180);</span>
+<span class="fc" id="L121">        o2.setColorGroup(&quot;maroon&quot;);</span>
+<span class="fc" id="L122">        o2.setHousePrice(100);</span>
+<span class="fc" id="L123">        o2.setName(&quot;Tennessee Avenue&quot;);</span>
+<span class="fc" id="L124">        o2.setRent(14);</span>
+        
+<span class="fc" id="L126">        o3.setPrice(200);</span>
+<span class="fc" id="L127">        o3.setColorGroup(&quot;maroon&quot;);</span>
+<span class="fc" id="L128">        o3.setHousePrice(100);</span>
+<span class="fc" id="L129">        o3.setName(&quot;New York Avenue&quot;);</span>
+<span class="fc" id="L130">        o3.setRent(16);</span>
+        
+<span class="fc" id="L132">        r1.setPrice(220);</span>
+<span class="fc" id="L133">        r1.setColorGroup(&quot;red&quot;);</span>
+<span class="fc" id="L134">        r1.setHousePrice(150);</span>
+<span class="fc" id="L135">        r1.setName(&quot;Kentucky Avenue&quot;);</span>
+<span class="fc" id="L136">        r1.setRent(18);</span>
+        
+<span class="fc" id="L138">        r2.setPrice(220);</span>
+<span class="fc" id="L139">        r2.setColorGroup(&quot;red&quot;);</span>
+<span class="fc" id="L140">        r2.setHousePrice(150);</span>
+<span class="fc" id="L141">        r2.setName(&quot;Indiana Avenue&quot;);</span>
+<span class="fc" id="L142">        r2.setRent(18);</span>
+        
+<span class="fc" id="L144">        r3.setPrice(240);</span>
+<span class="fc" id="L145">        r3.setColorGroup(&quot;red&quot;);</span>
+<span class="fc" id="L146">        r3.setHousePrice(150);</span>
+<span class="fc" id="L147">        r3.setName(&quot;Illinois Avenue&quot;);</span>
+<span class="fc" id="L148">        r3.setRent(20);</span>
+        
+<span class="fc" id="L150">        y1.setPrice(260);</span>
+<span class="fc" id="L151">        y1.setColorGroup(&quot;yellow&quot;);</span>
+<span class="fc" id="L152">        y1.setHousePrice(150);</span>
+<span class="fc" id="L153">        y1.setName(&quot;Atlantic Avenue&quot;);</span>
+<span class="fc" id="L154">        y1.setRent(22);</span>
+        
+<span class="fc" id="L156">        y2.setPrice(260);</span>
+<span class="fc" id="L157">        y2.setColorGroup(&quot;yellow&quot;);</span>
+<span class="fc" id="L158">        y2.setHousePrice(150);</span>
+<span class="fc" id="L159">        y2.setName(&quot;Ventnor Avenue&quot;);</span>
+<span class="fc" id="L160">        y2.setRent(22);</span>
+        
+<span class="fc" id="L162">        y3.setPrice(280);</span>
+<span class="fc" id="L163">        y3.setColorGroup(&quot;yellow&quot;);</span>
+<span class="fc" id="L164">        y3.setHousePrice(150);</span>
+<span class="fc" id="L165">        y3.setName(&quot;Marvin Gardens&quot;);</span>
+<span class="fc" id="L166">        y3.setRent(24);</span>
+        
+<span class="fc" id="L168">        g1.setPrice(300);</span>
+<span class="fc" id="L169">        g1.setColorGroup(&quot;green&quot;);</span>
+<span class="fc" id="L170">        g1.setHousePrice(200);</span>
+<span class="fc" id="L171">        g1.setName(&quot;Pacific Avenue&quot;);</span>
+<span class="fc" id="L172">        g1.setRent(26);</span>
+        
+<span class="fc" id="L174">        g2.setPrice(300);</span>
+<span class="fc" id="L175">        g2.setColorGroup(&quot;green&quot;);</span>
+<span class="fc" id="L176">        g2.setHousePrice(200);</span>
+<span class="fc" id="L177">        g2.setName(&quot;North Carolina Avenue&quot;);</span>
+<span class="fc" id="L178">        g2.setRent(26);</span>
+        
+<span class="fc" id="L180">        g3.setPrice(320);</span>
+<span class="fc" id="L181">        g3.setColorGroup(&quot;green&quot;);</span>
+<span class="fc" id="L182">        g3.setHousePrice(200);</span>
+<span class="fc" id="L183">        g3.setName(&quot;Pennsylvania Avenue&quot;);</span>
+<span class="fc" id="L184">        g3.setRent(28);</span>
+        
+<span class="fc" id="L186">        db1.setPrice(350);</span>
+<span class="fc" id="L187">        db1.setColorGroup(&quot;blue&quot;);</span>
+<span class="fc" id="L188">        db1.setHousePrice(200);</span>
+<span class="fc" id="L189">        db1.setName(&quot;Park Place&quot;);</span>
+<span class="fc" id="L190">        db1.setRent(35);</span>
+        
+<span class="fc" id="L192">        db2.setPrice(350);</span>
+<span class="fc" id="L193">        db2.setColorGroup(&quot;blue&quot;);</span>
+<span class="fc" id="L194">        db2.setHousePrice(200);</span>
+<span class="fc" id="L195">        db2.setName(&quot;Dright Place&quot;);</span>
+<span class="fc" id="L196">        db2.setRent(35);</span>
+        
+<span class="fc" id="L198">        db3.setPrice(400);</span>
+<span class="fc" id="L199">        db3.setColorGroup(&quot;blue&quot;);</span>
+<span class="fc" id="L200">        db3.setHousePrice(200);</span>
+<span class="fc" id="L201">        db3.setName(&quot;Boardwalk&quot;);</span>
+<span class="fc" id="L202">        db3.setRent(50);</span>
+        
+<span class="fc" id="L204">        RailRoadCell.setBaseRent(50);</span>
+<span class="fc" id="L205">        RailRoadCell.setPrice(200);</span>
+        
+<span class="fc" id="L207">        rr1.setName(&quot;Reading Railroad&quot;);</span>
+<span class="fc" id="L208">        rr2.setName(&quot;Pennsylvania Railroad&quot;);</span>
+<span class="fc" id="L209">        rr3.setName(&quot;B. &amp; O. RailRoad&quot;);</span>
+<span class="fc" id="L210">        rr4.setName(&quot;Short Line&quot;);</span>
+        
+<span class="fc" id="L212">        UtilityCell.setPrice(150);</span>
+        
+<span class="fc" id="L214">        u1.setName(&quot;Electric Company&quot;);</span>
+<span class="fc" id="L215">        u2.setName(&quot;Water Works&quot;);</span>
+        
+<span class="fc" id="L217">        addCell(dp1);</span>
+<span class="fc" id="L218">        addCell(cc1);</span>
+<span class="fc" id="L219">        addCell(dp2);</span>
+<span class="fc" id="L220">        addCell(dp3);</span>
+<span class="fc" id="L221">        addCell(rr1);</span>
+<span class="fc" id="L222">        addCell(lb1);</span>
+<span class="fc" id="L223">        addCell(c1);</span>
+<span class="fc" id="L224">        addCell(lb2);</span>
+<span class="fc" id="L225">        addCell(lb3);</span>
+<span class="fc" id="L226">        addCell(jail);</span>
+<span class="fc" id="L227">        addCell(p1);</span>
+<span class="fc" id="L228">        addCell(u1);</span>
+<span class="fc" id="L229">        addCell(p2);</span>
+<span class="fc" id="L230">        addCell(p3);</span>
+<span class="fc" id="L231">        addCell(rr2);</span>
+<span class="fc" id="L232">        addCell(o1);</span>
+<span class="fc" id="L233">        addCell(cc2);</span>
+<span class="fc" id="L234">        addCell(o2);</span>
+<span class="fc" id="L235">        addCell(o3);</span>
+<span class="fc" id="L236">        addCell(fp);</span>
+<span class="fc" id="L237">        addCell(r1);</span>
+<span class="fc" id="L238">        addCell(c2);</span>
+<span class="fc" id="L239">        addCell(r2);</span>
+<span class="fc" id="L240">        addCell(r3);</span>
+<span class="fc" id="L241">        addCell(rr3);</span>
+<span class="fc" id="L242">        addCell(y1);</span>
+<span class="fc" id="L243">        addCell(y2);</span>
+<span class="fc" id="L244">        addCell(u2);</span>
+<span class="fc" id="L245">        addCell(y3);</span>
+<span class="fc" id="L246">        addCell(goToJail);</span>
+<span class="fc" id="L247">        addCell(g1);</span>
+<span class="fc" id="L248">        addCell(g2);</span>
+<span class="fc" id="L249">        addCell(cc3);</span>
+<span class="fc" id="L250">        addCell(g3);</span>
+<span class="fc" id="L251">        addCell(rr4);</span>
+<span class="fc" id="L252">        addCell(c3);</span>
+<span class="fc" id="L253">        addCell(db1);</span>
+<span class="fc" id="L254">        addCell(db2);</span>
+<span class="fc" id="L255">        addCell(db3);</span>
+        
+<span class="fc" id="L257">        addCard(new MoneyCard(&quot;Win $50&quot;, 50, Card.TYPE_CC));</span>
+<span class="fc" id="L258">        addCard(new MoneyCard(&quot;Win $20&quot;, 20, Card.TYPE_CC));</span>
+<span class="fc" id="L259">        addCard(new MoneyCard(&quot;Win $10&quot;, 10, Card.TYPE_CC));</span>
+<span class="fc" id="L260">        addCard(new MoneyCard(&quot;Lose $100&quot;, -100, Card.TYPE_CC));</span>
+<span class="fc" id="L261">        addCard(new MoneyCard(&quot;Lose $50&quot;, -50, Card.TYPE_CC));</span>
+<span class="fc" id="L262">        addCard(new JailCard(Card.TYPE_CC));</span>
+<span class="fc" id="L263">        addCard(new MovePlayerCard(&quot;St. Charles Place&quot;, Card.TYPE_CC));</span>
+<span class="fc" id="L264">        addCard(new MovePlayerCard(&quot;Boardwalk&quot;, Card.TYPE_CC));</span>
+
+<span class="fc" id="L266">        addCard(new MoneyCard(&quot;Win $50&quot;, 50, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L267">        addCard(new MoneyCard(&quot;Win $20&quot;, 20, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L268">        addCard(new MoneyCard(&quot;Win $10&quot;, 10, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L269">        addCard(new MoneyCard(&quot;Lose $100&quot;, -100, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L270">        addCard(new MoneyCard(&quot;Lose $50&quot;, -50, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L271">        addCard(new JailCard(Card.TYPE_CHANCE));</span>
+<span class="fc" id="L272">        addCard(new MovePlayerCard(&quot;Illinois Avenue&quot;, Card.TYPE_CHANCE));</span>
+<span class="fc" id="L273">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

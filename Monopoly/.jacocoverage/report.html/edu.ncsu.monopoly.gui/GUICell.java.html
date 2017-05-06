@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GUICell.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.gui</a> &gt; <span class="el_source">GUICell.java</span></div><h1>GUICell.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly.gui;
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.BevelBorder;
+
+import edu.ncsu.monopoly.*;
+
+public class GUICell extends JPanel {
+
+	private Cell cell;
+	private JLabel lblInfo;
+<span class="nc" id="L14">	private JLabel[] lblPlayers = new JLabel[GameMaster.MAX_PLAYER];</span>
+	
+<span class="nc" id="L16">    public GUICell(Cell cell) {</span>
+<span class="nc" id="L17">        this.cell = cell;</span>
+<span class="nc" id="L18">        setLayout(new OverlayLayout(this));</span>
+<span class="nc" id="L19">        setBorder(new BevelBorder(BevelBorder.LOWERED));</span>
+<span class="nc" id="L20">        JPanel pnlPlayer = new JPanel();</span>
+<span class="nc" id="L21">        pnlPlayer.setLayout(new GridLayout(2, 4));</span>
+<span class="nc" id="L22">        pnlPlayer.setOpaque(false);</span>
+<span class="nc" id="L23">        createPlayerLabels(pnlPlayer);</span>
+<span class="nc" id="L24">        add(pnlPlayer);</span>
+<span class="nc" id="L25">        setPreferredSize(new Dimension(100,100));</span>
+<span class="nc" id="L26">        addCellInfo();</span>
+<span class="nc" id="L27">        this.doLayout();</span>
+<span class="nc" id="L28">	}</span>
+	
+	private void addCellInfo() {
+<span class="nc" id="L31">        lblInfo = new JLabel();</span>
+<span class="nc" id="L32">		displayInfo();</span>
+<span class="nc" id="L33">        JPanel pnlInfo = new JPanel();</span>
+<span class="nc" id="L34">        pnlInfo.setLayout(new GridLayout(1, 1));</span>
+<span class="nc" id="L35">        pnlInfo.add(lblInfo);</span>
+<span class="nc" id="L36">        add(pnlInfo);</span>
+<span class="nc" id="L37">    }</span>
+	
+	public void addPlayer(int index) {
+<span class="nc" id="L40">		Player player = GameMaster.instance().getPlayer(index);</span>
+<span class="nc" id="L41">		lblPlayers[index].setText(player.getName().substring(0, 1));</span>
+<span class="nc" id="L42">		lblPlayers[index].setOpaque(true);</span>
+<span class="nc" id="L43">	}</span>
+
+    private void createPlayerLabels(JPanel pnlPlayer) {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		for (int i = 0; i &lt; GameMaster.MAX_PLAYER; i++) {</span>
+<span class="nc" id="L47">			lblPlayers[i] = new JLabel();</span>
+<span class="nc" id="L48">			lblPlayers[i].setBackground(Color.GREEN);</span>
+<span class="nc" id="L49">			pnlPlayer.add(lblPlayers[i]);</span>
+		}
+<span class="nc" id="L51">	}</span>
+
+	public void displayInfo() {
+<span class="nc" id="L54">		lblInfo.setText(InfoFormatter.cellInfo(cell));</span>
+<span class="nc" id="L55">        this.invalidate();</span>
+<span class="nc" id="L56">		this.repaint();</span>
+<span class="nc" id="L57">	}</span>
+
+	public Cell getCell() {
+<span class="nc" id="L60">		return cell;</span>
+	}
+	
+	public void removePlayer(int index) {
+<span class="nc" id="L64">		lblPlayers[index].setText(&quot;&quot;);</span>
+<span class="nc" id="L65">		lblPlayers[index].setOpaque(false);</span>
+<span class="nc" id="L66">        this.repaint();</span>
+<span class="nc" id="L67">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

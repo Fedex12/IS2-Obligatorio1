@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>DeterministicDie.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly</a> &gt; <span class="el_source">DeterministicDie.java</span></div><h1>DeterministicDie.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly;
+
+<span class="nc" id="L3">public class DeterministicDie extends Die {</span>
+<span class="nc" id="L4">	int [] diethrows = new int[]{2,3,3,4,5,6,1};</span>
+<span class="nc" id="L5">	int index = 0;</span>
+	public int getRoll() {
+<span class="nc bnc" id="L7" title="All 2 branches missed.">		if (index &lt; diethrows.length){</span>
+<span class="nc" id="L8">			index++;</span>
+<span class="nc" id="L9">			return diethrows[index];</span>
+		}
+		else{
+<span class="nc" id="L12">			index = 0;</span>
+<span class="nc" id="L13">			return diethrows[index];</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

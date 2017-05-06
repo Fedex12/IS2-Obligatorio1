@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>UtilDiceRoll.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.gui</a> &gt; <span class="el_source">UtilDiceRoll.java</span></div><h1>UtilDiceRoll.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import edu.ncsu.monopoly.GameMaster;
+
+public class UtilDiceRoll extends JDialog {
+	
+	public static int showDialog() {
+<span class="nc" id="L18">		UtilDiceRoll dialog = new UtilDiceRoll();</span>
+<span class="nc" id="L19">		dialog.show();</span>
+<span class="nc" id="L20">		return dialog.diceValue;</span>
+	}
+<span class="nc" id="L22">	JButton btnDice = new JButton(&quot;Roll the Dice!&quot;);</span>
+<span class="nc" id="L23">	private JButton btnOK = new JButton(&quot;OK&quot;);</span>
+	private int diceValue;
+<span class="nc" id="L25">	private JLabel lblPrompt = new JLabel();</span>
+
+<span class="nc" id="L27">	public UtilDiceRoll() {</span>
+<span class="nc" id="L28">		setModal(true);</span>
+<span class="nc" id="L29">		btnOK.setEnabled(false);</span>
+<span class="nc" id="L30">		lblPrompt.setText(&quot;Please roll the dice to determine your utility bill.&quot;);</span>
+<span class="nc" id="L31">		Container contentPane = getContentPane();</span>
+<span class="nc" id="L32">		JPanel pnlButtons = new JPanel();</span>
+<span class="nc" id="L33">		pnlButtons.add(btnDice);</span>
+<span class="nc" id="L34">		pnlButtons.add(btnOK);</span>
+<span class="nc" id="L35">		contentPane.setLayout(new BorderLayout());</span>
+<span class="nc" id="L36">		contentPane.add(lblPrompt, BorderLayout.CENTER);</span>
+<span class="nc" id="L37">		contentPane.add(pnlButtons, BorderLayout.SOUTH);</span>
+<span class="nc" id="L38">		btnDice.addActionListener(new ActionListener(){</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L40">				rollDice();</span>
+<span class="nc" id="L41">			}</span>
+		});
+<span class="nc" id="L43">		btnOK.addActionListener(new ActionListener(){</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L45">				okClicked();</span>
+<span class="nc" id="L46">			}</span>
+		});
+<span class="nc" id="L48">		this.pack();</span>
+<span class="nc" id="L49">	}</span>
+	
+	public void okClicked(){
+<span class="nc" id="L52">		this.dispose();</span>
+<span class="nc" id="L53">	}</span>
+	
+	public void rollDice() {
+<span class="nc" id="L56">		int[] diceRoll = GameMaster.instance().rollDice();</span>
+<span class="nc" id="L57">		this.diceValue = diceRoll[0] + diceRoll[1];</span>
+<span class="nc" id="L58">		lblPrompt.setText(&quot;You rolled &quot; + diceValue);</span>
+<span class="nc" id="L59">		btnDice.setEnabled(false);</span>
+<span class="nc" id="L60">		btnOK.setEnabled(true);</span>
+<span class="nc" id="L61">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

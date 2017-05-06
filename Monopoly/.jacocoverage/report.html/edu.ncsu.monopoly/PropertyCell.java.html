@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PropertyCell.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly</a> &gt; <span class="el_source">PropertyCell.java</span></div><h1>PropertyCell.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly;
+
+<span class="fc" id="L3">public class PropertyCell extends Cell {</span>
+	private String colorGroup;
+	private int housePrice;
+	private int numHouses;
+	private int rent;
+	private int sellPrice;
+
+	public String getColorGroup() {
+<span class="fc" id="L11">		return colorGroup;</span>
+	}
+
+	public int getHousePrice() {
+<span class="fc" id="L15">		return housePrice;</span>
+	}
+
+	public int getNumHouses() {
+<span class="fc" id="L19">		return numHouses;</span>
+	}
+    
+    public int getPrice() {
+<span class="fc" id="L23">		return sellPrice;</span>
+	}
+
+	public int getRent(int parameter) {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">		if (parameter == 0){</span>
+<span class="fc" id="L28">			return getParameterlessRent();</span>
+		}
+		else{
+<span class="fc" id="L31">			int rentToCharge = rent * Cell.InflationParameter;</span>
+<span class="fc" id="L32">			String [] monopolies = owner.getMonopolies();</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">			for(int i = 0; i &lt; monopolies.length; i++) {</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">				if(monopolies[i].equals(colorGroup)) {</span>
+<span class="nc" id="L35">					rentToCharge = rent * 2;</span>
+				}
+			}
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">			if(numHouses &gt; 0) {</span>
+<span class="nc" id="L39">				rentToCharge = rent * (numHouses + 1);</span>
+			}
+<span class="fc" id="L41">			return rentToCharge;</span>
+		}
+		
+	}
+
+	private int getParameterlessRent() {
+<span class="fc" id="L47">		int rentToCharge = rent;</span>
+<span class="fc" id="L48">		String [] monopolies = owner.getMonopolies();</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">		for(int i = 0; i &lt; monopolies.length; i++) {</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">			if(monopolies[i].equals(colorGroup)) {</span>
+<span class="nc" id="L51">				rentToCharge = rent * 2;</span>
+			}
+		}
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">		if(numHouses &gt; 0) {</span>
+<span class="nc" id="L55">			rentToCharge = rent * (numHouses + 1);</span>
+		}
+<span class="fc" id="L57">		return rentToCharge;</span>
+	}
+	
+
+	public void playAction() {
+<span class="fc" id="L62">		Player currentPlayer = null;</span>
+<span class="pc bpc" id="L63" title="1 of 2 branches missed.">		if(!isAvailable()) {</span>
+<span class="fc" id="L64">			currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">			if(owner != currentPlayer) {</span>
+<span class="fc" id="L66">				currentPlayer.payRentTo(owner, getRent(Cell.InflationParameter));</span>
+			}
+		}
+<span class="fc" id="L69">	}</span>
+
+	public void setColorGroup(String colorGroup) {
+<span class="fc" id="L72">		this.colorGroup = colorGroup;</span>
+<span class="fc" id="L73">	}</span>
+
+	public void setHousePrice(int housePrice) {
+<span class="fc" id="L76">		this.housePrice = housePrice;</span>
+<span class="fc" id="L77">	}</span>
+
+	public void setNumHouses(int numHouses) {
+<span class="fc" id="L80">		this.numHouses = numHouses;</span>
+<span class="fc" id="L81">	}</span>
+
+	public void setPrice(int sellPrice) {
+<span class="fc" id="L84">		this.sellPrice = sellPrice;</span>
+<span class="fc" id="L85">	}</span>
+
+	public void setRent(int rent) {
+<span class="fc" id="L88">		this.rent = rent;</span>
+<span class="fc" id="L89">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

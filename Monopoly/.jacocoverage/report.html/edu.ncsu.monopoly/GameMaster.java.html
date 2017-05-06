@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GameMaster.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly</a> &gt; <span class="el_source">GameMaster.java</span></div><h1>GameMaster.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class GameMaster {
+
+	private static GameMaster gameMaster;
+	static final public int MAX_PLAYER = 8;	
+	private Die[] dice;
+	private GameBoard gameBoard;
+	private MonopolyGUI gui;
+	private int initAmountOfMoney;
+<span class="fc" id="L15">	private ArrayList players = new ArrayList();</span>
+<span class="fc" id="L16">	private int turn = 0;</span>
+	private int utilDiceRoll;
+	private boolean testMode;
+
+	public static GameMaster instance() {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		if(gameMaster == null) {</span>
+<span class="fc" id="L22">			gameMaster = new GameMaster();</span>
+		}
+<span class="fc" id="L24">		return gameMaster;</span>
+	}
+
+<span class="fc" id="L27">	public GameMaster() {</span>
+<span class="fc" id="L28">		initAmountOfMoney = 1500;</span>
+<span class="fc" id="L29">		dice = new Die[]{new Die(), new Die()};</span>
+<span class="fc" id="L30">	}</span>
+
+    public void btnBuyHouseClicked() {
+<span class="nc" id="L33">        gui.showBuyHouseDialog(getCurrentPlayer());</span>
+<span class="nc" id="L34">    }</span>
+
+    public Card btnDrawCardClicked() {
+<span class="fc" id="L37">        gui.setDrawCardEnabled(false);</span>
+<span class="fc" id="L38">        CardCell cell = (CardCell)getCurrentPlayer().getPosition();</span>
+<span class="fc" id="L39">        Card card = null;</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if(cell.getType() == Card.TYPE_CC) {</span>
+<span class="fc" id="L41">            card = getGameBoard().drawCCCard();</span>
+<span class="fc" id="L42">            card.applyAction();</span>
+        } else {
+<span class="nc" id="L44">            card = getGameBoard().drawChanceCard();</span>
+<span class="nc" id="L45">            card.applyAction();</span>
+        }
+<span class="fc" id="L47">        gui.setEndTurnEnabled(true);</span>
+<span class="fc" id="L48">        return card;</span>
+    }
+
+    public void btnEndTurnClicked() {
+<span class="fc" id="L52">		setAllButtonEnabled(false);</span>
+<span class="fc" id="L53">		getCurrentPlayer().getPosition().playAction();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">		if(getCurrentPlayer().isBankrupt()) {</span>
+<span class="fc" id="L55">			gui.setBuyHouseEnabled(false);</span>
+<span class="fc" id="L56">			gui.setDrawCardEnabled(false);</span>
+<span class="fc" id="L57">			gui.setEndTurnEnabled(false);</span>
+<span class="fc" id="L58">			gui.setGetOutOfJailEnabled(false);</span>
+<span class="fc" id="L59">			gui.setPurchasePropertyEnabled(false);</span>
+<span class="fc" id="L60">			gui.setRollDiceEnabled(false);</span>
+<span class="fc" id="L61">			gui.setTradeEnabled(getCurrentPlayerIndex(),false);</span>
+<span class="fc" id="L62">			updateGUI();</span>
+		}
+		else {
+<span class="fc" id="L65">			switchTurn();</span>
+<span class="fc" id="L66">			updateGUI();</span>
+		}
+<span class="fc" id="L68">    }</span>
+
+    public void btnGetOutOfJailClicked() {
+<span class="nc" id="L71">		getCurrentPlayer().getOutOfJail();</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">		if(getCurrentPlayer().isBankrupt()) {</span>
+<span class="nc" id="L73">			gui.setBuyHouseEnabled(false);</span>
+<span class="nc" id="L74">			gui.setDrawCardEnabled(false);</span>
+<span class="nc" id="L75">			gui.setEndTurnEnabled(false);</span>
+<span class="nc" id="L76">			gui.setGetOutOfJailEnabled(false);</span>
+<span class="nc" id="L77">			gui.setPurchasePropertyEnabled(false);</span>
+<span class="nc" id="L78">			gui.setRollDiceEnabled(false);</span>
+<span class="nc" id="L79">			gui.setTradeEnabled(getCurrentPlayerIndex(),false);</span>
+		}
+		else {
+<span class="nc" id="L82">			gui.setRollDiceEnabled(true);</span>
+<span class="nc" id="L83">			gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());</span>
+<span class="nc" id="L84">			gui.setGetOutOfJailEnabled(getCurrentPlayer().isInJail());</span>
+		}
+<span class="nc" id="L86">    }</span>
+
+    public void btnPurchasePropertyClicked() {
+<span class="fc" id="L89">        Player player = getCurrentPlayer();</span>
+<span class="fc" id="L90">		player.purchase();</span>
+<span class="fc" id="L91">		gui.setPurchasePropertyEnabled(false);</span>
+<span class="fc" id="L92">		updateGUI();</span>
+<span class="fc" id="L93">    }</span>
+    
+    public void btnRollDiceClicked() {
+<span class="fc" id="L96">		int[] rolls = rollDice();</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">		if((rolls[0]+rolls[1]) &gt; 0) {</span>
+<span class="fc" id="L98">			Player player = getCurrentPlayer();</span>
+<span class="fc" id="L99">			gui.setRollDiceEnabled(false);</span>
+<span class="fc" id="L100">			StringBuffer msg = new StringBuffer();</span>
+<span class="fc" id="L101">			msg.append(player.getName())</span>
+<span class="fc" id="L102">					.append(&quot;, you rolled &quot;)</span>
+<span class="fc" id="L103">					.append(rolls[0])</span>
+<span class="fc" id="L104">					.append(&quot; and &quot;)</span>
+<span class="fc" id="L105">					.append(rolls[1]);</span>
+<span class="fc" id="L106">			gui.showMessage(msg.toString());</span>
+<span class="fc" id="L107">			movePlayer(player, rolls[0] + rolls[1]);</span>
+<span class="fc" id="L108">			gui.setBuyHouseEnabled(false);</span>
+		}
+<span class="fc" id="L110">    }</span>
+
+    public void btnTradeClicked() {
+<span class="fc" id="L113">        TradeDialog dialog = gui.openTradeDialog();</span>
+<span class="fc" id="L114">        TradeDeal deal = dialog.getTradeDeal();</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">        if(deal != null) {</span>
+<span class="fc" id="L116">            RespondDialog rDialog = gui.openRespondDialog(deal);</span>
+<span class="pc bpc" id="L117" title="1 of 2 branches missed.">            if(rDialog.getResponse()) {</span>
+<span class="fc" id="L118">                completeTrade(deal);</span>
+<span class="fc" id="L119">                updateGUI();</span>
+            }
+        }
+<span class="fc" id="L122">    }</span>
+
+    public void completeTrade(TradeDeal deal) {
+<span class="fc" id="L125">        Player seller = getPlayer(deal.getPlayerIndex());</span>
+<span class="fc" id="L126">        Cell property = gameBoard.queryCell(deal.getPropertyName());</span>
+<span class="fc" id="L127">        seller.sellProperty(property, deal.getAmount());</span>
+<span class="fc" id="L128">        getCurrentPlayer().buyProperty(property, deal.getAmount());</span>
+<span class="fc" id="L129">    }</span>
+
+    public Card drawCCCard() {
+<span class="fc" id="L132">        return gameBoard.drawCCCard();</span>
+    }
+
+    public Card drawChanceCard() {
+<span class="fc" id="L136">        return gameBoard.drawChanceCard();</span>
+    }
+
+	
+	public Player getCurrentPlayer() {
+<span class="fc" id="L141">		return getPlayer(turn);</span>
+	}
+    
+    public int getCurrentPlayerIndex() {
+<span class="fc" id="L145">        return turn;</span>
+    }
+
+	public GameBoard getGameBoard() {
+<span class="fc" id="L149">		return gameBoard;</span>
+	}
+
+    public MonopolyGUI getGUI() {
+<span class="fc" id="L153">        return gui;</span>
+    }
+
+	public int getInitAmountOfMoney() {
+<span class="fc" id="L157">		return initAmountOfMoney;</span>
+	}
+	
+	public int getNumberOfPlayers() {
+<span class="fc" id="L161">		return players.size();</span>
+	}
+
+    public int getNumberOfSellers() {
+<span class="fc" id="L165">        return players.size() - 1;</span>
+    }
+
+	public Player getPlayer(int index) {
+<span class="fc" id="L169">		return (Player)players.get(index);</span>
+	}
+	
+	public int getPlayerIndex(Player player) {
+<span class="fc" id="L173">		return players.indexOf(player);</span>
+	}
+
+    public ArrayList getSellerList() {
+<span class="fc" id="L177">        ArrayList sellers = new ArrayList();</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">        for (Iterator iter = players.iterator(); iter.hasNext();) {</span>
+<span class="fc" id="L179">            Player player = (Player) iter.next();</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">            if(player != getCurrentPlayer()) sellers.add(player);</span>
+<span class="fc" id="L181">        }</span>
+<span class="fc" id="L182">        return sellers;</span>
+    }
+
+	public int getTurn() {
+<span class="fc" id="L186">		return turn;</span>
+	}
+
+	public int getUtilDiceRoll() {
+<span class="fc" id="L190">		return this.utilDiceRoll;</span>
+	}
+
+	public void movePlayer(int playerIndex, int diceValue) {
+<span class="fc" id="L194">		Player player = (Player)players.get(playerIndex);</span>
+<span class="fc" id="L195">		movePlayer(player, diceValue);</span>
+<span class="fc" id="L196">	}</span>
+	
+	public void movePlayer(Player player, int diceValue) {
+<span class="fc" id="L199">		Cell currentPosition = player.getPosition();</span>
+<span class="fc" id="L200">		int positionIndex = gameBoard.queryCellIndex(currentPosition.getName());</span>
+<span class="fc" id="L201">		int newIndex = (positionIndex+diceValue)%gameBoard.getCellNumber();</span>
+<span class="pc bpc" id="L202" title="1 of 4 branches missed.">		if(newIndex &lt;= positionIndex || diceValue &gt;= gameBoard.getCellNumber()) {</span>
+<span class="fc" id="L203">			player.setMoney(player.getMoney() + 200);</span>
+		}
+<span class="fc" id="L205">		player.setPosition(gameBoard.getCell(newIndex));</span>
+<span class="fc" id="L206">		gui.movePlayer(getPlayerIndex(player), positionIndex, newIndex);</span>
+<span class="fc" id="L207">		playerMoved(player);</span>
+<span class="fc" id="L208">		updateGUI();</span>
+<span class="fc" id="L209">	}</span>
+
+	public void playerMoved(Player player) {
+<span class="fc" id="L212">		Cell cell = player.getPosition();</span>
+<span class="fc" id="L213">		int playerIndex = getPlayerIndex(player);</span>
+<span class="fc bfc" id="L214" title="All 2 branches covered.">		if(cell instanceof CardCell) {</span>
+<span class="fc" id="L215">		    gui.setDrawCardEnabled(true);</span>
+		} else{
+<span class="fc bfc" id="L217" title="All 2 branches covered.">			if(cell.isAvailable()) {</span>
+<span class="fc" id="L218">				int price = cell.getPrice();</span>
+<span class="pc bpc" id="L219" title="2 of 4 branches missed.">				if(price &lt;= player.getMoney() &amp;&amp; price &gt; 0) {</span>
+<span class="fc" id="L220">					gui.enablePurchaseBtn(playerIndex);</span>
+				}
+			}	
+<span class="fc" id="L223">			gui.enableEndTurnBtn(playerIndex);</span>
+		}
+<span class="fc" id="L225">        gui.setTradeEnabled(turn, false);</span>
+<span class="fc" id="L226">	}</span>
+
+	public void reset() {
+<span class="fc bfc" id="L229" title="All 2 branches covered.">		for(int i = 0; i &lt; getNumberOfPlayers(); i++){</span>
+<span class="fc" id="L230">			Player player = (Player)players.get(i);</span>
+<span class="fc" id="L231">			player.setPosition(gameBoard.getCell(0));</span>
+		}
+<span class="fc bfc" id="L233" title="All 2 branches covered.">		if(gameBoard != null) gameBoard.removeCards();</span>
+<span class="fc" id="L234">		turn = 0;</span>
+<span class="fc" id="L235">	}</span>
+	
+	public int[] rollDice() {
+<span class="pc bpc" id="L238" title="1 of 2 branches missed.">		if(testMode) {</span>
+<span class="fc" id="L239">			return gui.getDiceRoll();</span>
+		}
+		else {
+<span class="nc" id="L242">			return new int[]{</span>
+<span class="nc" id="L243">					dice[0].getRoll(),</span>
+<span class="nc" id="L244">					dice[1].getRoll()</span>
+			};
+		}
+	}
+	
+	public void sendToJail(Player player) {
+<span class="fc" id="L250">	    int oldPosition = gameBoard.queryCellIndex(getCurrentPlayer().getPosition().getName());</span>
+<span class="fc" id="L251">		player.setPosition(gameBoard.queryCell(&quot;Jail&quot;));</span>
+<span class="fc" id="L252">		player.setInJail(true);</span>
+<span class="fc" id="L253">		int jailIndex = gameBoard.queryCellIndex(&quot;Jail&quot;);</span>
+<span class="fc" id="L254">		gui.movePlayer(</span>
+<span class="fc" id="L255">		        getPlayerIndex(player),</span>
+		        oldPosition,
+		        jailIndex);
+<span class="fc" id="L258">	}</span>
+    
+	private void setAllButtonEnabled(boolean enabled) {
+<span class="fc" id="L261">		gui.setRollDiceEnabled(enabled);</span>
+<span class="fc" id="L262">		gui.setPurchasePropertyEnabled(enabled);</span>
+<span class="fc" id="L263">		gui.setEndTurnEnabled(enabled);</span>
+<span class="fc" id="L264">        gui.setTradeEnabled(turn, enabled);</span>
+<span class="fc" id="L265">        gui.setBuyHouseEnabled(enabled);</span>
+<span class="fc" id="L266">        gui.setDrawCardEnabled(enabled);</span>
+<span class="fc" id="L267">        gui.setGetOutOfJailEnabled(enabled);</span>
+<span class="fc" id="L268">	}</span>
+
+	public void setGameBoard(GameBoard board) {
+<span class="fc" id="L271">		this.gameBoard = board;</span>
+<span class="fc" id="L272">	}</span>
+	
+	public void setGUI(MonopolyGUI gui) {
+<span class="fc" id="L275">		this.gui = gui;</span>
+<span class="fc" id="L276">	}</span>
+
+	public void setInitAmountOfMoney(int money) {
+<span class="nc" id="L279">		this.initAmountOfMoney = money;</span>
+<span class="nc" id="L280">	}</span>
+
+	public void setNumberOfPlayers(int number) {
+<span class="fc" id="L283">		players.clear();</span>
+<span class="fc bfc" id="L284" title="All 2 branches covered.">		for(int i =0;i&lt;number;i++) {</span>
+<span class="fc" id="L285">			Player player = new Player();</span>
+<span class="fc" id="L286">			player.setMoney(initAmountOfMoney);</span>
+<span class="fc" id="L287">			players.add(player);</span>
+		}
+<span class="fc" id="L289">	}</span>
+
+	public void setUtilDiceRoll(int diceRoll) {
+<span class="nc" id="L292">		this.utilDiceRoll = diceRoll;</span>
+<span class="nc" id="L293">	}</span>
+	
+	public void startGame() {
+<span class="fc" id="L296">		gui.startGame();</span>
+<span class="fc" id="L297">		gui.enablePlayerTurn(0);</span>
+<span class="fc" id="L298">        gui.setTradeEnabled(0, true);</span>
+<span class="fc" id="L299">	}</span>
+
+	public void switchTurn() {
+<span class="fc" id="L302">		turn = (turn + 1) % getNumberOfPlayers();</span>
+<span class="pc bpc" id="L303" title="1 of 2 branches missed.">		if(!getCurrentPlayer().isInJail()) {</span>
+<span class="fc" id="L304">			gui.enablePlayerTurn(turn);</span>
+<span class="fc" id="L305">			gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());</span>
+<span class="fc" id="L306">            gui.setTradeEnabled(turn, true);</span>
+		}
+		else {
+<span class="nc" id="L309">			gui.setGetOutOfJailEnabled(false);</span>
+		}
+<span class="fc" id="L311">	}</span>
+	
+	public void updateGUI() {
+<span class="fc" id="L314">		gui.update();</span>
+<span class="fc" id="L315">	}</span>
+
+	public void utilRollDice() {
+<span class="fc" id="L318">		this.utilDiceRoll = gui.showUtilDiceRoll();</span>
+<span class="fc" id="L319">	}</span>
+
+	public void setTestMode(boolean b) {
+<span class="fc" id="L322">		testMode = b;</span>
+<span class="fc" id="L323">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

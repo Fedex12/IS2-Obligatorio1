@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>GameBoardFreeParking.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.test.boardScenarios</a> &gt; <span class="el_source">GameBoardFreeParking.java</span></div><h1>GameBoardFreeParking.java</h1><pre class="source lang-java linenums">
+package edu.ncsu.monopoly.test.boardScenarios;
+
+import edu.ncsu.monopoly.FreeParkingCell;
+import edu.ncsu.monopoly.GameBoard;
+import edu.ncsu.monopoly.GoToJailCell;
+import edu.ncsu.monopoly.JailCell;
+
+public class GameBoardFreeParking extends GameBoard {
+	public GameBoardFreeParking() {
+<span class="nc" id="L11">		super();</span>
+<span class="nc" id="L12">		JailCell jail = new JailCell();</span>
+<span class="nc" id="L13">		FreeParkingCell freeParking = new FreeParkingCell();</span>
+<span class="nc" id="L14">		GoToJailCell goToJail = new GoToJailCell();</span>
+<span class="nc" id="L15">		addCell(jail);</span>
+<span class="nc" id="L16">		addCell(freeParking);</span>
+<span class="nc" id="L17">		addCell(goToJail);</span>
+
+<span class="nc" id="L19">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

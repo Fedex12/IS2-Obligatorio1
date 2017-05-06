@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PlayerPanel.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.gui</a> &gt; <span class="el_source">PlayerPanel.java</span></div><h1>PlayerPanel.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly.gui;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.OverlayLayout;
+import javax.swing.border.BevelBorder;
+
+import edu.ncsu.monopoly.*;
+import edu.ncsu.monopoly.Card;
+import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.Player;
+
+public class PlayerPanel extends JPanel {
+
+    private JButton btnBuyHouse;
+    private JButton btnDrawCard;
+    private JButton btnEndTurn;
+    private JButton btnGetOutOfJail;
+    private JButton btnPurchaseProperty;
+    private JButton btnRollDice;
+    private JButton btnTrade;
+    
+    private JLabel lblMoney;
+    private JLabel lblName;
+    
+    private Player player;
+    
+    private JTextArea txtProperty;
+
+<span class="nc" id="L38">    public PlayerPanel(Player player) {</span>
+<span class="nc" id="L39">        JPanel pnlAction = new JPanel();</span>
+<span class="nc" id="L40">        JPanel pnlInfo = new JPanel();</span>
+<span class="nc" id="L41">        btnRollDice = new JButton(&quot;Roll Dice&quot;);</span>
+<span class="nc" id="L42">        btnPurchaseProperty = new JButton(&quot;Purchase Property&quot;);</span>
+<span class="nc" id="L43">        btnEndTurn = new JButton(&quot;End Turn&quot;);</span>
+<span class="nc" id="L44">        btnBuyHouse = new JButton(&quot;Buy House&quot;);</span>
+<span class="nc" id="L45">        btnGetOutOfJail = new JButton(&quot;Get Out of Jail&quot;);</span>
+<span class="nc" id="L46">        btnDrawCard = new JButton(&quot;Draw Card&quot;);</span>
+<span class="nc" id="L47">        btnTrade = new JButton(&quot;Trade&quot;);</span>
+<span class="nc" id="L48">        this.player = player;</span>
+<span class="nc" id="L49">        lblName = new JLabel();</span>
+<span class="nc" id="L50">        lblMoney = new JLabel();</span>
+<span class="nc" id="L51">        txtProperty = new JTextArea(30, 70);</span>
+
+<span class="nc" id="L53">        txtProperty.setEnabled(false);</span>
+
+<span class="nc" id="L55">        JPanel pnlName = new JPanel();</span>
+<span class="nc" id="L56">        JPanel pnlProperties = new JPanel();</span>
+
+<span class="nc" id="L58">        pnlInfo.setLayout(new BorderLayout());</span>
+<span class="nc" id="L59">        pnlInfo.add(pnlName, BorderLayout.NORTH);</span>
+<span class="nc" id="L60">        pnlInfo.add(pnlProperties, BorderLayout.CENTER);</span>
+
+<span class="nc" id="L62">        pnlProperties.setLayout(new OverlayLayout(pnlProperties));</span>
+
+<span class="nc" id="L64">        pnlName.add(lblName);</span>
+<span class="nc" id="L65">        pnlName.add(lblMoney);</span>
+<span class="nc" id="L66">        pnlProperties.add(txtProperty);</span>
+
+<span class="nc" id="L68">        pnlAction.setLayout(new GridLayout(3, 3));</span>
+<span class="nc" id="L69">        pnlAction.add(btnBuyHouse);</span>
+<span class="nc" id="L70">        pnlAction.add(btnRollDice);</span>
+<span class="nc" id="L71">        pnlAction.add(btnPurchaseProperty);</span>
+<span class="nc" id="L72">        pnlAction.add(btnGetOutOfJail);</span>
+<span class="nc" id="L73">        pnlAction.add(btnEndTurn);</span>
+<span class="nc" id="L74">        pnlAction.add(btnDrawCard);</span>
+<span class="nc" id="L75">        pnlAction.add(btnTrade);</span>
+
+<span class="nc" id="L77">        pnlAction.doLayout();</span>
+<span class="nc" id="L78">        pnlInfo.doLayout();</span>
+<span class="nc" id="L79">        pnlName.doLayout();</span>
+<span class="nc" id="L80">        pnlProperties.doLayout();</span>
+<span class="nc" id="L81">        this.doLayout();</span>
+
+<span class="nc" id="L83">        setLayout(new BorderLayout());</span>
+<span class="nc" id="L84">        add(pnlInfo, BorderLayout.CENTER);</span>
+<span class="nc" id="L85">        add(pnlAction, BorderLayout.SOUTH);</span>
+
+<span class="nc" id="L87">        btnRollDice.setEnabled(false);</span>
+<span class="nc" id="L88">        btnPurchaseProperty.setEnabled(false);</span>
+<span class="nc" id="L89">        btnEndTurn.setEnabled(false);</span>
+<span class="nc" id="L90">        btnBuyHouse.setEnabled(false);</span>
+<span class="nc" id="L91">        btnGetOutOfJail.setEnabled(false);</span>
+<span class="nc" id="L92">        btnDrawCard.setEnabled(false);</span>
+<span class="nc" id="L93">        btnTrade.setEnabled(false);</span>
+
+<span class="nc" id="L95">        setBorder(new BevelBorder(BevelBorder.RAISED));</span>
+
+<span class="nc" id="L97">        btnRollDice.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L99">                GameMaster.instance().btnRollDiceClicked();</span>
+<span class="nc" id="L100">            }</span>
+        });
+
+<span class="nc" id="L103">        btnEndTurn.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L105">                GameMaster.instance().btnEndTurnClicked();</span>
+<span class="nc" id="L106">            }</span>
+        });
+
+<span class="nc" id="L109">        btnPurchaseProperty.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L111">                GameMaster.instance().btnPurchasePropertyClicked();</span>
+<span class="nc" id="L112">            }</span>
+        });
+
+<span class="nc" id="L115">        btnBuyHouse.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L117">                GameMaster.instance().btnBuyHouseClicked();</span>
+<span class="nc" id="L118">            }</span>
+        });
+
+<span class="nc" id="L121">        btnGetOutOfJail.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L123">                GameMaster.instance().btnGetOutOfJailClicked();</span>
+<span class="nc" id="L124">            }</span>
+        });
+
+<span class="nc" id="L127">        btnDrawCard.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L129">                Card card = GameMaster.instance().btnDrawCardClicked();</span>
+<span class="nc" id="L130">                JOptionPane</span>
+<span class="nc" id="L131">                        .showMessageDialog(PlayerPanel.this, card.getLabel());</span>
+<span class="nc" id="L132">                displayInfo();</span>
+<span class="nc" id="L133">            }</span>
+        });
+
+<span class="nc" id="L136">        btnTrade.addActionListener(new ActionListener() {</span>
+            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L138">                GameMaster.instance().btnTradeClicked();</span>
+<span class="nc" id="L139">            }</span>
+        });
+<span class="nc" id="L141">    }</span>
+
+    public void displayInfo() {
+<span class="nc" id="L144">        lblName.setText(player.getName());</span>
+<span class="nc" id="L145">        lblMoney.setText(&quot;$ &quot; + player.getMoney());</span>
+<span class="nc" id="L146">        StringBuffer buf = new StringBuffer();</span>
+<span class="nc" id="L147">        Cell[] cells = player.getAllProperties();</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">        for (int i = 0; i &lt; cells.length; i++) {</span>
+<span class="nc" id="L149">            buf.append(cells[i] + &quot;\n&quot;);</span>
+        }
+<span class="nc" id="L151">        txtProperty.setText(buf.toString());</span>
+<span class="nc" id="L152">    }</span>
+    
+    public boolean isBuyHouseButtonEnabled() {
+<span class="nc" id="L155">        return btnBuyHouse.isEnabled();</span>
+    }
+
+    public boolean isDrawCardButtonEnabled() {
+<span class="nc" id="L159">        return btnDrawCard.isEnabled();</span>
+    }
+
+    public boolean isEndTurnButtonEnabled() {
+<span class="nc" id="L163">        return btnEndTurn.isEnabled();</span>
+    }
+    
+    public boolean isGetOutOfJailButtonEnabled() {
+<span class="nc" id="L167">        return btnGetOutOfJail.isEnabled();</span>
+    }
+    
+    public boolean isPurchasePropertyButtonEnabled() {
+<span class="nc" id="L171">        return btnPurchaseProperty.isEnabled();</span>
+    }
+    
+    public boolean isRollDiceButtonEnabled() {
+<span class="nc" id="L175">        return btnRollDice.isEnabled();</span>
+    }
+
+    public boolean isTradeButtonEnabled() {
+<span class="nc" id="L179">        return btnTrade.isEnabled();</span>
+    }
+
+    public void setBuyHouseEnabled(boolean b) {
+<span class="nc" id="L183">        btnBuyHouse.setEnabled(b);</span>
+<span class="nc" id="L184">    }</span>
+
+    public void setDrawCardEnabled(boolean b) {
+<span class="nc" id="L187">        btnDrawCard.setEnabled(b);</span>
+<span class="nc" id="L188">    }</span>
+
+    public void setEndTurnEnabled(boolean enabled) {
+<span class="nc" id="L191">        btnEndTurn.setEnabled(enabled);</span>
+<span class="nc" id="L192">    }</span>
+
+    public void setGetOutOfJailEnabled(boolean b) {
+<span class="nc" id="L195">        btnGetOutOfJail.setEnabled(b);</span>
+<span class="nc" id="L196">    }</span>
+
+    public void setPurchasePropertyEnabled(boolean enabled) {
+<span class="nc" id="L199">        btnPurchaseProperty.setEnabled(enabled);</span>
+<span class="nc" id="L200">    }</span>
+
+    public void setRollDiceEnabled(boolean enabled) {
+<span class="nc" id="L203">        btnRollDice.setEnabled(enabled);</span>
+<span class="nc" id="L204">    }</span>
+
+    public void setTradeEnabled(boolean b) {
+<span class="nc" id="L207">        btnTrade.setEnabled(b);</span>
+<span class="nc" id="L208">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
