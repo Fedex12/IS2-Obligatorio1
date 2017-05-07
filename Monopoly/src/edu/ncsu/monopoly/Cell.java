@@ -1,6 +1,8 @@
 package edu.ncsu.monopoly;
 
-public abstract class Cell {
+import java.io.Serializable;
+
+public abstract class Cell implements Serializable {
 
     public static int InflationParameter = 1;
     public static int NoInflationParameter = 0;

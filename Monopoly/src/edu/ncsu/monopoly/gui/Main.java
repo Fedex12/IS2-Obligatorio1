@@ -56,28 +56,8 @@ public class Main {
             gameBoard = new GameBoardFull();
         }
 
-//      GameBoard gameBoard = new GameBoardFull();
-//		GameBoard gameBoard = new GameBoardCCMovePlayer();
-//		GameBoard gameBoard = new GameBoardCCLoseMoney();
-//		GameBoard gameBoard = new GameBoardCCJail();
-//		GameBoard gameBoard = new GameBoardUtility();
-//		GameBoard gameBoard = new GameBoardRailRoad();
-//		GameBoard gameBoard = new GameBoard14();
-//		GameBoard gameBoard = new SimpleGameBoard();
-//		GameBoard gameBoard = new GameBoardJail();
-//		GameBoard gameBoard = new GameBoardFreeParking();
-        master.setGameBoard(gameBoard);
-        /*int numPlayers = inputNumberOfPlayers(window);
-        for (int i = 0; i < numPlayers; i++) {
-            String name
-                    = JOptionPane.showInputDialog(window, "Please input name for Player " + (i + 1));
-            GameMaster.instance().getPlayer(i).setName(name);
-        }
-        */
-        window.setupGameBoard(gameBoard);
-        //window.show();
-        master.setGUI(window);
-        MenuInicial inicio = new MenuInicial();
+        
+        HomeMenu inicio = new HomeMenu();
         inicio.setVisible(true);
                 
        // master.startGame();

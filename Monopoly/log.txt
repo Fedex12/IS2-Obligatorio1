@@ -78,3 +78,103 @@
 7/5/2017;15:31:42;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
 7/5/2017;15:32:17;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
 7/5/2017;15:32:45;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:42:27;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-Players.file (The system cannot find the file specified)
+7/5/2017;15:42:42;Excepcion al levantar datos persistidos: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: edu.ncsu.monopoly.GoCell
+7/5/2017;15:46:39;Excepcion al levantar datos persistidos: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: edu.ncsu.monopoly.GoCell
+7/5/2017;15:46:56;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;16:18:56;Excepcion al levantar datos persistidos: java.io.InvalidClassException: edu.ncsu.monopoly.Player; local class incompatible: stream classdesc serialVersionUID = 8234458315263459970, local class serialVersionUID = 2917682667837862265
+7/5/2017;16:29:48;Excepcion al levantar datos persistidos: java.io.InvalidClassException: edu.ncsu.monopoly.Player; local class incompatible: stream classdesc serialVersionUID = 2917682667837862265, local class serialVersionUID = -8933082823526444819
+7/5/2017;16:30:23;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:0:10;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:2:24;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:4:26;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:5:40;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:6:43;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:8:20;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:9:56;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:14:3;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:40:50;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:44:27; Comienza el juego!
+7/5/2017;17:44:32; Comienza el juego!
+7/5/2017;17:45:32;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:45:49;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:52:11;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:53:7;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:53:21; Comienza el juego!
+7/5/2017;17:53:47;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:55:13;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:55:56;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:57:35;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;17:59:46;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:0:0;Excepcion al levantar datos persistidos: java.io.StreamCorruptedException: invalid type code: AC
+7/5/2017;18:0:21;Excepcion al levantar datos persistidos: java.io.StreamCorruptedException: invalid type code: AC
+7/5/2017;18:4:29;Excepcion al levantar datos persistidos: java.io.StreamCorruptedException: invalid type code: AC
+7/5/2017;18:4:38;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:4:58;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:5:11;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:6:58;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:7:12;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:7:23; Comienza el juego!
+7/5/2017;18:8:9;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:8:18;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:11:5; Comienza el juego!
+7/5/2017;18:15:59;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:16:50; Comienza el juego!
+7/5/2017;18:20:53;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:20:59; Comienza el juego!
+7/5/2017;18:27:17;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:27:37; Comienza el juego!
+7/5/2017;18:34:12;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:34:18; Comienza el juego!
+7/5/2017;18:34:35;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:34:40; Comienza el juego!
+7/5/2017;18:35:23;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:35:30; Comienza el juego!
+7/5/2017;18:35:53;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:36:2; Comienza el juego!
+7/5/2017;18:38:44;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;18:42:45; Comienza el juego!
+7/5/2017;19:7:27;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:7:33; Comienza el juego!
+7/5/2017;19:9:36;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:10:20; Comienza el juego!
+7/5/2017;19:10:57;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:11:8; Comienza el juego!
+7/5/2017;19:15:15;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:15:24; Comienza el juego!
+7/5/2017;19:15:46;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:16:34; Comienza el juego!
+7/5/2017;19:16:54;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:17:1; Comienza el juego!
+7/5/2017;19:19:22;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:19:36;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:19:51; Comienza el juego!
+7/5/2017;19:20:29;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:20:40; Comienza el juego!
+7/5/2017;19:22:16;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:22:25;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:22:33; Comienza el juego!
+7/5/2017;19:25:15;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:25:27;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:25:53;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:27:21;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:27:32; Comienza el juego!
+7/5/2017;19:28:20;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:37:41;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:38:54;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:39:23;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:39:41;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:40:8;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:40:49;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:41:43; Comienza el juego!
+7/5/2017;19:42:37;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:43:2;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;19:43:7; Comienza el juego!
+7/5/2017;19:43:9;Federico, you rolled 2 and 6
+7/5/2017;19:43:13;Cambio de jugador turno de 1
+7/5/2017;19:43:14;Katya, you rolled 5 and 5
+7/5/2017;19:43:16;Cambio de jugador turno de 0
+7/5/2017;19:43:18;Federico, you rolled 5 and 6
+7/5/2017;19:43:20;Cambio de jugador turno de 1
+7/5/2017;19:43:21;Katya, you rolled 6 and 4
+7/5/2017;19:43:23;Cambio de jugador turno de 0

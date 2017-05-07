@@ -5,30 +5,36 @@
  */
 package edu.ncsu.monopoly.gui;
 
+import edu.ncsu.monopoly.GameBoard;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.Player;
+import edu.ncsu.monopoly.test.boardScenarios.GameBoardFull;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Federico
  */
 public class opcionesJuego extends javax.swing.JFrame {
+
     private GameMaster master;
+
     /**
      * Creates new form opcionesJuego
      */
     public opcionesJuego() {
         master = GameMaster.instance();
         initComponents();
-        DefaultListModel<String> model = new DefaultListModel<String>();
-        for(Player p: master.getRegistredPlayers()){
-            model.addElement(p.getName());
+        DefaultListModel<Player> model = new DefaultListModel<Player>();
+        for (Player p : master.getRegistredPlayers()) {
+            model.addElement(p);
         }
-      //  registredPlayerList.removeAll();
+        //  registredPlayerList.removeAll();
         registredPlayerList.setModel(model);
         registredPlayerList.updateUI();
-        
+
     }
 
     /**
@@ -51,24 +57,16 @@ public class opcionesJuego extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         bttNewPlayer = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 3, 18)); // NOI18N
         jLabel1.setText("Game Options");
 
-        selectedPlayerList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         selectedPlayerPanel.setViewportView(selectedPlayerList);
 
-        registredPlayerList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         registredPlayerPanel.setViewportView(registredPlayerList);
 
         jLabel3.setText("Registred Players");
@@ -76,6 +74,11 @@ public class opcionesJuego extends javax.swing.JFrame {
         jLabel4.setText("Selected Players");
 
         jButton1.setText(">");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("<");
 
@@ -83,6 +86,20 @@ public class opcionesJuego extends javax.swing.JFrame {
         bttNewPlayer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttNewPlayerActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("CANCEL");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("START");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -111,6 +128,15 @@ public class opcionesJuego extends javax.swing.JFrame {
                 .addGap(262, 262, 262)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(209, 209, 209))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(473, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(56, 56, 56)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,7 +158,14 @@ public class opcionesJuego extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bttNewPlayer)))
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(431, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(23, 23, 23)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,10 +186,69 @@ public class opcionesJuego extends javax.swing.JFrame {
 
         new CreateNewPlayer().setVisible(true);
         this.dispose();
-        
-        
+
 // TODO add your handling code here:
     }//GEN-LAST:event_bttNewPlayerActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        DefaultListModel<Player> model = new DefaultListModel<>();
+
+        if (selectedPlayerList.getModel().getSize() > 0) {
+            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
+        }
+        model.addElement((Player) registredPlayerList.getSelectedValue());
+        selectedPlayerList.setModel(model);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        new HomeMenu().setVisible(true);
+        this.dispose();
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        GameMaster master = GameMaster.instance();
+        DefaultListModel<Player> model = new DefaultListModel<>();
+
+        if (selectedPlayerList.getModel().getSize() > 1 && selectedPlayerList.getModel().getSize() < 9) {
+            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
+            ArrayList<Player> players = new ArrayList();
+            for (int i = 0; i < model.getSize(); i++) {
+                players.add(model.get(i));
+            }
+            master.setPlayers(players);
+            //Aqui
+           
+            MainWindow window = new MainWindow();
+		GameBoard gameBoard = null;
+	
+			gameBoard = new GameBoardFull();
+		
+
+		master.setGameBoard(gameBoard);
+		master.setNumberOfPlayers(players.size());
+                master.setPlayers(players);
+		
+		window.setupGameBoard(gameBoard);
+		window.show();
+		master.setGUI(window);
+		//master.startGame();
+            
+            
+            //hasta aqui
+
+            master.startGame();
+            this.dispose();
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Error: You must choose between 2 and 8 players.");
+        }
+
+
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,6 +289,8 @@ public class opcionesJuego extends javax.swing.JFrame {
     private javax.swing.JButton bttNewPlayer;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

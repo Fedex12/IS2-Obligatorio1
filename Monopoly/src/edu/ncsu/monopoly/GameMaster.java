@@ -2,8 +2,10 @@ package edu.ncsu.monopoly;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,7 +18,7 @@ public class GameMaster {
     private MonopolyGUI gui;
     ArchivoLog archivo = new ArchivoLog();
     private int initAmountOfMoney;
-    private ArrayList<Player> players = new ArrayList();
+    private ArrayList<Player> players;
     private ArrayList<Player> registredPlayers= new ArrayList();
     private int turn = 0;
     private int utilDiceRoll;
@@ -32,11 +34,12 @@ public class GameMaster {
     public GameMaster() {
         FileInputStream fis = null;
         try {
+            players= new ArrayList();
             initAmountOfMoney = 1500;
             dice = new Die[]{new Die(), new Die()};
             Player p;
             //abre el archivo
-            fis = new FileInputStream("persisted-object.file");
+            fis = new FileInputStream("persisted-Players.file");
             ObjectInputStream ois = new ObjectInputStream(fis);
             //lee el objeto del archivo
             
@@ -58,6 +61,32 @@ public class GameMaster {
 
     }
 
+    public void persistPlayers(){
+        
+        FileOutputStream fos = null;
+        ObjectOutputStream salida = null;
+        
+        try {
+            fos = new FileOutputStream("persisted-Players.file");
+            salida = new ObjectOutputStream(fos);
+            for(Player p: registredPlayers){
+                salida.writeObject(p);
+            }
+           
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if(fos!=null) fos.close();
+                if(salida!=null) salida.close();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+    
     public void btnBuyHouseClicked() {
 
         gui.showBuyHouseDialog(getCurrentPlayer());
@@ -227,6 +256,10 @@ public class GameMaster {
 
     public void setPlayers(ArrayList players) {
         this.players = players;
+        for(int i=0;i<players.size();i++){
+            this.players.get(i).setMoney(initAmountOfMoney);
+        }
+        
     }
 
     public void movePlayer(int playerIndex, int diceValue) {
@@ -321,11 +354,11 @@ public class GameMaster {
     }
 
     public void setNumberOfPlayers(int number) {
-        players.clear();
+        //players.clear();
         for (int i = 0; i < number; i++) {
-            Player player = new Player();
-            player.setMoney(initAmountOfMoney);
-            players.add(player);
+           // Player player = new Player();
+            players.get(i).setMoney(initAmountOfMoney);
+           // players.add(player);
         }
     }
 
@@ -338,6 +371,7 @@ public class GameMaster {
         archivo.crearLog(" Comienza el juego!");
         gui.startGame();
         gui.enablePlayerTurn(0);
+        
         gui.setTradeEnabled(0, true);
     }
 
@@ -357,6 +391,7 @@ public class GameMaster {
     }
     public void newPlayer(Player player){
         registredPlayers.add(player);
+        persistPlayers();
     }
 
     public void updateGUI() {

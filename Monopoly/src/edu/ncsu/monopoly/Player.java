@@ -1,5 +1,7 @@
 package edu.ncsu.monopoly;
 
+import java.awt.Color;
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -12,6 +14,8 @@ public class Player implements Serializable {
     private boolean inJail;
     private int money;
     private String name;
+    private File perfil;
+    private Color color;
 
     private Cell position;
     private ArrayList properties = new ArrayList();
@@ -261,6 +265,22 @@ public class Player implements Serializable {
         this.position = newPosition;
     }
 
+    public File getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(File perfil) {
+        this.perfil = perfil;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+    
     public String toString() {
         return name;
     }

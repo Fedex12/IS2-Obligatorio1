@@ -7,6 +7,14 @@ package edu.ncsu.monopoly.gui;
 
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.Player;
+import java.awt.Color;
+import java.awt.Image;
+import java.io.File;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -14,14 +22,23 @@ import edu.ncsu.monopoly.Player;
  */
 public class CreateNewPlayer extends javax.swing.JFrame {
 
+    File picture;
+
     /**
      * Creates new form NuevoJugador
      */
     public CreateNewPlayer() {
         initComponents();
+        picture= new File(("/Imagenes/Perfil blanco.jpg"));
         colorChoice.addItem("RED");
         colorChoice.addItem("BLUE");
-       
+        colorChoice.addItem("GREEN");
+        colorChoice.addItem("PINK");
+        colorChoice.addItem("GRAY");
+        colorChoice.addItem("ORANGE");
+        colorChoice.addItem("YELLOW");
+        colorChoice.addItem("WHITE");
+
     }
 
     /**
@@ -114,11 +131,45 @@ public class CreateNewPlayer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
+        int resultado;
+
+        PictureChooser windowPC = new PictureChooser();
+
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("JPG y PNG", "jpg", "png");
+
+        windowPC.SelectPicture.setFileFilter(filtro);
+
+        resultado = windowPC.SelectPicture.showOpenDialog(null);
+
+        if (JFileChooser.APPROVE_OPTION == resultado) {
+
+            picture = windowPC.SelectPicture.getSelectedFile();
+
+            try {
+
+                ImageIcon icon = new ImageIcon(picture.toString());
+
+                Icon icono = new ImageIcon(icon.getImage().getScaledInstance(ProfilePhoto.getWidth(), ProfilePhoto.getHeight(), Image.SCALE_DEFAULT));
+
+                ProfilePhoto.setIcon(icono);
+
+            } catch (Exception ex) {
+
+                JOptionPane.showMessageDialog(null, "Error abriendo la imagen " + ex);
+
+            }
+
+        }
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void exitBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBttActionPerformed
         // TODO add your handling code here:
+        new opcionesJuego().setVisible(true);
+        this.dispose();
+          
     }//GEN-LAST:event_exitBttActionPerformed
 
     private void CreateBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBttActionPerformed
@@ -126,10 +177,41 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         GameMaster master = GameMaster.instance();
         Player player = new Player();
         player.setName(nameText.getText());
+        player.setPerfil(picture);
+
+        switch (colorChoice.getSelectedItem()) {
+            case "RED":
+                player.setColor(Color.RED);
+                break;
+            case "BLUE":
+                player.setColor(Color.BLUE);
+                break;
+            case "GREEN":
+                player.setColor(Color.GREEN);
+                break;
+            case "PINK":
+                player.setColor(Color.PINK);
+                break;
+            case "GRAY":
+                player.setColor(Color.GRAY);
+                break;
+            case "ORANGE":
+                player.setColor(Color.ORANGE);
+                break;
+            case "YELLOW":
+                player.setColor(Color.YELLOW);
+                break;
+            case "WHITE":
+                player.setColor(Color.WHITE);
+                break;
+            default:
+                player.setColor(Color.GREEN);
+                break;
+        }
+
         master.newPlayer(player);
         new opcionesJuego().setVisible(true);
         this.dispose();
-        
 
 // TODO add your handling code here:
     }//GEN-LAST:event_CreateBttActionPerformed
