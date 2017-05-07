@@ -57,3 +57,24 @@
 7/5/2017;4:3:7;katya le paga una renta de 22a fede
 7/5/2017;4:3:7;katya dinero: -12
 7/5/2017;4:3:7;fede dinero: 1188
+7/5/2017;13:9:5;Se ingresaron null jugadores.
+7/5/2017;15:4:22;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:6:4;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:7:3;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:7:53;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:9:53;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:11:26;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:14:50;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:16:23;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:17:55;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:19:29;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:20:54;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:23:45;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:25:13;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:25:50;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:29:13;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:30:3;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:30:41;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:31:42;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:32:17;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)
+7/5/2017;15:32:45;Excepcion al levantar datos persistidos: java.io.FileNotFoundException: persisted-object.file (The system cannot find the file specified)

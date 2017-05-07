@@ -1,5 +1,9 @@
 package edu.ncsu.monopoly;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -12,7 +16,8 @@ public class GameMaster {
     private MonopolyGUI gui;
     ArchivoLog archivo = new ArchivoLog();
     private int initAmountOfMoney;
-    private ArrayList players = new ArrayList();
+    private ArrayList<Player> players = new ArrayList();
+    private ArrayList<Player> registredPlayers= new ArrayList();
     private int turn = 0;
     private int utilDiceRoll;
     private boolean testMode;
@@ -25,12 +30,36 @@ public class GameMaster {
     }
 
     public GameMaster() {
-        initAmountOfMoney = 1500;
-        dice = new Die[]{new Die(), new Die()};
+        FileInputStream fis = null;
+        try {
+            initAmountOfMoney = 1500;
+            dice = new Die[]{new Die(), new Die()};
+            Player p;
+            //abre el archivo
+            fis = new FileInputStream("persisted-object.file");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            //lee el objeto del archivo
+            
+            p = (Player) ois.readObject();
+            while(p!=null){
+                registredPlayers.add(p);
+                p = (Player) ois.readObject();
+            }
+            ois.close();
+
+        } catch (FileNotFoundException ex) {
+            archivo.crearLog("Excepcion al levantar datos persistidos: " + ex.toString());
+        } catch (IOException ex) {
+            archivo.crearLog("Excepcion al levantar datos persistidos: " + ex.toString());
+        } catch (ClassNotFoundException ex) {
+            archivo.crearLog("Excepcion al levantar datos persistidos: " + ex.toString());
+        } 
+        
+
     }
 
     public void btnBuyHouseClicked() {
-       
+
         gui.showBuyHouseDialog(getCurrentPlayer());
     }
 
@@ -192,6 +221,14 @@ public class GameMaster {
         return this.utilDiceRoll;
     }
 
+    public ArrayList getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(ArrayList players) {
+        this.players = players;
+    }
+
     public void movePlayer(int playerIndex, int diceValue) {
         Player player = (Player) players.get(playerIndex);
         movePlayer(player, diceValue);
@@ -203,7 +240,7 @@ public class GameMaster {
         int newIndex = (positionIndex + diceValue) % gameBoard.getCellNumber();
         if (newIndex <= positionIndex || diceValue >= gameBoard.getCellNumber()) {
             player.setMoney(player.getMoney() + 200);
-            archivo.crearLog("El jugador "+player.getName()+" pasa por el GO y suma 200");
+            archivo.crearLog("El jugador " + player.getName() + " pasa por el GO y suma 200");
         }
         player.setPosition(gameBoard.getCell(newIndex));
         gui.movePlayer(getPlayerIndex(player), positionIndex, newIndex);
@@ -297,7 +334,7 @@ public class GameMaster {
     }
 
     public void startGame() {
-        
+
         archivo.crearLog(" Comienza el juego!");
         gui.startGame();
         gui.enablePlayerTurn(0);
@@ -306,17 +343,20 @@ public class GameMaster {
 
     public void switchTurn() {
         turn = (turn + 1) % getNumberOfPlayers();
-        archivo.crearLog("Cambio de jugador turno de "+turn);
+        archivo.crearLog("Cambio de jugador turno de " + turn);
         if (!getCurrentPlayer().isInJail()) {
             gui.enablePlayerTurn(turn);
             gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
             gui.setTradeEnabled(turn, true);
-            
+
         } else {
             gui.setGetOutOfJailEnabled(false);
-            archivo.crearLog("Jugador "+turn+" esta en la carcel");
+            archivo.crearLog("Jugador " + turn + " esta en la carcel");
         }
-        
+
+    }
+    public void newPlayer(Player player){
+        registredPlayers.add(player);
     }
 
     public void updateGUI() {
@@ -330,4 +370,13 @@ public class GameMaster {
     public void setTestMode(boolean b) {
         testMode = b;
     }
+
+    public ArrayList<Player> getRegistredPlayers() {
+        return registredPlayers;
+    }
+
+    public void setRegistredPlayers(ArrayList registredPlayers) {
+        this.registredPlayers = registredPlayers;
+    }
+    
 }

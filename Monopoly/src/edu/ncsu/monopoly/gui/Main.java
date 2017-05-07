@@ -67,15 +67,19 @@ public class Main {
 //		GameBoard gameBoard = new GameBoardJail();
 //		GameBoard gameBoard = new GameBoardFreeParking();
         master.setGameBoard(gameBoard);
-        int numPlayers = inputNumberOfPlayers(window);
+        /*int numPlayers = inputNumberOfPlayers(window);
         for (int i = 0; i < numPlayers; i++) {
             String name
                     = JOptionPane.showInputDialog(window, "Please input name for Player " + (i + 1));
             GameMaster.instance().getPlayer(i).setName(name);
         }
+        */
         window.setupGameBoard(gameBoard);
-        window.show();
+        //window.show();
         master.setGUI(window);
-        master.startGame();
+        MenuInicial inicio = new MenuInicial();
+        inicio.setVisible(true);
+                
+       // master.startGame();
     }
 }
