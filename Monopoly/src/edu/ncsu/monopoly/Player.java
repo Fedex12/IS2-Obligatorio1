@@ -16,6 +16,8 @@ public class Player implements Serializable {
     private String name;
     private File perfil;
     private Color color;
+    private int gamesPlayed;
+    private int gamesWon;
 
     private Cell position;
     private ArrayList properties = new ArrayList();
@@ -279,6 +281,22 @@ public class Player implements Serializable {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public int getGamesPlayed() {
+        return gamesPlayed;
+    }
+
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
+    }
+
+    public int getGamesWon() {
+        return gamesWon;
+    }
+
+    public void setGamesWon(int gamesWon) {
+        this.gamesWon = gamesWon;
     }
     
     public String toString() {

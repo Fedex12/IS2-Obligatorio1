@@ -178,6 +178,8 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         Player player = new Player();
         player.setName(nameText.getText());
         player.setPerfil(picture);
+        player.setGamesPlayed(0);
+        player.setGamesWon(0);
 
         switch (colorChoice.getSelectedItem()) {
             case "RED":
@@ -208,7 +210,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
                 player.setColor(Color.GREEN);
                 break;
         }
-
+        
         master.newPlayer(player);
         new opcionesJuego().setVisible(true);
         this.dispose();

@@ -5,6 +5,12 @@
  */
 package edu.ncsu.monopoly.gui;
 
+import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.Player;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Federico
@@ -16,6 +22,11 @@ public class Profiles extends javax.swing.JFrame {
      */
     public Profiles() {
         initComponents();
+        GameMaster master = GameMaster.instance();
+        for (int i = 0; i < master.getRegistredPlayers().size(); i++) {
+            comboJugadores.addItem(master.getRegistredPlayers().get(i));
+        }
+
     }
 
     /**
@@ -30,10 +41,12 @@ public class Profiles extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         comboJugadores = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        fotoJugadorLabel = new javax.swing.JLabel();
-        jugadasLabel = new javax.swing.JLabel();
-        nombreLabel = new javax.swing.JLabel();
-        ganadasLabel = new javax.swing.JLabel();
+        Photo = new javax.swing.JLabel();
+        gamesPlayerLabel = new javax.swing.JLabel();
+        namePlayerLabel = new javax.swing.JLabel();
+        gamesWonLabel = new javax.swing.JLabel();
+        loadBtt = new javax.swing.JButton();
+        returnBtt = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -48,62 +61,103 @@ public class Profiles extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        comboJugadores.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setText("Player");
 
-        jLabel1.setText("Jugador");
+        Photo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil blanco.jpg"))); // NOI18N
+        Photo.setText("fotoJugador");
 
-        fotoJugadorLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil blanco.jpg"))); // NOI18N
-        fotoJugadorLabel.setText("fotoJugador");
+        gamesPlayerLabel.setText("Games played:");
 
-        jugadasLabel.setText("Partidas Jugadas:");
+        namePlayerLabel.setText("Name:");
 
-        nombreLabel.setText("Nombre:");
+        gamesWonLabel.setText("Games won:");
 
-        ganadasLabel.setText("Partidas Ganadas:");
+        loadBtt.setText("Load");
+        loadBtt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadBttActionPerformed(evt);
+            }
+        });
+
+        returnBtt.setText("Return");
+        returnBtt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnBttActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(comboJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(loadBtt))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(fotoJugadorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nombreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jugadasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ganadasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(Photo, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(namePlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gamesPlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gamesWonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(returnBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(loadBtt))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fotoJugadorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Photo, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(nombreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(namePlayerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jugadasLabel)
+                        .addComponent(gamesPlayerLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ganadasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(gamesWonLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(returnBtt)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void returnBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnBttActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_returnBttActionPerformed
+
+    private void loadBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadBttActionPerformed
+
+        Player player = (Player) comboJugadores.getSelectedItem();
+        namePlayerLabel.setText("Name: "+player.getName());
+        gamesPlayerLabel.setText("Games Played: " + player.getGamesPlayed());
+        gamesWonLabel.setText("Games Won: " + player.getGamesWon());
+
+        ImageIcon icon = new ImageIcon(player.getPerfil().toString());
+
+        Icon icono = new ImageIcon(icon.getImage().getScaledInstance(Photo.getWidth(), Photo.getHeight(), Image.SCALE_DEFAULT));
+
+        Photo.setIcon(icono);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_loadBttActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,12 +196,14 @@ public class Profiles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Photo;
     private javax.swing.JComboBox comboJugadores;
-    private javax.swing.JLabel fotoJugadorLabel;
-    private javax.swing.JLabel ganadasLabel;
+    private javax.swing.JLabel gamesPlayerLabel;
+    private javax.swing.JLabel gamesWonLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel jugadasLabel;
-    private javax.swing.JLabel nombreLabel;
+    private javax.swing.JButton loadBtt;
+    private javax.swing.JLabel namePlayerLabel;
+    private javax.swing.JButton returnBtt;
     // End of variables declaration//GEN-END:variables
 }

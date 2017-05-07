@@ -178,3 +178,6 @@
 7/5/2017;19:43:20;Cambio de jugador turno de 1
 7/5/2017;19:43:21;Katya, you rolled 6 and 4
 7/5/2017;19:43:23;Cambio de jugador turno de 0
+7/5/2017;20:23:30;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;20:24:38;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;20:40:16;Excepcion al levantar datos persistidos: java.io.InvalidClassException: edu.ncsu.monopoly.Player; local class incompatible: stream classdesc serialVersionUID = -8933082823526444819, local class serialVersionUID = 8886990711338053622
