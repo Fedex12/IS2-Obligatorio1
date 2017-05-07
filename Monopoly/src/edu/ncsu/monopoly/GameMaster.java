@@ -10,6 +10,7 @@ public class GameMaster {
     private Die[] dice;
     private GameBoard gameBoard;
     private MonopolyGUI gui;
+    ArchivoLog archivo = new ArchivoLog();
     private int initAmountOfMoney;
     private ArrayList players = new ArrayList();
     private int turn = 0;
@@ -29,6 +30,7 @@ public class GameMaster {
     }
 
     public void btnBuyHouseClicked() {
+       
         gui.showBuyHouseDialog(getCurrentPlayer());
     }
 
@@ -100,6 +102,7 @@ public class GameMaster {
                     .append(rolls[0])
                     .append(" and ")
                     .append(rolls[1]);
+            archivo.crearLog(msg.toString());
             gui.showMessage(msg.toString());
             movePlayer(player, rolls[0] + rolls[1]);
             gui.setBuyHouseEnabled(false);
@@ -113,6 +116,7 @@ public class GameMaster {
             RespondDialog rDialog = gui.openRespondDialog(deal);
             if (rDialog.getResponse()) {
                 completeTrade(deal);
+                archivo.crearLog(deal.makeMessage());
                 updateGUI();
             }
         }
@@ -199,6 +203,7 @@ public class GameMaster {
         int newIndex = (positionIndex + diceValue) % gameBoard.getCellNumber();
         if (newIndex <= positionIndex || diceValue >= gameBoard.getCellNumber()) {
             player.setMoney(player.getMoney() + 200);
+            archivo.crearLog("El jugador "+player.getName()+" pasa por el GO y suma 200");
         }
         player.setPosition(gameBoard.getCell(newIndex));
         gui.movePlayer(getPlayerIndex(player), positionIndex, newIndex);
@@ -292,6 +297,8 @@ public class GameMaster {
     }
 
     public void startGame() {
+        
+        archivo.crearLog(" Comienza el juego!");
         gui.startGame();
         gui.enablePlayerTurn(0);
         gui.setTradeEnabled(0, true);
@@ -299,13 +306,17 @@ public class GameMaster {
 
     public void switchTurn() {
         turn = (turn + 1) % getNumberOfPlayers();
+        archivo.crearLog("Cambio de jugador turno de "+turn);
         if (!getCurrentPlayer().isInJail()) {
             gui.enablePlayerTurn(turn);
             gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
             gui.setTradeEnabled(turn, true);
+            
         } else {
             gui.setGetOutOfJailEnabled(false);
+            archivo.crearLog("Jugador "+turn+" esta en la carcel");
         }
+        
     }
 
     public void updateGUI() {

@@ -1,0 +1,59 @@
+7/5/2017;3:5:13;Se ingresaron 2 jugadores.
+7/5/2017;3:5:16; Comienza el juego!
+7/5/2017;3:5:19;Cambio de jugador turno de 1
+7/5/2017;3:5:25;Cambio de jugador turno de 0
+7/5/2017;3:5:32;Cambio de jugador turno de 1
+7/5/2017;3:5:37;Cambio de jugador turno de 0
+7/5/2017;3:5:41;Cambio de jugador turno de 1
+7/5/2017;3:5:46;Cambio de jugador turno de 0
+7/5/2017;3:5:50;Cambio de jugador turno de 1
+7/5/2017;3:5:56;Cambio de jugador turno de 0
+7/5/2017;3:5:59;Cambio de jugador turno de 1
+7/5/2017;3:6:4;Cambio de jugador turno de 0
+7/5/2017;3:6:8;Cambio de jugador turno de 1
+7/5/2017;4:1:18;Se ingresaron 2 jugadores.
+7/5/2017;4:1:27; Comienza el juego!
+7/5/2017;4:1:29;fede, you rolled 2 and 1
+7/5/2017;4:1:32;Cambio de jugador turno de 1
+7/5/2017;4:1:33;katya, you rolled 4 and 2
+7/5/2017;4:1:36;Cambio de jugador turno de 0
+7/5/2017;4:1:37;fede, you rolled 1 and 3
+7/5/2017;4:1:41;Cambio de jugador turno de 1
+7/5/2017;4:1:42;katya, you rolled 2 and 3
+7/5/2017;4:1:46;Cambio de jugador turno de 0
+7/5/2017;4:1:47;fede, you rolled 6 and 4
+7/5/2017;4:1:52;Cambio de jugador turno de 1
+7/5/2017;4:1:53;katya, you rolled 4 and 6
+7/5/2017;4:1:57;Cambio de jugador turno de 0
+7/5/2017;4:1:59;fede, you rolled 2 and 1
+7/5/2017;4:2:2;Cambio de jugador turno de 1
+7/5/2017;4:2:3;katya, you rolled 1 and 2
+7/5/2017;4:2:7;Cambio de jugador turno de 0
+7/5/2017;4:2:8;fede, you rolled 4 and 4
+7/5/2017;4:2:11;Cambio de jugador turno de 1
+7/5/2017;4:2:13;katya, you rolled 3 and 2
+7/5/2017;4:2:16;Cambio de jugador turno de 0
+7/5/2017;4:2:17;fede, you rolled 3 and 2
+7/5/2017;4:2:20;Cambio de jugador turno de 1
+7/5/2017;4:2:21;katya, you rolled 3 and 5
+7/5/2017;4:2:24;Cambio de jugador turno de 0
+7/5/2017;4:2:25;fede, you rolled 4 and 6
+7/5/2017;4:2:26;El jugador fede pasa por el GO y suma 200
+7/5/2017;4:2:27;Cambio de jugador turno de 1
+7/5/2017;4:2:29;katya, you rolled 5 and 4
+7/5/2017;4:2:29;El jugador katya pasa por el GO y suma 200
+7/5/2017;4:2:30;Cambio de jugador turno de 0
+7/5/2017;4:2:31;fede, you rolled 6 and 3
+7/5/2017;4:2:34;Cambio de jugador turno de 1
+7/5/2017;4:2:35;katya, you rolled 5 and 5
+7/5/2017;4:2:37;Cambio de jugador turno de 0
+7/5/2017;4:2:38;fede, you rolled 3 and 2
+7/5/2017;4:2:42;Cambio de jugador turno de 1
+7/5/2017;4:2:45;katya, you rolled 1 and 1
+7/5/2017;4:2:50;Cambio de jugador turno de 0
+7/5/2017;4:2:52;fede, you rolled 3 and 6
+7/5/2017;4:2:54;Cambio de jugador turno de 1
+7/5/2017;4:3:0;katya, you rolled 6 and 2
+7/5/2017;4:3:7;katya le paga una renta de 22a fede
+7/5/2017;4:3:7;katya dinero: -12
+7/5/2017;4:3:7;fede dinero: 1188

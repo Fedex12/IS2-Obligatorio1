@@ -160,13 +160,20 @@ public class Player {
     }
 
     public void payRentTo(Player owner, int rentValue) {
+        ArchivoLog archivo = new ArchivoLog();
+                
         if (money < rentValue) {
             owner.money += money;
             money -= rentValue;
+            
         } else {
             money -= rentValue;
             owner.money += rentValue;
+            
         }
+        archivo.crearLog(this.getName()+" le paga una renta de "+rentValue+"a "+owner.getName());
+        archivo.crearLog(this.getName()+" dinero: "+this.getMoney());
+        archivo.crearLog(owner.getName()+" dinero: "+owner.getMoney());
         if (isBankrupt()) {
             money = 0;
             exchangeProperty(owner);

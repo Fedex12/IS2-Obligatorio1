@@ -1,5 +1,6 @@
 package edu.ncsu.monopoly.gui;
 
+import edu.ncsu.monopoly.ArchivoLog;
 import edu.ncsu.monopoly.GameBoard;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.test.boardScenarios.GameBoardFull;
@@ -8,9 +9,11 @@ import javax.swing.JOptionPane;
 public class Main {
 
     private static int inputNumberOfPlayers(MainWindow window) {
+        ArchivoLog archivo = new ArchivoLog();
         int numPlayers = 0;
         while (numPlayers <= 0 || numPlayers > GameMaster.MAX_PLAYER) {
             String numberOfPlayers = JOptionPane.showInputDialog(window, "How many players");
+            archivo.crearLog("Se ingresaron "+numberOfPlayers+" jugadores.");
             if (numberOfPlayers == null) {
                 System.exit(0);
             }

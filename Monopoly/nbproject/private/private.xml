@@ -3,14 +3,70 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameBoard.java</file>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/Player.java</file>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/FreeParkingCell.java</file>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameMaster.java</file>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/CardCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/DeterministicDie.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameBoardUtility.java</file>
             <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/Card.java</file>
-            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/MainWindow.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/FreeParkingCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/MoneyCard.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/PlayerPanel.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/GoToJailCardTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoardCCMovePlayer.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/GainMoneyCardTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/GameboardCreationTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GotoJailCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/TradeDealTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GoCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/Cell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/MockGUI.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/JailCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GUICell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/PropertyCell.java</file>
             <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/TradeDeal.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/MockRespondDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/MovePlayerCardTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/InfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GoCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GUIRespondDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/UtilityCellTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/MovePlayerCard.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/InfoPanel.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/RRCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/CardCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/TestDiceRollDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/FreeParkingCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/PropertyCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameBoardRailRoad.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameMaster.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GameBoardUtil.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoardCCGainMoney.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/TradeDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/BuyHouseDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/RailRoadCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/MockTradeDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/GameboardTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/CardsTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/Die.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/ArchivoLog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GameBoard.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/CCCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/RailRoadCellTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoardFull.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoard14.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/GameMasterTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/GUITradeDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/PlayerTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/UtilDiceRoll.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/MonopolyGUI.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/Player.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/RespondDialog.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/GoToJailCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/MainWindow.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoardJail.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/PropertyCellTest.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/test/boardScenarios/GameBoardCCJail.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/ChanceCellInfoFormatter.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/UtilityCell.java</file>
+            <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/SimpleGameBoard.java</file>
             <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/gui/Main.java</file>
             <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/src/edu/ncsu/monopoly/JailCard.java</file>
             <file>file:/C:/Users/Fede_/OneDrive/Documentos/Ingeniería%20de%20Software%202/Obligatorio%201.%20Mantenimiento/IS2-Obligatorio1/Monopoly/test/edu/ncsu/monopoly/test/CellInfoFormatterTest.java</file>
