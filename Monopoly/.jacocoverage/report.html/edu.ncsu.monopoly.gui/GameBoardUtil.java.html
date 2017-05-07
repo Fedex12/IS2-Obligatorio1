@@ -6,54 +6,54 @@ import java.util.List;
 
 import edu.ncsu.monopoly.GameBoard;
 
-<span class="nc" id="L9">public class GameBoardUtil {</span>
+<span class="nc" id="L9">public class GameBoardUtil{</span>
     
-	public static Dimension calculateDimension(int i) {
+	public static Dimension calculateDimension(int i){
 <span class="fc" id="L12">		i = i - 4;</span>
 <span class="fc" id="L13">		int shortSide = i / 4;</span>
 <span class="fc" id="L14">		int longSide = (i - (shortSide * 2)) / 2;</span>
 <span class="fc" id="L15">		return new Dimension(longSide, shortSide);</span>
 	}
 	
-	public static List getEastCells(GameBoard board) {
+	public static List getEastCells(GameBoard board){
 <span class="fc" id="L19">		Dimension d = calculateDimension(board.getCellNumber());</span>
 <span class="fc" id="L20">		int longSide = d.width;</span>
 <span class="fc" id="L21">		int shortSide = d.height;</span>
 <span class="fc" id="L22">		List cells = new ArrayList();</span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">		for(int i = board.getCellNumber() - shortSide; i &lt;= board.getCellNumber() - 1; i++) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">		for(int i = board.getCellNumber() - shortSide; i &lt;= board.getCellNumber() - 1; i++){</span>
 <span class="fc" id="L24">			cells.add(board.getCell(i));</span>
 		}
 <span class="fc" id="L26">		return cells;</span>
 	}
 	
-	public static List getNorthCells(GameBoard board) {
+	public static List getNorthCells(GameBoard board){
 <span class="fc" id="L30">		Dimension d = calculateDimension(board.getCellNumber());</span>
 <span class="fc" id="L31">		int longSide = d.width;</span>
 <span class="fc" id="L32">		int shortSide = d.height;</span>
 <span class="fc" id="L33">		List cells = new ArrayList();</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">		for(int i = longSide + 2 + shortSide; i &lt;= longSide + 2 + shortSide + longSide + 1; i++) {</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">		for(int i = longSide + 2 + shortSide; i &lt;= longSide + 2 + shortSide + longSide + 1; i++){</span>
 <span class="fc" id="L35">			cells.add(board.getCell(i));</span>
 		}
 <span class="fc" id="L37">		return cells;</span>
 	}
 	
-	public static List getSouthCells(GameBoard board) {
+	public static List getSouthCells(GameBoard board){
 <span class="fc" id="L41">		Dimension d = calculateDimension(board.getCellNumber());</span>
 <span class="fc" id="L42">		int longSide = d.width;</span>
 <span class="fc" id="L43">		int shortSide = d.height;</span>
 <span class="fc" id="L44">		List cells = new ArrayList();</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">		for(int i = longSide + 1; i &gt;= 0; i--) {</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		for(int i = longSide + 1; i &gt;= 0; i--){</span>
 <span class="fc" id="L46">			cells.add(board.getCell(i));</span>
 		}
 <span class="fc" id="L48">		return cells;</span>
 	}
 	
-	public static List getWestCells(GameBoard board) {
+	public static List getWestCells(GameBoard board){
 <span class="fc" id="L52">		Dimension d = calculateDimension(board.getCellNumber());</span>
 <span class="fc" id="L53">		int longSide = d.width;</span>
 <span class="fc" id="L54">		int shortSide = d.height;</span>
 <span class="fc" id="L55">		List cells = new ArrayList();</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">		for(int i = longSide + 1 + shortSide; i &gt; longSide + 1; i--) {</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">		for(int i = longSide + 1 + shortSide; i &gt; longSide + 1; i--){</span>
 <span class="fc" id="L57">			cells.add(board.getCell(i));</span>
 		}
 <span class="fc" id="L59">		return cells;</span>

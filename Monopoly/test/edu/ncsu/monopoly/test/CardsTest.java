@@ -1,7 +1,5 @@
 package edu.ncsu.monopoly.test;
 
-
-
 import edu.ncsu.monopoly.Card;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.MoneyCard;
@@ -9,8 +7,9 @@ import edu.ncsu.monopoly.test.boardScenarios.GameBoardCCGainMoney;
 import junit.framework.TestCase;
 
 public class CardsTest extends TestCase {
+
     Card ccCard, chanceCard;
-    
+
     GameMaster gameMaster;
 
     protected void setUp() {
@@ -23,7 +22,7 @@ public class CardsTest extends TestCase {
         chanceCard = new MoneyCard("Lose 50 dollars", -50, Card.TYPE_CHANCE);
         gameMaster.getGameBoard().addCard(ccCard);
     }
-    
+
     public void testCardType() {
         Card card = gameMaster.drawCCCard();
         assertEquals(Card.TYPE_CC, ccCard.getCardType());

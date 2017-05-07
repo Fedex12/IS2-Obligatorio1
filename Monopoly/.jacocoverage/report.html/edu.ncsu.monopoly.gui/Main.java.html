@@ -5,55 +5,55 @@ import javax.swing.JOptionPane;
 import edu.ncsu.monopoly.*;
 import edu.ncsu.monopoly.test.boardScenarios.GameBoardFull;
 
-<span class="nc" id="L8">public class Main {</span>
+<span class="nc" id="L8">public class Main{</span>
 
-	private static int inputNumberOfPlayers(MainWindow window) {
+	private static int inputNumberOfPlayers(MainWindow window){
 <span class="nc" id="L11">		int numPlayers = 0;</span>
-<span class="nc bnc" id="L12" title="All 4 branches missed.">		while(numPlayers &lt;= 0 || numPlayers &gt; GameMaster.MAX_PLAYER) {</span>
+<span class="nc bnc" id="L12" title="All 4 branches missed.">		while(numPlayers &lt;= 0 || numPlayers &gt; GameMaster.MAX_PLAYER){</span>
 <span class="nc" id="L13">			String numberOfPlayers = JOptionPane.showInputDialog(window, &quot;How many players&quot;);</span>
-<span class="nc bnc" id="L14" title="All 2 branches missed.">			if(numberOfPlayers == null) {</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">			if(numberOfPlayers == null){</span>
 <span class="nc" id="L15">				System.exit(0);</span>
 			}
-			try {
+			try{
 <span class="nc" id="L18">				numPlayers = Integer.parseInt(numberOfPlayers);</span>
-<span class="nc" id="L19">			} catch (NumberFormatException e) {</span>
+<span class="nc" id="L19">			} catch (NumberFormatException e){</span>
 <span class="nc" id="L20">				JOptionPane.showMessageDialog(window, &quot;Please input a number&quot;);</span>
 <span class="nc" id="L21">			}</span>
-<span class="nc bnc" id="L22" title="All 4 branches missed.">			if (numPlayers &lt;= 0 || numPlayers &gt; GameMaster.MAX_PLAYER) {</span>
+<span class="nc bnc" id="L22" title="All 4 branches missed.">			if (numPlayers &lt;= 0 || numPlayers &gt; GameMaster.MAX_PLAYER){</span>
 <span class="nc" id="L23">				JOptionPane.showMessageDialog(window, &quot;Please input a number between one and eight&quot;);</span>
-			} else {
+			} else{
 <span class="nc" id="L25">				GameMaster.instance().setNumberOfPlayers(numPlayers);</span>
 			}
 <span class="nc" id="L27">		}</span>
 <span class="nc" id="L28">		return numPlayers;</span>
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 <span class="nc" id="L32">		GameMaster master = GameMaster.instance();</span>
 <span class="nc" id="L33">		MainWindow window = new MainWindow();</span>
 <span class="nc" id="L34">		GameBoard gameBoard = null;</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(args.length &gt; 0) {</span>
-<span class="nc bnc" id="L36" title="All 2 branches missed.">			if(args[0].equals(&quot;test&quot;)) {</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		if(args.length &gt; 0){</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">			if(args[0].equals(&quot;test&quot;)){</span>
 <span class="nc" id="L37">				master.setTestMode(true);</span>
 			}
-			try {
+			try{
 <span class="nc" id="L40">				Class c = Class.forName(args[1]);</span>
 <span class="nc" id="L41">				gameBoard = (GameBoard)c.newInstance();</span>
 			}
-<span class="nc" id="L43">			catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L43">			catch (ClassNotFoundException e){</span>
 <span class="nc" id="L44">				JOptionPane.showMessageDialog(window, &quot;Class Not Found.  Program will exit&quot;);</span>
 <span class="nc" id="L45">				System.exit(0);</span>
 			}
-<span class="nc" id="L47">			catch (IllegalAccessException e ) {</span>
+<span class="nc" id="L47">			catch (IllegalAccessException e ){</span>
 <span class="nc" id="L48">				JOptionPane.showMessageDialog(window, &quot;Illegal Access of Class.  Program will exit&quot;);</span>
 <span class="nc" id="L49">				System.exit(0);</span>
 			}
-<span class="nc" id="L51">			catch (InstantiationException e) {</span>
+<span class="nc" id="L51">			catch (InstantiationException e){</span>
 <span class="nc" id="L52">				JOptionPane.showMessageDialog(window, &quot;Class Cannot be Instantiated.  Program will exit&quot;);</span>
 <span class="nc" id="L53">				System.exit(0);</span>
 <span class="nc" id="L54">			}</span>
 		}
-		else {
+		else{
 <span class="nc" id="L57">			gameBoard = new GameBoardFull();</span>
 		}
 		
@@ -70,7 +70,7 @@ import edu.ncsu.monopoly.test.boardScenarios.GameBoardFull;
 
 <span class="nc" id="L71">		master.setGameBoard(gameBoard);</span>
 <span class="nc" id="L72">		int numPlayers = inputNumberOfPlayers(window);</span>
-<span class="nc bnc" id="L73" title="All 2 branches missed.">		for(int i = 0; i &lt; numPlayers; i++) {</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">		for(int i = 0; i &lt; numPlayers; i++){</span>
 <span class="nc" id="L74">			String name = </span>
 <span class="nc" id="L75">				JOptionPane.showInputDialog(window, &quot;Please input name for Player &quot; + (i+1));</span>
 <span class="nc" id="L76">			GameMaster.instance().getPlayer(i).setName(name);</span>

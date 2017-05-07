@@ -4,13 +4,13 @@ import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.PropertyCell;
 
-<span class="fc" id="L7">public class PropertyCellInfoFormatter implements CellInfoFormatter {</span>
-    public String format(Cell cell) {
+<span class="fc" id="L7">public class PropertyCellInfoFormatter implements CellInfoFormatter{</span>
+    public String format(Cell cell){
 <span class="fc" id="L9">        PropertyCell c = (PropertyCell)cell;</span>
 <span class="fc" id="L10">        StringBuffer buf = new StringBuffer();</span>
 <span class="fc" id="L11">        Player owner = cell.getOwner();</span>
 <span class="fc" id="L12">        String ownerName = &quot;&quot;;</span>
-<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if(owner != null) {</span>
+<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if(owner != null){</span>
 <span class="fc" id="L14">        	ownerName = owner.getName();</span>
         }
 <span class="fc" id="L16">        buf.append(&quot;&lt;html&gt;&lt;b&gt;&lt;font color='&quot;)</span>

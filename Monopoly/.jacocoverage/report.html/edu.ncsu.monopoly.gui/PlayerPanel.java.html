@@ -18,7 +18,7 @@ import edu.ncsu.monopoly.Card;
 import edu.ncsu.monopoly.GameMaster;
 import edu.ncsu.monopoly.Player;
 
-public class PlayerPanel extends JPanel {
+public class PlayerPanel extends JPanel{
 
     private JButton btnBuyHouse;
     private JButton btnDrawCard;
@@ -35,7 +35,7 @@ public class PlayerPanel extends JPanel {
     
     private JTextArea txtProperty;
 
-<span class="nc" id="L38">    public PlayerPanel(Player player) {</span>
+<span class="nc" id="L38">    public PlayerPanel(Player player){</span>
 <span class="nc" id="L39">        JPanel pnlAction = new JPanel();</span>
 <span class="nc" id="L40">        JPanel pnlInfo = new JPanel();</span>
 <span class="nc" id="L41">        btnRollDice = new JButton(&quot;Roll Dice&quot;);</span>
@@ -94,38 +94,38 @@ public class PlayerPanel extends JPanel {
 
 <span class="nc" id="L95">        setBorder(new BevelBorder(BevelBorder.RAISED));</span>
 
-<span class="nc" id="L97">        btnRollDice.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L97">        btnRollDice.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L99">                GameMaster.instance().btnRollDiceClicked();</span>
 <span class="nc" id="L100">            }</span>
         });
 
-<span class="nc" id="L103">        btnEndTurn.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L103">        btnEndTurn.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L105">                GameMaster.instance().btnEndTurnClicked();</span>
 <span class="nc" id="L106">            }</span>
         });
 
-<span class="nc" id="L109">        btnPurchaseProperty.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L109">        btnPurchaseProperty.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L111">                GameMaster.instance().btnPurchasePropertyClicked();</span>
 <span class="nc" id="L112">            }</span>
         });
 
-<span class="nc" id="L115">        btnBuyHouse.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L115">        btnBuyHouse.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L117">                GameMaster.instance().btnBuyHouseClicked();</span>
 <span class="nc" id="L118">            }</span>
         });
 
-<span class="nc" id="L121">        btnGetOutOfJail.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L121">        btnGetOutOfJail.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L123">                GameMaster.instance().btnGetOutOfJailClicked();</span>
 <span class="nc" id="L124">            }</span>
         });
 
-<span class="nc" id="L127">        btnDrawCard.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L127">        btnDrawCard.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L129">                Card card = GameMaster.instance().btnDrawCardClicked();</span>
 <span class="nc" id="L130">                JOptionPane</span>
 <span class="nc" id="L131">                        .showMessageDialog(PlayerPanel.this, card.getLabel());</span>
@@ -133,77 +133,77 @@ public class PlayerPanel extends JPanel {
 <span class="nc" id="L133">            }</span>
         });
 
-<span class="nc" id="L136">        btnTrade.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L136">        btnTrade.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L138">                GameMaster.instance().btnTradeClicked();</span>
 <span class="nc" id="L139">            }</span>
         });
 <span class="nc" id="L141">    }</span>
 
-    public void displayInfo() {
+    public void displayInfo(){
 <span class="nc" id="L144">        lblName.setText(player.getName());</span>
 <span class="nc" id="L145">        lblMoney.setText(&quot;$ &quot; + player.getMoney());</span>
 <span class="nc" id="L146">        StringBuffer buf = new StringBuffer();</span>
 <span class="nc" id="L147">        Cell[] cells = player.getAllProperties();</span>
-<span class="nc bnc" id="L148" title="All 2 branches missed.">        for (int i = 0; i &lt; cells.length; i++) {</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">        for (int i = 0; i &lt; cells.length; i++){</span>
 <span class="nc" id="L149">            buf.append(cells[i] + &quot;\n&quot;);</span>
         }
 <span class="nc" id="L151">        txtProperty.setText(buf.toString());</span>
 <span class="nc" id="L152">    }</span>
     
-    public boolean isBuyHouseButtonEnabled() {
+    public boolean isBuyHouseButtonEnabled(){
 <span class="nc" id="L155">        return btnBuyHouse.isEnabled();</span>
     }
 
-    public boolean isDrawCardButtonEnabled() {
+    public boolean isDrawCardButtonEnabled(){
 <span class="nc" id="L159">        return btnDrawCard.isEnabled();</span>
     }
 
-    public boolean isEndTurnButtonEnabled() {
+    public boolean isEndTurnButtonEnabled(){
 <span class="nc" id="L163">        return btnEndTurn.isEnabled();</span>
     }
     
-    public boolean isGetOutOfJailButtonEnabled() {
+    public boolean isGetOutOfJailButtonEnabled(){
 <span class="nc" id="L167">        return btnGetOutOfJail.isEnabled();</span>
     }
     
-    public boolean isPurchasePropertyButtonEnabled() {
+    public boolean isPurchasePropertyButtonEnabled(){
 <span class="nc" id="L171">        return btnPurchaseProperty.isEnabled();</span>
     }
     
-    public boolean isRollDiceButtonEnabled() {
+    public boolean isRollDiceButtonEnabled(){
 <span class="nc" id="L175">        return btnRollDice.isEnabled();</span>
     }
 
-    public boolean isTradeButtonEnabled() {
+    public boolean isTradeButtonEnabled(){
 <span class="nc" id="L179">        return btnTrade.isEnabled();</span>
     }
 
-    public void setBuyHouseEnabled(boolean b) {
+    public void setBuyHouseEnabled(boolean b){
 <span class="nc" id="L183">        btnBuyHouse.setEnabled(b);</span>
 <span class="nc" id="L184">    }</span>
 
-    public void setDrawCardEnabled(boolean b) {
+    public void setDrawCardEnabled(boolean b){
 <span class="nc" id="L187">        btnDrawCard.setEnabled(b);</span>
 <span class="nc" id="L188">    }</span>
 
-    public void setEndTurnEnabled(boolean enabled) {
+    public void setEndTurnEnabled(boolean enabled){
 <span class="nc" id="L191">        btnEndTurn.setEnabled(enabled);</span>
 <span class="nc" id="L192">    }</span>
 
-    public void setGetOutOfJailEnabled(boolean b) {
+    public void setGetOutOfJailEnabled(boolean b){
 <span class="nc" id="L195">        btnGetOutOfJail.setEnabled(b);</span>
 <span class="nc" id="L196">    }</span>
 
-    public void setPurchasePropertyEnabled(boolean enabled) {
+    public void setPurchasePropertyEnabled(boolean enabled){
 <span class="nc" id="L199">        btnPurchaseProperty.setEnabled(enabled);</span>
 <span class="nc" id="L200">    }</span>
 
-    public void setRollDiceEnabled(boolean enabled) {
+    public void setRollDiceEnabled(boolean enabled){
 <span class="nc" id="L203">        btnRollDice.setEnabled(enabled);</span>
 <span class="nc" id="L204">    }</span>
 
-    public void setTradeEnabled(boolean b) {
+    public void setTradeEnabled(boolean b){
 <span class="nc" id="L207">        btnTrade.setEnabled(b);</span>
 <span class="nc" id="L208">    }</span>
 }

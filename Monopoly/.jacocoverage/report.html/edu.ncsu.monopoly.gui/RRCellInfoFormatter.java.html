@@ -4,13 +4,13 @@ import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.RailRoadCell;
 
-<span class="fc" id="L7">public class RRCellInfoFormatter implements CellInfoFormatter {</span>
-    public String format(Cell cell) {
+<span class="fc" id="L7">public class RRCellInfoFormatter implements CellInfoFormatter{</span>
+    public String format(Cell cell){
 <span class="nc" id="L9">        RailRoadCell c = (RailRoadCell)cell;</span>
 <span class="nc" id="L10">        StringBuffer buf = new StringBuffer();</span>
 <span class="nc" id="L11">        Player owner = cell.getOwner();</span>
 <span class="nc" id="L12">        String ownerName = &quot;&quot;;</span>
-<span class="nc bnc" id="L13" title="All 2 branches missed.">        if(owner != null) {</span>
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        if(owner != null){</span>
 <span class="nc" id="L14">        	ownerName = owner.getName();</span>
         }
 <span class="nc" id="L16">        buf.append(&quot;&lt;html&gt;&lt;b&gt;&lt;font color='lime'&gt;&quot;)</span>

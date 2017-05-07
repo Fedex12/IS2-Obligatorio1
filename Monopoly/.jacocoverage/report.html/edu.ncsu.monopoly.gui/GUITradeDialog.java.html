@@ -17,14 +17,14 @@ import edu.ncsu.monopoly.*;
 import edu.ncsu.monopoly.TradeDeal;
 import edu.ncsu.monopoly.TradeDialog;
 
-public class GUITradeDialog extends JDialog implements TradeDialog {
+public class GUITradeDialog extends JDialog implements TradeDialog{
     private JButton btnOK, btnCancel;
     private JComboBox cboSellers, cboProperties;
 
     private TradeDeal deal;
     private JTextField txtAmount;
     
-    public GUITradeDialog(Frame parent) {
+    public GUITradeDialog(Frame parent){
 <span class="nc" id="L28">        super(parent);</span>
         
 <span class="nc" id="L30">        setTitle(&quot;Trade Property&quot;);</span>
@@ -51,24 +51,24 @@ public class GUITradeDialog extends JDialog implements TradeDialog {
 <span class="nc" id="L51">        contentPane.add(btnCancel);</span>
         
 <span class="nc" id="L53">        btnCancel.addActionListener(new ActionListener(){</span>
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L55">                GUITradeDialog.this.hide();</span>
 <span class="nc" id="L56">            }</span>
         });
         
 <span class="nc" id="L59">        cboSellers.addItemListener(new ItemListener(){</span>
-            public void itemStateChanged(ItemEvent e) {
+            public void itemStateChanged(ItemEvent e){
 <span class="nc" id="L61">                Player player = (Player)e.getItem();</span>
 <span class="nc" id="L62">                updatePropertiesCombo(player);</span>
 <span class="nc" id="L63">            }</span>
         });
         
-<span class="nc" id="L66">        btnOK.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L66">        btnOK.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L68">                int amount = 0;</span>
                 try{
 <span class="nc" id="L70">                    amount = Integer.parseInt(txtAmount.getText());</span>
-<span class="nc" id="L71">                } catch(NumberFormatException nfe) {</span>
+<span class="nc" id="L71">                } catch(NumberFormatException nfe){</span>
 <span class="nc" id="L72">                    JOptionPane.showMessageDialog(GUITradeDialog.this,</span>
                             &quot;Amount should be an integer&quot;, &quot;Error&quot;, JOptionPane.ERROR_MESSAGE);
 <span class="nc" id="L74">                    return;</span>
@@ -77,7 +77,7 @@ public class GUITradeDialog extends JDialog implements TradeDialog {
 <span class="nc bnc" id="L77" title="All 2 branches missed.">                if(cell == null) return;</span>
 <span class="nc" id="L78">                Player player = (Player)cboSellers.getSelectedItem();</span>
 <span class="nc" id="L79">                Player currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
-<span class="nc bnc" id="L80" title="All 2 branches missed.">                if(currentPlayer.getMoney() &gt; amount) { </span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">                if(currentPlayer.getMoney() &gt; amount){ </span>
 <span class="nc" id="L81">	                deal = new TradeDeal();</span>
 <span class="nc" id="L82">	                deal.setAmount(amount);</span>
 <span class="nc" id="L83">	                deal.setPropertyName(cell.getName());</span>
@@ -90,26 +90,26 @@ public class GUITradeDialog extends JDialog implements TradeDialog {
 <span class="nc" id="L90">        this.pack();</span>
 <span class="nc" id="L91">    }</span>
 
-    private void buildSellersCombo() {
+    private void buildSellersCombo(){
 <span class="nc" id="L94">        List sellers = GameMaster.instance().getSellerList();</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (Iterator iter = sellers.iterator(); iter.hasNext();) {</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (Iterator iter = sellers.iterator(); iter.hasNext();){</span>
 <span class="nc" id="L96">            Player player = (Player) iter.next();</span>
 <span class="nc" id="L97">            cboSellers.addItem(player);</span>
 <span class="nc" id="L98">        }</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">        if(sellers.size() &gt; 0) {</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if(sellers.size() &gt; 0){</span>
 <span class="nc" id="L100">            updatePropertiesCombo((Player)sellers.get(0));</span>
         }
 <span class="nc" id="L102">    }</span>
 
-    public TradeDeal getTradeDeal() {
+    public TradeDeal getTradeDeal(){
 <span class="nc" id="L105">        return deal;</span>
     }
 
-    private void updatePropertiesCombo(Player player) {
+    private void updatePropertiesCombo(Player player){
 <span class="nc" id="L109">        cboProperties.removeAllItems();</span>
 <span class="nc" id="L110">        Cell[] cells = player.getAllProperties();</span>
 <span class="nc bnc" id="L111" title="All 2 branches missed.">        btnOK.setEnabled(cells.length &gt; 0);</span>
-<span class="nc bnc" id="L112" title="All 2 branches missed.">        for (int i = 0; i &lt; cells.length; i++) {</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">        for (int i = 0; i &lt; cells.length; i++){</span>
 <span class="nc" id="L113">            cboProperties.addItem(cells[i]);</span>
         }
 <span class="nc" id="L115">    }</span>

@@ -10,11 +10,11 @@ import edu.ncsu.monopoly.RespondDialog;
 import edu.ncsu.monopoly.TradeDeal;
 
 
-public class GUIRespondDialog extends JDialog implements RespondDialog {
+public class GUIRespondDialog extends JDialog implements RespondDialog{
     private boolean response;
 <span class="nc" id="L15">    JTextArea txtMessage = new JTextArea();</span>
     
-<span class="nc" id="L17">    public GUIRespondDialog() {</span>
+<span class="nc" id="L17">    public GUIRespondDialog(){</span>
 <span class="nc" id="L18">        JButton btnYes = new JButton(&quot;Yes&quot;);</span>
 <span class="nc" id="L19">        JButton btnNo = new JButton(&quot;No&quot;);</span>
 <span class="nc" id="L20">        txtMessage.setPreferredSize(new Dimension(300, 200));</span>
@@ -30,14 +30,14 @@ public class GUIRespondDialog extends JDialog implements RespondDialog {
 <span class="nc" id="L30">        contentPane.add(pnlButtons, BorderLayout.SOUTH);</span>
         
 <span class="nc" id="L32">        btnYes.addActionListener(new ActionListener(){</span>
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L34">                response = true;</span>
 <span class="nc" id="L35">                hide();</span>
 <span class="nc" id="L36">            }</span>
         });
 
 <span class="nc" id="L39">        btnNo.addActionListener(new ActionListener(){</span>
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
 <span class="nc" id="L41">                response = false;</span>
 <span class="nc" id="L42">                hide();</span>
 <span class="nc" id="L43">            }</span>
@@ -47,11 +47,11 @@ public class GUIRespondDialog extends JDialog implements RespondDialog {
 <span class="nc" id="L47">        pack();</span>
 <span class="nc" id="L48">    }</span>
 
-    public boolean getResponse() {
+    public boolean getResponse(){
 <span class="nc" id="L51">        return response;</span>
     }
     
-    public void setDeal(TradeDeal deal) {
+    public void setDeal(TradeDeal deal){
 <span class="nc" id="L55">        txtMessage.setText(deal.makeMessage());</span>
 <span class="nc" id="L56">    }</span>
 

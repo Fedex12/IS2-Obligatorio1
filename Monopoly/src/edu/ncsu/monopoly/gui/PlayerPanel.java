@@ -1,10 +1,13 @@
 package edu.ncsu.monopoly.gui;
 
+import edu.ncsu.monopoly.Card;
+import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.GameMaster;
+import edu.ncsu.monopoly.Player;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -12,11 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.OverlayLayout;
 import javax.swing.border.BevelBorder;
-
-import edu.ncsu.monopoly.*;
-import edu.ncsu.monopoly.Card;
-import edu.ncsu.monopoly.GameMaster;
-import edu.ncsu.monopoly.Player;
 
 public class PlayerPanel extends JPanel {
 
@@ -27,12 +25,12 @@ public class PlayerPanel extends JPanel {
     private JButton btnPurchaseProperty;
     private JButton btnRollDice;
     private JButton btnTrade;
-    
+
     private JLabel lblMoney;
     private JLabel lblName;
-    
+
     private Player player;
-    
+
     private JTextArea txtProperty;
 
     public PlayerPanel(Player player) {
@@ -150,7 +148,7 @@ public class PlayerPanel extends JPanel {
         }
         txtProperty.setText(buf.toString());
     }
-    
+
     public boolean isBuyHouseButtonEnabled() {
         return btnBuyHouse.isEnabled();
     }
@@ -162,15 +160,15 @@ public class PlayerPanel extends JPanel {
     public boolean isEndTurnButtonEnabled() {
         return btnEndTurn.isEnabled();
     }
-    
+
     public boolean isGetOutOfJailButtonEnabled() {
         return btnGetOutOfJail.isEnabled();
     }
-    
+
     public boolean isPurchasePropertyButtonEnabled() {
         return btnPurchaseProperty.isEnabled();
     }
-    
+
     public boolean isRollDiceButtonEnabled() {
         return btnRollDice.isEnabled();
     }

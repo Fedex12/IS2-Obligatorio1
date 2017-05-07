@@ -4,14 +4,14 @@ import edu.ncsu.monopoly.Cell;
 import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.UtilityCell;
 
-public class UtilCellInfoFormatter implements CellInfoFormatter {
+public class UtilCellInfoFormatter implements CellInfoFormatter{
 
-	public String format(Cell cell) {
+	public String format(Cell cell){
         UtilityCell c = (UtilityCell)cell;
         StringBuffer buf = new StringBuffer();
         Player owner = cell.getOwner();
         String ownerName = "";
-        if(owner != null) {
+        if(owner != null){
         	ownerName = owner.getName();
         }
         buf.append("<html><b><font color='olive'>")

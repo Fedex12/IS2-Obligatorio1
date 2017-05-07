@@ -6,8 +6,8 @@ import edu.ncsu.monopoly.GameBoard;
 import edu.ncsu.monopoly.GoToJailCell;
 import edu.ncsu.monopoly.JailCell;
 
-public class GameBoardFreeParking extends GameBoard {
-	public GameBoardFreeParking() {
+public class GameBoardFreeParking extends GameBoard{
+	public GameBoardFreeParking(){
 		super();
 		JailCell jail = new JailCell();
 		FreeParkingCell freeParking = new FreeParkingCell();

@@ -1,5 +1,5 @@
 package edu.ncsu.monopoly;
 
-public interface RespondDialog {
+public interface RespondDialog{
     boolean getResponse();
 }

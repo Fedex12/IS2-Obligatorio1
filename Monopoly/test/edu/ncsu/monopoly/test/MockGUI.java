@@ -9,6 +9,7 @@ import edu.ncsu.monopoly.TradeDeal;
 import edu.ncsu.monopoly.TradeDialog;
 
 public class MockGUI implements MonopolyGUI {
+
     private boolean btnDrawCardState, btnEndTurnState, btnGetOutOfJailState;
     private boolean[] btnTradeState = new boolean[2];
 
@@ -20,12 +21,13 @@ public class MockGUI implements MonopolyGUI {
 
     public void enablePurchaseBtn(int playerIndex) {
     }
-	public int[] getDiceRoll() {
-		int roll[] = new int[2];
-		roll[0] = 2;
-		roll[1] = 3;
-		return roll;
-	}
+
+    public int[] getDiceRoll() {
+        int roll[] = new int[2];
+        roll[0] = 2;
+        roll[1] = 3;
+        return roll;
+    }
 
     public boolean isDrawCardButtonEnabled() {
         return btnDrawCardState;
@@ -34,10 +36,10 @@ public class MockGUI implements MonopolyGUI {
     public boolean isEndTurnButtonEnabled() {
         return btnEndTurnState;
     }
-	
-	public boolean isGetOutOfJailButtonEnabled() {
-		return btnGetOutOfJailState;
-	}
+
+    public boolean isGetOutOfJailButtonEnabled() {
+        return btnGetOutOfJailState;
+    }
 
     public boolean isTradeButtonEnabled(int i) {
         return btnTradeState[i];
@@ -68,7 +70,7 @@ public class MockGUI implements MonopolyGUI {
     }
 
     public void setGetOutOfJailEnabled(boolean b) {
-    	this.btnGetOutOfJailState = b;
+        this.btnGetOutOfJailState = b;
     }
 
     public void setPurchasePropertyEnabled(boolean enabled) {
@@ -87,15 +89,15 @@ public class MockGUI implements MonopolyGUI {
     public void showMessage(String string) {
     }
 
-	public int showUtilDiceRoll() {
+    public int showUtilDiceRoll() {
 //		int[] diceValues = GameMaster.instance().rollDice();
 //		return diceValues[0] + diceValues[1];
-		return 10;
-	}
+        return 10;
+    }
 
     public void startGame() {
     }
 
-	public void update() {
-	}
+    public void update() {
+    }
 }

@@ -4,17 +4,17 @@ import java.util.Hashtable;
 
 import edu.ncsu.monopoly.*;
 
-<span class="nc" id="L7">public class InfoFormatter {</span>
+<span class="nc" id="L7">public class InfoFormatter{</span>
 <span class="fc" id="L8">    static Hashtable cellInfoFormatters = null;</span>
     
-    static {
-<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if (cellInfoFormatters == null) {</span>
+    static{
+<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if (cellInfoFormatters == null){</span>
 <span class="fc" id="L12">            cellInfoFormatters = new Hashtable();</span>
 <span class="fc" id="L13">            addFormatters();</span>
         }
 <span class="fc" id="L15">    }</span>
     
-    private static void addFormatters() {
+    private static void addFormatters(){
 <span class="fc" id="L18">        cellInfoFormatters.put(</span>
                 PropertyCell.class, new PropertyCellInfoFormatter());
 <span class="fc" id="L20">        cellInfoFormatters.put(</span>
@@ -33,7 +33,7 @@ import edu.ncsu.monopoly.*;
                 CardCell.class, new CCCellInfoFormatter());
 <span class="fc" id="L34">    }</span>
 
-    public static String cellInfo(Cell cell) {
+    public static String cellInfo(Cell cell){
 <span class="fc" id="L37">        CellInfoFormatter formatter =</span>
 <span class="fc" id="L38">                (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());</span>
 <span class="fc" id="L39">        return formatter.format(cell);</span>

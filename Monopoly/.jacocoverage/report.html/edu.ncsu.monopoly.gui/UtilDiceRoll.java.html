@@ -12,9 +12,9 @@ import javax.swing.JPanel;
 
 import edu.ncsu.monopoly.GameMaster;
 
-public class UtilDiceRoll extends JDialog {
+public class UtilDiceRoll extends JDialog{
 	
-	public static int showDialog() {
+	public static int showDialog(){
 <span class="nc" id="L18">		UtilDiceRoll dialog = new UtilDiceRoll();</span>
 <span class="nc" id="L19">		dialog.show();</span>
 <span class="nc" id="L20">		return dialog.diceValue;</span>
@@ -24,7 +24,7 @@ public class UtilDiceRoll extends JDialog {
 	private int diceValue;
 <span class="nc" id="L25">	private JLabel lblPrompt = new JLabel();</span>
 
-<span class="nc" id="L27">	public UtilDiceRoll() {</span>
+<span class="nc" id="L27">	public UtilDiceRoll(){</span>
 <span class="nc" id="L28">		setModal(true);</span>
 <span class="nc" id="L29">		btnOK.setEnabled(false);</span>
 <span class="nc" id="L30">		lblPrompt.setText(&quot;Please roll the dice to determine your utility bill.&quot;);</span>
@@ -36,12 +36,12 @@ public class UtilDiceRoll extends JDialog {
 <span class="nc" id="L36">		contentPane.add(lblPrompt, BorderLayout.CENTER);</span>
 <span class="nc" id="L37">		contentPane.add(pnlButtons, BorderLayout.SOUTH);</span>
 <span class="nc" id="L38">		btnDice.addActionListener(new ActionListener(){</span>
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0){
 <span class="nc" id="L40">				rollDice();</span>
 <span class="nc" id="L41">			}</span>
 		});
 <span class="nc" id="L43">		btnOK.addActionListener(new ActionListener(){</span>
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0){
 <span class="nc" id="L45">				okClicked();</span>
 <span class="nc" id="L46">			}</span>
 		});
@@ -52,7 +52,7 @@ public class UtilDiceRoll extends JDialog {
 <span class="nc" id="L52">		this.dispose();</span>
 <span class="nc" id="L53">	}</span>
 	
-	public void rollDice() {
+	public void rollDice(){
 <span class="nc" id="L56">		int[] diceRoll = GameMaster.instance().rollDice();</span>
 <span class="nc" id="L57">		this.diceValue = diceRoll[0] + diceRoll[1];</span>
 <span class="nc" id="L58">		lblPrompt.setText(&quot;You rolled &quot; + diceValue);</span>

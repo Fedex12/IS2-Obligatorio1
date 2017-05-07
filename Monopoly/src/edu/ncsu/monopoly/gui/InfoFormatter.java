@@ -1,30 +1,38 @@
 package edu.ncsu.monopoly.gui;
 
+import edu.ncsu.monopoly.CardCell;
+import edu.ncsu.monopoly.Cell;
+import edu.ncsu.monopoly.FreeParkingCell;
+import edu.ncsu.monopoly.GoCell;
+import edu.ncsu.monopoly.GoToJailCell;
+import edu.ncsu.monopoly.JailCell;
+import edu.ncsu.monopoly.PropertyCell;
+import edu.ncsu.monopoly.RailRoadCell;
+import edu.ncsu.monopoly.UtilityCell;
 import java.util.Hashtable;
 
-import edu.ncsu.monopoly.*;
-
 public class InfoFormatter {
+
     static Hashtable cellInfoFormatters = null;
-    
+
     static {
         if (cellInfoFormatters == null) {
             cellInfoFormatters = new Hashtable();
             addFormatters();
         }
     }
-    
+
     private static void addFormatters() {
         cellInfoFormatters.put(
                 PropertyCell.class, new PropertyCellInfoFormatter());
         cellInfoFormatters.put(
                 GoCell.class, new GoCellInfoFormatter());
         cellInfoFormatters.put(
-        		JailCell.class, new JailCellInfoFormatter());
+                JailCell.class, new JailCellInfoFormatter());
         cellInfoFormatters.put(
-        		GoToJailCell.class, new GotoJailCellInfoFormatter());
+                GoToJailCell.class, new GotoJailCellInfoFormatter());
         cellInfoFormatters.put(
-        		FreeParkingCell.class, new FreeParkingCellInfoFormatter());
+                FreeParkingCell.class, new FreeParkingCellInfoFormatter());
         cellInfoFormatters.put(
                 RailRoadCell.class, new RRCellInfoFormatter());
         cellInfoFormatters.put(
@@ -34,8 +42,8 @@ public class InfoFormatter {
     }
 
     public static String cellInfo(Cell cell) {
-        CellInfoFormatter formatter =
-                (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());
+        CellInfoFormatter formatter
+                = (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());
         return formatter.format(cell);
     }
 
