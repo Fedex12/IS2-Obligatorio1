@@ -23,7 +23,7 @@ public class TaxiCard extends Card {
         Player currentPlayer = GameMaster.instance().getCurrentPlayer();
         int pos = 0;
         while (pos <= 0 || pos > GameMaster.MAX_PLAYER) {
-            String resp = JOptionPane.showInputDialog("You can move between one and six positions, enter the number of positions you want to advance.","");
+            String resp = JOptionPane.showInputDialog("Taxi Card: You can move between one and six positions, enter the number of positions you want to advance.","");
 
             try {
                 pos = Integer.parseInt(resp);

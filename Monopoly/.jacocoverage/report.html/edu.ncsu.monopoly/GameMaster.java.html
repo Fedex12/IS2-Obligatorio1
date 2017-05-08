@@ -169,295 +169,298 @@ public class GameMaster {
 <span class="fc" id="L169">            gui.showMessage(msg.toString());</span>
 <span class="fc" id="L170">            movePlayer(player, rolls[0] + rolls[1]);</span>
 <span class="fc" id="L171">            gui.setBuyHouseEnabled(false);</span>
-        }
-<span class="fc" id="L173">    }</span>
-
-    public void btnTradeClicked() {
-<span class="fc" id="L176">        TradeDialog dialog = gui.openTradeDialog();</span>
-<span class="fc" id="L177">        TradeDeal deal = dialog.getTradeDeal();</span>
-<span class="pc bpc" id="L178" title="1 of 2 branches missed.">        if (deal != null) {</span>
-<span class="fc" id="L179">            RespondDialog rDialog = gui.openRespondDialog(deal);</span>
-<span class="pc bpc" id="L180" title="1 of 2 branches missed.">            if (rDialog.getResponse()) {</span>
-<span class="fc" id="L181">                completeTrade(deal);</span>
-<span class="fc" id="L182">                archivo.crearLog(deal.makeMessage());</span>
-<span class="fc" id="L183">                updateGUI();</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">            if(rolls[0]==rolls[1]){</span>
+<span class="nc" id="L173">                gui.setRollDiceEnabled(true);</span>
             }
         }
-<span class="fc" id="L186">    }</span>
+<span class="fc" id="L176">    }</span>
+
+    public void btnTradeClicked() {
+<span class="fc" id="L179">        TradeDialog dialog = gui.openTradeDialog();</span>
+<span class="fc" id="L180">        TradeDeal deal = dialog.getTradeDeal();</span>
+<span class="pc bpc" id="L181" title="1 of 2 branches missed.">        if (deal != null) {</span>
+<span class="fc" id="L182">            RespondDialog rDialog = gui.openRespondDialog(deal);</span>
+<span class="pc bpc" id="L183" title="1 of 2 branches missed.">            if (rDialog.getResponse()) {</span>
+<span class="fc" id="L184">                completeTrade(deal);</span>
+<span class="fc" id="L185">                archivo.crearLog(deal.makeMessage());</span>
+<span class="fc" id="L186">                updateGUI();</span>
+            }
+        }
+<span class="fc" id="L189">    }</span>
 
     public void completeTrade(TradeDeal deal) {
-<span class="fc" id="L189">        Player seller = getPlayer(deal.getPlayerIndex());</span>
-<span class="fc" id="L190">        Cell property = gameBoard.queryCell(deal.getPropertyName());</span>
-<span class="fc" id="L191">        seller.sellProperty(property, deal.getAmount());</span>
-<span class="fc" id="L192">        getCurrentPlayer().buyProperty(property, deal.getAmount());</span>
-<span class="fc" id="L193">    }</span>
+<span class="fc" id="L192">        Player seller = getPlayer(deal.getPlayerIndex());</span>
+<span class="fc" id="L193">        Cell property = gameBoard.queryCell(deal.getPropertyName());</span>
+<span class="fc" id="L194">        seller.sellProperty(property, deal.getAmount());</span>
+<span class="fc" id="L195">        getCurrentPlayer().buyProperty(property, deal.getAmount());</span>
+<span class="fc" id="L196">    }</span>
 
     public Card drawCCCard() {
-<span class="fc" id="L196">        return gameBoard.drawCCCard();</span>
+<span class="fc" id="L199">        return gameBoard.drawCCCard();</span>
     }
 
     public Card drawChanceCard() {
-<span class="nc" id="L200">        return gameBoard.drawChanceCard();</span>
+<span class="nc" id="L203">        return gameBoard.drawChanceCard();</span>
     }
 
     public Player getCurrentPlayer() {
-<span class="fc" id="L204">        return getPlayer(turn);</span>
+<span class="fc" id="L207">        return getPlayer(turn);</span>
     }
 
     public int getCurrentPlayerIndex() {
-<span class="fc" id="L208">        return turn;</span>
+<span class="fc" id="L211">        return turn;</span>
     }
 
     public GameBoard getGameBoard() {
-<span class="fc" id="L212">        return gameBoard;</span>
+<span class="fc" id="L215">        return gameBoard;</span>
     }
 
     public MonopolyGUI getGUI() {
-<span class="fc" id="L216">        return gui;</span>
+<span class="fc" id="L219">        return gui;</span>
     }
 
     public int getInitAmountOfMoney() {
-<span class="fc" id="L220">        return initAmountOfMoney;</span>
+<span class="fc" id="L223">        return initAmountOfMoney;</span>
     }
 
     public int getNumberOfPlayers() {
-<span class="fc" id="L224">        return players.size();</span>
+<span class="fc" id="L227">        return players.size();</span>
     }
 
     public int getNumberOfSellers() {
-<span class="fc" id="L228">        return players.size() - 1;</span>
+<span class="fc" id="L231">        return players.size() - 1;</span>
     }
 
     public Player getPlayer(int index) {
-<span class="fc" id="L232">        return (Player) players.get(index);</span>
+<span class="fc" id="L235">        return (Player) players.get(index);</span>
     }
 
     public int getPlayerIndex(Player player) {
-<span class="fc" id="L236">        return players.indexOf(player);</span>
+<span class="fc" id="L239">        return players.indexOf(player);</span>
     }
 
     public void addGamePlayed(Player player) {
-<span class="nc" id="L240">        int pos = registredPlayers.indexOf(player);</span>
-<span class="nc" id="L241">        int gamesPlayed = registredPlayers.get(pos).getGamesPlayed();</span>
-<span class="nc" id="L242">        registredPlayers.get(pos).setGamesPlayed(gamesPlayed + 1);</span>
-<span class="nc" id="L243">    }</span>
+<span class="nc" id="L243">        int pos = registredPlayers.indexOf(player);</span>
+<span class="nc" id="L244">        int gamesPlayed = registredPlayers.get(pos).getGamesPlayed();</span>
+<span class="nc" id="L245">        registredPlayers.get(pos).setGamesPlayed(gamesPlayed + 1);</span>
+<span class="nc" id="L246">    }</span>
 
     public ArrayList getSellerList() {
-<span class="fc" id="L246">        ArrayList sellers = new ArrayList();</span>
-<span class="fc bfc" id="L247" title="All 2 branches covered.">        for (Iterator iter = players.iterator(); iter.hasNext();) {</span>
-<span class="fc" id="L248">            Player player = (Player) iter.next();</span>
-<span class="fc bfc" id="L249" title="All 2 branches covered.">            if (player != getCurrentPlayer()) {</span>
-<span class="fc" id="L250">                sellers.add(player);</span>
+<span class="fc" id="L249">        ArrayList sellers = new ArrayList();</span>
+<span class="fc bfc" id="L250" title="All 2 branches covered.">        for (Iterator iter = players.iterator(); iter.hasNext();) {</span>
+<span class="fc" id="L251">            Player player = (Player) iter.next();</span>
+<span class="fc bfc" id="L252" title="All 2 branches covered.">            if (player != getCurrentPlayer()) {</span>
+<span class="fc" id="L253">                sellers.add(player);</span>
             }
-<span class="fc" id="L252">        }</span>
-<span class="fc" id="L253">        return sellers;</span>
+<span class="fc" id="L255">        }</span>
+<span class="fc" id="L256">        return sellers;</span>
     }
 
     public int getTurn() {
-<span class="fc" id="L257">        return turn;</span>
+<span class="fc" id="L260">        return turn;</span>
     }
 
     public int getUtilDiceRoll() {
-<span class="fc" id="L261">        return this.utilDiceRoll;</span>
+<span class="fc" id="L264">        return this.utilDiceRoll;</span>
     }
 
     public ArrayList getPlayers() {
-<span class="nc" id="L265">        return players;</span>
+<span class="nc" id="L268">        return players;</span>
     }
 
     public void setPlayers(ArrayList players) {
-<span class="nc" id="L269">        this.players = players;</span>
-<span class="nc bnc" id="L270" title="All 2 branches missed.">        for (int i = 0; i &lt; players.size(); i++) {</span>
-<span class="nc" id="L271">            this.players.get(i).setMoney(initAmountOfMoney);</span>
+<span class="nc" id="L272">        this.players = players;</span>
+<span class="nc bnc" id="L273" title="All 2 branches missed.">        for (int i = 0; i &lt; players.size(); i++) {</span>
+<span class="nc" id="L274">            this.players.get(i).setMoney(initAmountOfMoney);</span>
         }
 
-<span class="nc" id="L274">    }</span>
+<span class="nc" id="L277">    }</span>
 
     public void movePlayer(int playerIndex, int diceValue) {
-<span class="fc" id="L277">        Player player = (Player) players.get(playerIndex);</span>
-<span class="fc" id="L278">        movePlayer(player, diceValue);</span>
-<span class="fc" id="L279">    }</span>
+<span class="fc" id="L280">        Player player = (Player) players.get(playerIndex);</span>
+<span class="fc" id="L281">        movePlayer(player, diceValue);</span>
+<span class="fc" id="L282">    }</span>
 
     public void movePlayer(Player player, int diceValue) {
-<span class="fc" id="L282">        Cell currentPosition = player.getPosition();</span>
-<span class="fc" id="L283">        int positionIndex = gameBoard.queryCellIndex(currentPosition.getName());</span>
-<span class="fc" id="L284">        int newIndex = (positionIndex + diceValue) % gameBoard.getCellNumber();</span>
-<span class="pc bpc" id="L285" title="1 of 4 branches missed.">        if (newIndex &lt;= positionIndex || diceValue &gt;= gameBoard.getCellNumber()) {</span>
-<span class="fc" id="L286">            player.setMoney(player.getMoney() + 200);</span>
-<span class="fc" id="L287">            archivo.crearLog(&quot;El jugador &quot; + player.getName() + &quot; pasa por el GO y suma 200&quot;);</span>
+<span class="fc" id="L285">        Cell currentPosition = player.getPosition();</span>
+<span class="fc" id="L286">        int positionIndex = gameBoard.queryCellIndex(currentPosition.getName());</span>
+<span class="fc" id="L287">        int newIndex = (positionIndex + diceValue) % gameBoard.getCellNumber();</span>
+<span class="pc bpc" id="L288" title="1 of 4 branches missed.">        if (newIndex &lt;= positionIndex || diceValue &gt;= gameBoard.getCellNumber()) {</span>
+<span class="fc" id="L289">            player.setMoney(player.getMoney() + 200);</span>
+<span class="fc" id="L290">            archivo.crearLog(&quot;El jugador &quot; + player.getName() + &quot; pasa por el GO y suma 200&quot;);</span>
         }
-<span class="fc" id="L289">        player.setPosition(gameBoard.getCell(newIndex));</span>
-<span class="fc" id="L290">        gui.movePlayer(getPlayerIndex(player), positionIndex, newIndex);</span>
-<span class="fc" id="L291">        playerMoved(player);</span>
-<span class="fc" id="L292">        updateGUI();</span>
-<span class="fc" id="L293">    }</span>
+<span class="fc" id="L292">        player.setPosition(gameBoard.getCell(newIndex));</span>
+<span class="fc" id="L293">        gui.movePlayer(getPlayerIndex(player), positionIndex, newIndex);</span>
+<span class="fc" id="L294">        playerMoved(player);</span>
+<span class="fc" id="L295">        updateGUI();</span>
+<span class="fc" id="L296">    }</span>
 
     public void playerMoved(Player player) {
-<span class="fc" id="L296">        Cell cell = player.getPosition();</span>
-<span class="fc" id="L297">        int playerIndex = getPlayerIndex(player);</span>
-<span class="fc bfc" id="L298" title="All 2 branches covered.">        if (cell instanceof CardCell) {</span>
-<span class="fc" id="L299">            gui.setDrawCardEnabled(true);</span>
+<span class="fc" id="L299">        Cell cell = player.getPosition();</span>
+<span class="fc" id="L300">        int playerIndex = getPlayerIndex(player);</span>
+<span class="fc bfc" id="L301" title="All 2 branches covered.">        if (cell instanceof CardCell) {</span>
+<span class="fc" id="L302">            gui.setDrawCardEnabled(true);</span>
         } else {
-<span class="fc bfc" id="L301" title="All 2 branches covered.">            if (cell.isAvailable()) {</span>
-<span class="fc" id="L302">                int price = cell.getPrice();</span>
-<span class="pc bpc" id="L303" title="2 of 4 branches missed.">                if (price &lt;= player.getMoney() &amp;&amp; price &gt; 0) {</span>
-<span class="fc" id="L304">                    gui.enablePurchaseBtn(playerIndex);</span>
+<span class="fc bfc" id="L304" title="All 2 branches covered.">            if (cell.isAvailable()) {</span>
+<span class="fc" id="L305">                int price = cell.getPrice();</span>
+<span class="pc bpc" id="L306" title="2 of 4 branches missed.">                if (price &lt;= player.getMoney() &amp;&amp; price &gt; 0) {</span>
+<span class="fc" id="L307">                    gui.enablePurchaseBtn(playerIndex);</span>
                 }
             }
-<span class="fc" id="L307">            gui.enableEndTurnBtn(playerIndex);</span>
+<span class="fc" id="L310">            gui.enableEndTurnBtn(playerIndex);</span>
         }
-<span class="fc" id="L309">        gui.setTradeEnabled(turn, false);</span>
-<span class="fc" id="L310">    }</span>
+<span class="fc" id="L312">        gui.setTradeEnabled(turn, false);</span>
+<span class="fc" id="L313">    }</span>
 
     public void reset() {
-<span class="fc bfc" id="L313" title="All 2 branches covered.">        for (int i = 0; i &lt; getNumberOfPlayers(); i++) {</span>
-<span class="fc" id="L314">            Player player = (Player) players.get(i);</span>
-<span class="fc" id="L315">            player.setPosition(gameBoard.getCell(0));</span>
+<span class="fc bfc" id="L316" title="All 2 branches covered.">        for (int i = 0; i &lt; getNumberOfPlayers(); i++) {</span>
+<span class="fc" id="L317">            Player player = (Player) players.get(i);</span>
+<span class="fc" id="L318">            player.setPosition(gameBoard.getCell(0));</span>
         }
-<span class="fc bfc" id="L317" title="All 2 branches covered.">        if (gameBoard != null) {</span>
-<span class="fc" id="L318">            gameBoard.removeCards();</span>
+<span class="fc bfc" id="L320" title="All 2 branches covered.">        if (gameBoard != null) {</span>
+<span class="fc" id="L321">            gameBoard.removeCards();</span>
         }
-<span class="fc" id="L320">        turn = 0;</span>
-<span class="fc" id="L321">    }</span>
+<span class="fc" id="L323">        turn = 0;</span>
+<span class="fc" id="L324">    }</span>
 
     public int[] rollDice() {
-<span class="pc bpc" id="L324" title="1 of 2 branches missed.">        if (testMode) {</span>
-<span class="fc" id="L325">            return gui.getDiceRoll();</span>
+<span class="pc bpc" id="L327" title="1 of 2 branches missed.">        if (testMode) {</span>
+<span class="fc" id="L328">            return gui.getDiceRoll();</span>
         } else {
-<span class="nc" id="L327">            return new int[]{</span>
-<span class="nc" id="L328">                dice[0].getRoll(),</span>
-<span class="nc" id="L329">                dice[1].getRoll()</span>
+<span class="nc" id="L330">            return new int[]{</span>
+<span class="nc" id="L331">                dice[0].getRoll(),</span>
+<span class="nc" id="L332">                dice[1].getRoll()</span>
             };
         }
     }
 
     public void sendToJail(Player player) {
-<span class="fc" id="L335">        int oldPosition = gameBoard.queryCellIndex(getCurrentPlayer().getPosition().getName());</span>
-<span class="fc" id="L336">        player.setPosition(gameBoard.queryCell(&quot;Jail&quot;));</span>
-<span class="fc" id="L337">        player.setInJail(true);</span>
-<span class="fc" id="L338">        int jailIndex = gameBoard.queryCellIndex(&quot;Jail&quot;);</span>
-<span class="fc" id="L339">        gui.movePlayer(</span>
-<span class="fc" id="L340">                getPlayerIndex(player),</span>
+<span class="fc" id="L338">        int oldPosition = gameBoard.queryCellIndex(getCurrentPlayer().getPosition().getName());</span>
+<span class="fc" id="L339">        player.setPosition(gameBoard.queryCell(&quot;Jail&quot;));</span>
+<span class="fc" id="L340">        player.setInJail(true);</span>
+<span class="fc" id="L341">        int jailIndex = gameBoard.queryCellIndex(&quot;Jail&quot;);</span>
+<span class="fc" id="L342">        gui.movePlayer(</span>
+<span class="fc" id="L343">                getPlayerIndex(player),</span>
                 oldPosition,
                 jailIndex);
-<span class="fc" id="L343">    }</span>
+<span class="fc" id="L346">    }</span>
 
     private void setAllButtonEnabled(boolean enabled) {
-<span class="fc" id="L346">        gui.setRollDiceEnabled(enabled);</span>
-<span class="fc" id="L347">        gui.setPurchasePropertyEnabled(enabled);</span>
-<span class="fc" id="L348">        gui.setEndTurnEnabled(enabled);</span>
-<span class="fc" id="L349">        gui.setTradeEnabled(turn, enabled);</span>
-<span class="fc" id="L350">        gui.setBuyHouseEnabled(enabled);</span>
-<span class="fc" id="L351">        gui.setDrawCardEnabled(enabled);</span>
-<span class="fc" id="L352">        gui.setGetOutOfJailEnabled(enabled);</span>
-<span class="fc" id="L353">    }</span>
+<span class="fc" id="L349">        gui.setRollDiceEnabled(enabled);</span>
+<span class="fc" id="L350">        gui.setPurchasePropertyEnabled(enabled);</span>
+<span class="fc" id="L351">        gui.setEndTurnEnabled(enabled);</span>
+<span class="fc" id="L352">        gui.setTradeEnabled(turn, enabled);</span>
+<span class="fc" id="L353">        gui.setBuyHouseEnabled(enabled);</span>
+<span class="fc" id="L354">        gui.setDrawCardEnabled(enabled);</span>
+<span class="fc" id="L355">        gui.setGetOutOfJailEnabled(enabled);</span>
+<span class="fc" id="L356">    }</span>
 
     public void setGameBoard(GameBoard board) {
-<span class="fc" id="L356">        this.gameBoard = board;</span>
-<span class="fc" id="L357">    }</span>
+<span class="fc" id="L359">        this.gameBoard = board;</span>
+<span class="fc" id="L360">    }</span>
 
     public void setGUI(MonopolyGUI gui) {
-<span class="fc" id="L360">        this.gui = gui;</span>
-<span class="fc" id="L361">    }</span>
+<span class="fc" id="L363">        this.gui = gui;</span>
+<span class="fc" id="L364">    }</span>
 
     public void setInitAmountOfMoney(int money) {
-<span class="nc" id="L364">        this.initAmountOfMoney = money;</span>
-<span class="nc" id="L365">    }</span>
+<span class="nc" id="L367">        this.initAmountOfMoney = money;</span>
+<span class="nc" id="L368">    }</span>
 
     public void setNumberOfPlayers(int number) {
-<span class="fc" id="L368">        players.clear();</span>
-<span class="fc bfc" id="L369" title="All 2 branches covered.">        for (int i = 0; i &lt; number; i++) {</span>
-<span class="fc" id="L370">            Player player = new Player();</span>
-<span class="fc" id="L371">            player.setMoney(initAmountOfMoney);</span>
-<span class="fc" id="L372">            players.add(player);</span>
+<span class="fc" id="L371">        players.clear();</span>
+<span class="fc bfc" id="L372" title="All 2 branches covered.">        for (int i = 0; i &lt; number; i++) {</span>
+<span class="fc" id="L373">            Player player = new Player();</span>
+<span class="fc" id="L374">            player.setMoney(initAmountOfMoney);</span>
+<span class="fc" id="L375">            players.add(player);</span>
         }
-<span class="fc" id="L374">    }</span>
+<span class="fc" id="L377">    }</span>
 
     public void setUtilDiceRoll(int diceRoll) {
-<span class="nc" id="L377">        this.utilDiceRoll = diceRoll;</span>
-<span class="nc" id="L378">    }</span>
+<span class="nc" id="L380">        this.utilDiceRoll = diceRoll;</span>
+<span class="nc" id="L381">    }</span>
 
     public void startGame() {
 
-<span class="fc" id="L382">        archivo.crearLog(&quot; Comienza el juego!&quot;);</span>
-<span class="fc" id="L383">        gui.startGame();</span>
-<span class="fc" id="L384">        gui.enablePlayerTurn(0);</span>
+<span class="fc" id="L385">        archivo.crearLog(&quot; Comienza el juego!&quot;);</span>
+<span class="fc" id="L386">        gui.startGame();</span>
+<span class="fc" id="L387">        gui.enablePlayerTurn(0);</span>
 
-<span class="fc" id="L386">        gui.setTradeEnabled(0, true);</span>
-<span class="fc" id="L387">    }</span>
+<span class="fc" id="L389">        gui.setTradeEnabled(0, true);</span>
+<span class="fc" id="L390">    }</span>
 
     public boolean gameEnded() {
-<span class="nc" id="L390">        int inGame = 0;</span>
-<span class="nc" id="L391">        Player player = getPlayer(0);</span>
-<span class="nc bnc" id="L392" title="All 2 branches missed.">        for (Player p : players) {</span>
-<span class="nc bnc" id="L393" title="All 2 branches missed.">            if (!p.isBankrupt()) {</span>
-<span class="nc" id="L394">                inGame++;</span>
-<span class="nc" id="L395">                player = p;</span>
+<span class="nc" id="L393">        int inGame = 0;</span>
+<span class="nc" id="L394">        Player player = getPlayer(0);</span>
+<span class="nc bnc" id="L395" title="All 2 branches missed.">        for (Player p : players) {</span>
+<span class="nc bnc" id="L396" title="All 2 branches missed.">            if (!p.isBankrupt()) {</span>
+<span class="nc" id="L397">                inGame++;</span>
+<span class="nc" id="L398">                player = p;</span>
             }
-<span class="nc" id="L397">        }</span>
+<span class="nc" id="L400">        }</span>
 
-<span class="nc bnc" id="L399" title="All 2 branches missed.">        if (inGame == 1) {</span>
-<span class="nc" id="L400">            gui.showMessage(&quot;GAME ENDED: THE WINNER IS &quot; + player.getName());</span>
-<span class="nc" id="L401">            ArchivoLog archivo = new ArchivoLog();</span>
-<span class="nc" id="L402">            archivo.crearLog(&quot;GAME ENDED: THE WINNER IS &quot; + player.getName());</span>
-<span class="nc bnc" id="L403" title="All 2 branches missed.">            for(int i=0;i&lt;registredPlayers.size();i++){</span>
-<span class="nc bnc" id="L404" title="All 2 branches missed.">                if(player.getName().equals(registredPlayers.get(i).getName())){</span>
-<span class="nc" id="L405">                    int gamesWon = this.registredPlayers.get(i).getGamesWon();</span>
-<span class="nc" id="L406">                    this.registredPlayers.get(i).setGamesWon(gamesWon + 1);   </span>
+<span class="nc bnc" id="L402" title="All 2 branches missed.">        if (inGame == 1) {</span>
+<span class="nc" id="L403">            gui.showMessage(&quot;GAME ENDED: THE WINNER IS &quot; + player.getName());</span>
+<span class="nc" id="L404">            ArchivoLog archivo = new ArchivoLog();</span>
+<span class="nc" id="L405">            archivo.crearLog(&quot;GAME ENDED: THE WINNER IS &quot; + player.getName());</span>
+<span class="nc bnc" id="L406" title="All 2 branches missed.">            for(int i=0;i&lt;registredPlayers.size();i++){</span>
+<span class="nc bnc" id="L407" title="All 2 branches missed.">                if(player.getName().equals(registredPlayers.get(i).getName())){</span>
+<span class="nc" id="L408">                    int gamesWon = this.registredPlayers.get(i).getGamesWon();</span>
+<span class="nc" id="L409">                    this.registredPlayers.get(i).setGamesWon(gamesWon + 1);   </span>
                 }
             }
             
-<span class="nc" id="L410">            persistPlayers();</span>
-<span class="nc" id="L411">            return true;</span>
+<span class="nc" id="L413">            persistPlayers();</span>
+<span class="nc" id="L414">            return true;</span>
         }
-<span class="nc" id="L413">        return false;</span>
+<span class="nc" id="L416">        return false;</span>
     }
 
     public void switchTurn() {
-<span class="fc" id="L417">        turn = (turn + 1) % getNumberOfPlayers();</span>
-<span class="fc" id="L418">        archivo.crearLog(&quot;Cambio de jugador turno de &quot; + turn);</span>
-<span class="pc bpc" id="L419" title="1 of 2 branches missed.">        if (getCurrentPlayer().isInJail()) {</span>
-<span class="nc" id="L420">            gui.setGetOutOfJailEnabled(true);</span>
-<span class="nc" id="L421">            archivo.crearLog(&quot;Jugador &quot; + turn + &quot; esta en la carcel&quot;);</span>
+<span class="fc" id="L420">        turn = (turn + 1) % getNumberOfPlayers();</span>
+<span class="fc" id="L421">        archivo.crearLog(&quot;Cambio de jugador turno de &quot; + turn);</span>
+<span class="pc bpc" id="L422" title="1 of 2 branches missed.">        if (getCurrentPlayer().isInJail()) {</span>
+<span class="nc" id="L423">            gui.setGetOutOfJailEnabled(true);</span>
+<span class="nc" id="L424">            archivo.crearLog(&quot;Jugador &quot; + turn + &quot; esta en la carcel&quot;);</span>
             
             
 
-<span class="pc bpc" id="L425" title="1 of 2 branches missed.">        } else if (getCurrentPlayer().isBankrupt()) {</span>
-<span class="nc bnc" id="L426" title="All 2 branches missed.">            if (!gameEnded()) {</span>
-<span class="nc" id="L427">                switchTurn();</span>
+<span class="pc bpc" id="L428" title="1 of 2 branches missed.">        } else if (getCurrentPlayer().isBankrupt()) {</span>
+<span class="nc bnc" id="L429" title="All 2 branches missed.">            if (!gameEnded()) {</span>
+<span class="nc" id="L430">                switchTurn();</span>
             }
         } else {
-<span class="fc" id="L430">            gui.enablePlayerTurn(turn);</span>
-<span class="fc" id="L431">            gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());</span>
-<span class="fc" id="L432">            gui.setTradeEnabled(turn, true);</span>
+<span class="fc" id="L433">            gui.enablePlayerTurn(turn);</span>
+<span class="fc" id="L434">            gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());</span>
+<span class="fc" id="L435">            gui.setTradeEnabled(turn, true);</span>
         }
 
-<span class="fc" id="L435">    }</span>
+<span class="fc" id="L438">    }</span>
 
     public void newPlayer(Player player) {
-<span class="nc" id="L438">        registredPlayers.add(player);</span>
-<span class="nc" id="L439">        persistPlayers();</span>
-<span class="nc" id="L440">    }</span>
+<span class="nc" id="L441">        registredPlayers.add(player);</span>
+<span class="nc" id="L442">        persistPlayers();</span>
+<span class="nc" id="L443">    }</span>
 
     public void updateGUI() {
-<span class="fc" id="L443">        gui.update();</span>
-<span class="fc" id="L444">    }</span>
+<span class="fc" id="L446">        gui.update();</span>
+<span class="fc" id="L447">    }</span>
 
     public void utilRollDice() {
-<span class="fc" id="L447">        this.utilDiceRoll = gui.showUtilDiceRoll();</span>
-<span class="fc" id="L448">    }</span>
+<span class="fc" id="L450">        this.utilDiceRoll = gui.showUtilDiceRoll();</span>
+<span class="fc" id="L451">    }</span>
 
     public void setTestMode(boolean b) {
-<span class="fc" id="L451">        testMode = b;</span>
-<span class="fc" id="L452">    }</span>
+<span class="fc" id="L454">        testMode = b;</span>
+<span class="fc" id="L455">    }</span>
 
     public ArrayList&lt;Player&gt; getRegistredPlayers() {
-<span class="nc" id="L455">        return registredPlayers;</span>
+<span class="nc" id="L458">        return registredPlayers;</span>
     }
 
     public void setRegistredPlayers(ArrayList registredPlayers) {
-<span class="nc" id="L459">        this.registredPlayers = registredPlayers;</span>
-<span class="nc" id="L460">    }</span>
+<span class="nc" id="L462">        this.registredPlayers = registredPlayers;</span>
+<span class="nc" id="L463">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

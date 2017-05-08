@@ -1226,3 +1226,156 @@
 8/5/2017;12:17:0;null le paga una renta de 40a null
 8/5/2017;12:17:0;null dinero: 1460
 8/5/2017;12:17:0;null dinero: 1390
+8/5/2017;12:29:47;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:29:52; Comienza el juego!
+8/5/2017;12:29:53;Federico, you rolled 6 and 2
+8/5/2017;12:29:55;Cambio de jugador turno de 1
+8/5/2017;12:29:56;katya, you rolled 4 and 2
+8/5/2017;12:29:57;Cambio de jugador turno de 0
+8/5/2017;12:29:58;Federico, you rolled 6 and 2
+8/5/2017;12:30:0;Cambio de jugador turno de 1
+8/5/2017;12:30:1;katya, you rolled 3 and 1
+8/5/2017;12:30:3;Cambio de jugador turno de 0
+8/5/2017;12:30:4;Federico, you rolled 5 and 2
+8/5/2017;12:30:5;Cambio de jugador turno de 1
+8/5/2017;12:30:6;katya, you rolled 3 and 4
+8/5/2017;12:30:10;Cambio de jugador turno de 0
+8/5/2017;12:30:11;Federico, you rolled 3 and 3
+8/5/2017;12:30:17;Federico, you rolled 4 and 5
+8/5/2017;12:30:19;Cambio de jugador turno de 1
+8/5/2017;12:30:20;katya, you rolled 1 and 6
+8/5/2017;12:30:23;Cambio de jugador turno de 0
+8/5/2017;12:30:24;Federico, you rolled 5 and 2
+8/5/2017;12:30:25;El jugador Federico pasa por el GO y suma 200
+8/5/2017;12:30:26;Cambio de jugador turno de 1
+8/5/2017;12:30:28;katya, you rolled 2 and 6
+8/5/2017;12:30:30;Cambio de jugador turno de 0
+8/5/2017;12:30:31;Federico, you rolled 5 and 5
+8/5/2017;12:30:34;Federico, you rolled 1 and 5
+8/5/2017;12:30:37;Cambio de jugador turno de 1
+8/5/2017;12:30:38;katya, you rolled 4 and 5
+8/5/2017;12:30:39;El jugador katya pasa por el GO y suma 200
+8/5/2017;12:30:41;Cambio de jugador turno de 0
+8/5/2017;12:30:42;Federico, you rolled 4 and 1
+8/5/2017;12:30:45;Cambio de jugador turno de 1
+8/5/2017;12:30:46;katya, you rolled 4 and 5
+8/5/2017;12:30:48;Cambio de jugador turno de 0
+8/5/2017;12:30:49;Federico, you rolled 5 and 2
+8/5/2017;12:30:54;Cambio de jugador turno de 1
+8/5/2017;12:30:55;katya, you rolled 2 and 1
+8/5/2017;12:30:58;Cambio de jugador turno de 0
+8/5/2017;12:30:59;Federico, you rolled 2 and 3
+8/5/2017;12:31:50;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:31:57; Comienza el juego!
+8/5/2017;12:32:3;Mayte, you rolled 1 and 3
+8/5/2017;12:32:6;Cambio de jugador turno de 1
+8/5/2017;12:32:7;katya, you rolled 6 and 4
+8/5/2017;12:32:9;Cambio de jugador turno de 0
+8/5/2017;12:32:10;Mayte, you rolled 6 and 5
+8/5/2017;12:32:13;Cambio de jugador turno de 1
+8/5/2017;12:32:16;katya, you rolled 1 and 4
+8/5/2017;12:32:19;katya le paga una renta de 50a Mayte
+8/5/2017;12:32:19;katya dinero: 1450
+8/5/2017;12:32:19;Mayte dinero: 1290
+8/5/2017;12:32:19;Cambio de jugador turno de 0
+8/5/2017;12:32:19;Mayte, you rolled 2 and 4
+8/5/2017;12:32:22;Cambio de jugador turno de 1
+8/5/2017;12:32:23;katya, you rolled 4 and 6
+8/5/2017;12:32:26;Cambio de jugador turno de 0
+8/5/2017;12:32:27;Mayte, you rolled 5 and 1
+8/5/2017;12:32:30;Cambio de jugador turno de 1
+8/5/2017;12:32:31;katya, you rolled 6 and 3
+8/5/2017;12:32:35;Cambio de jugador turno de 0
+8/5/2017;12:32:36;Mayte, you rolled 2 and 3
+8/5/2017;12:32:39;Cambio de jugador turno de 1
+8/5/2017;12:32:41;katya, you rolled 5 and 3
+8/5/2017;12:32:43;El jugador katya pasa por el GO y suma 200
+8/5/2017;12:32:46;Cambio de jugador turno de 0
+8/5/2017;13:38:51;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;14:1:17; Comienza el juego!
+8/5/2017;14:1:20;Federico, you rolled 2 and 2
+8/5/2017;14:1:23;Federico, you rolled 4 and 5
+8/5/2017;14:18:50;Cambio de jugador turno de 1
+8/5/2017;14:18:52;Marcos, you rolled 3 and 5
+8/5/2017;14:19:2;Cambio de jugador turno de 2
+8/5/2017;14:19:4;katya, you rolled 5 and 6
+8/5/2017;14:19:8;Cambio de jugador turno de 0
+8/5/2017;14:19:9;Federico, you rolled 4 and 2
+8/5/2017;14:19:12;Cambio de jugador turno de 1
+8/5/2017;14:19:12;Marcos, you rolled 5 and 5
+8/5/2017;14:19:16;Marcos, you rolled 2 and 3
+8/5/2017;14:19:21;Cambio de jugador turno de 2
+8/5/2017;14:19:22;katya, you rolled 3 and 4
+8/5/2017;14:19:24;katya le paga una renta de 14a Marcos
+8/5/2017;14:19:24;katya dinero: 1346
+8/5/2017;14:19:24;Marcos dinero: 1014
+8/5/2017;14:19:24;Cambio de jugador turno de 0
+8/5/2017;14:19:25;Federico, you rolled 1 and 3
+8/5/2017;14:19:27;Federico le paga una renta de 18a Marcos
+8/5/2017;14:19:27;Federico dinero: 1142
+8/5/2017;14:19:27;Marcos dinero: 1032
+8/5/2017;14:19:28;Cambio de jugador turno de 1
+8/5/2017;14:19:29;Marcos, you rolled 2 and 6
+8/5/2017;14:19:32;Cambio de jugador turno de 2
+8/5/2017;14:19:34;katya, you rolled 1 and 6
+8/5/2017;14:19:38;Cambio de jugador turno de 0
+8/5/2017;14:19:39;Federico, you rolled 4 and 6
+8/5/2017;14:19:44;Cambio de jugador turno de 1
+8/5/2017;14:19:45;Marcos, you rolled 1 and 4
+8/5/2017;14:21:3;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;14:21:14; Comienza el juego!
+8/5/2017;14:21:16;Federico, you rolled 3 and 3
+8/5/2017;14:21:21;Federico, you rolled 2 and 2
+8/5/2017;14:21:23;Federico, you rolled 5 and 1
+8/5/2017;14:21:27;Cambio de jugador turno de 1
+8/5/2017;14:21:27;katya, you rolled 2 and 3
+8/5/2017;14:21:31;Cambio de jugador turno de 2
+8/5/2017;14:21:32;Mayte, you rolled 6 and 1
+8/5/2017;15:4:5;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:38;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:39;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:40;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:41;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41;Player 1, you rolled 2 and 3
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41;Cambio de jugador turno de 1
+8/5/2017;16:3:41;Player 2 wishes to purchase Mediterranean Avenue from Player 1 for 200.  Player 1, do you wish to trade your property?
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41;Cambio de jugador turno de 1
+8/5/2017;16:3:41; Comienza el juego!
+8/5/2017;16:3:41;Cambio de jugador turno de 1
+8/5/2017;16:3:41;Cambio de jugador turno de 0
+8/5/2017;16:3:44;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:45;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:45;El jugador null pasa por el GO y suma 200
+8/5/2017;16:3:46;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:46; Comienza el juego!
+8/5/2017;16:3:46;Cambio de jugador turno de 0
+8/5/2017;16:3:46;Cambio de jugador turno de 0
+8/5/2017;16:3:46;Cambio de jugador turno de 0
+8/5/2017;16:3:46;Cambio de jugador turno de 1
+8/5/2017;16:3:46;Cambio de jugador turno de 1
+8/5/2017;16:3:46;null le paga una renta de 1600a null
+8/5/2017;16:3:46;null dinero: -100
+8/5/2017;16:3:46;null dinero: 2800
+8/5/2017;16:3:46;Cambio de jugador turno de 0
+8/5/2017;16:3:47;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:47;Cambio de jugador turno de 1
+8/5/2017;16:3:47;null le paga una renta de 10a null
+8/5/2017;16:3:47;null dinero: 1490
+8/5/2017;16:3:47;null dinero: 1390
+8/5/2017;16:3:47;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:47;Cambio de jugador turno de 1
+8/5/2017;16:3:48;null le paga una renta de 25a null
+8/5/2017;16:3:48;null dinero: 1475
+8/5/2017;16:3:48;null dinero: 1325
+8/5/2017;16:3:48;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:49;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;16:3:49;Cambio de jugador turno de 1
+8/5/2017;16:3:49;null le paga una renta de 40a null
+8/5/2017;16:3:49;null dinero: 1460
+8/5/2017;16:3:49;null dinero: 1390

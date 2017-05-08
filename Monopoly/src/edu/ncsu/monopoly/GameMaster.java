@@ -169,6 +169,9 @@ public class GameMaster {
             gui.showMessage(msg.toString());
             movePlayer(player, rolls[0] + rolls[1]);
             gui.setBuyHouseEnabled(false);
+            if(rolls[0]==rolls[1]){
+                gui.setRollDiceEnabled(true);
+            }
         }
     }
 
