@@ -260,19 +260,10 @@ public class GameBoardFull extends GameBoard {
         addCard(new MoneyCard("Lose $50", -50, Card.TYPE_CC));
         addCard(new JailCard(Card.TYPE_CC));
         addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
-        addCard(new TaxiCard(Card.TYPE_CC));
         addCard(new MovePlayerCard("St. Charles Place", Card.TYPE_CC));
         addCard(new MovePlayerCard("Boardwalk", Card.TYPE_CC));
-        
+             
+        addCard(new TaxiCard(Card.TYPE_CHANCE));    
         addCard(new MoneyCard("Win $50", 50, Card.TYPE_CHANCE));
         addCard(new MoneyCard("Win $20", 20, Card.TYPE_CHANCE));
         addCard(new MoneyCard("Win $10", 10, Card.TYPE_CHANCE));

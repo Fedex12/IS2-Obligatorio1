@@ -391,7 +391,7 @@ public class GameMaster {
             gui.setTradeEnabled(turn, true);
 
         } else {
-            gui.setGetOutOfJailEnabled(false);
+            gui.setGetOutOfJailEnabled(true);
             archivo.crearLog("Jugador " + turn + " esta en la carcel");
         }
 
