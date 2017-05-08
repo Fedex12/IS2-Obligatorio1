@@ -15,21 +15,21 @@
 <span class="fc" id="L15">    }</span>
 
     public int getPrice() {
-<span class="nc" id="L18">        return RailRoadCell.price;</span>
+<span class="fc" id="L18">        return RailRoadCell.price;</span>
     }
 
     public int getRent() {
-<span class="nc" id="L22">        return RailRoadCell.baseRent * (int) Math.pow(2, owner.numberOfRR() - 1);</span>
+<span class="fc" id="L22">        return RailRoadCell.baseRent * (int) Math.pow(2, owner.numberOfRR() - 1);</span>
     }
 
     public void playAction() {
-<span class="nc" id="L26">        Player currentPlayer = null;</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        if (!isAvailable()) {</span>
-<span class="nc" id="L28">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">            if (owner != currentPlayer) {</span>
-<span class="nc" id="L30">                currentPlayer.payRentTo(owner, getRent());</span>
+<span class="fc" id="L26">        Player currentPlayer = null;</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if (!isAvailable()) {</span>
+<span class="fc" id="L28">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">            if (owner != currentPlayer) {</span>
+<span class="fc" id="L30">                currentPlayer.payRentTo(owner, getRent());</span>
             }
         }
-<span class="nc" id="L33">    }</span>
+<span class="fc" id="L33">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

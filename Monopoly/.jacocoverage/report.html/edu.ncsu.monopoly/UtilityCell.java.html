@@ -10,28 +10,28 @@
 <span class="fc" id="L10">    }</span>
 
     public int getPrice() {
-<span class="nc" id="L13">        return UtilityCell.PRICE;</span>
+<span class="fc" id="L13">        return UtilityCell.PRICE;</span>
     }
 
     public int getRent(int diceRoll) {
-<span class="nc bnc" id="L17" title="All 2 branches missed.">        if (owner.numberOfUtil() == 1) {</span>
-<span class="nc" id="L18">            return diceRoll * 4;</span>
-<span class="nc bnc" id="L19" title="All 2 branches missed.">        } else if (owner.numberOfUtil() &gt;= 2) {</span>
-<span class="nc" id="L20">            return diceRoll * 10;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (owner.numberOfUtil() == 1) {</span>
+<span class="fc" id="L18">            return diceRoll * 4;</span>
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">        } else if (owner.numberOfUtil() &gt;= 2) {</span>
+<span class="fc" id="L20">            return diceRoll * 10;</span>
         }
 <span class="nc" id="L22">        return 0;</span>
     }
 
     public void playAction() {
-<span class="nc" id="L26">        Player currentPlayer = null;</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        if (!isAvailable()) {</span>
-<span class="nc" id="L28">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">            if (owner != currentPlayer) {</span>
-<span class="nc" id="L30">                GameMaster.instance().utilRollDice();</span>
-<span class="nc" id="L31">                int diceRoll = GameMaster.instance().getUtilDiceRoll();</span>
-<span class="nc" id="L32">                currentPlayer.payRentTo(owner, getRent(diceRoll));</span>
+<span class="fc" id="L26">        Player currentPlayer = null;</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if (!isAvailable()) {</span>
+<span class="fc" id="L28">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">            if (owner != currentPlayer) {</span>
+<span class="fc" id="L30">                GameMaster.instance().utilRollDice();</span>
+<span class="fc" id="L31">                int diceRoll = GameMaster.instance().getUtilDiceRoll();</span>
+<span class="fc" id="L32">                currentPlayer.payRentTo(owner, getRent(diceRoll));</span>
             }
         }
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L35">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

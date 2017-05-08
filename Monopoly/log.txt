@@ -935,3 +935,247 @@
 8/5/2017;5:19:57;Federico dinero: 1439
 8/5/2017;5:19:57;Cambio de jugador turno de 2
 8/5/2017;5:20:10;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:26:57;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:27:29;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:28:7;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:28:40;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:28:45; Comienza el juego!
+8/5/2017;11:28:47;katya, you rolled 2 and 2
+8/5/2017;11:28:51;Cambio de jugador turno de 1
+8/5/2017;11:28:52;Federico, you rolled 2 and 1
+8/5/2017;11:28:55;Cambio de jugador turno de 0
+8/5/2017;11:28:56;katya, you rolled 5 and 3
+8/5/2017;11:29:3;Cambio de jugador turno de 1
+8/5/2017;11:29:5;Federico, you rolled 5 and 1
+8/5/2017;11:29:9;Cambio de jugador turno de 0
+8/5/2017;11:29:10;katya, you rolled 2 and 1
+8/5/2017;11:29:12;Cambio de jugador turno de 1
+8/5/2017;11:29:13;Federico, you rolled 5 and 2
+8/5/2017;11:29:15;Cambio de jugador turno de 0
+8/5/2017;11:29:16;katya, you rolled 4 and 5
+8/5/2017;11:29:20;Cambio de jugador turno de 1
+8/5/2017;11:29:24;Federico, you rolled 3 and 1
+8/5/2017;11:29:27;Cambio de jugador turno de 0
+8/5/2017;11:29:52;katya wishes to purchase Baltic Avenue from Federico for 849.  Federico, do you wish to trade your property?
+8/5/2017;11:29:53;katya, you rolled 4 and 3
+8/5/2017;11:29:55;Cambio de jugador turno de 1
+8/5/2017;11:30:5;Federico wishes to purchase Sarah Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:30:10;Federico wishes to purchase Illinois Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:30:16;Federico wishes to purchase Baltic Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:30:24;Federico wishes to purchase Electric Company from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:30:31;Federico wishes to purchase Pennsylvania Railroad from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:30:32;Federico, you rolled 1 and 2
+8/5/2017;11:30:37;Cambio de jugador turno de 0
+8/5/2017;11:30:38;katya, you rolled 6 and 1
+8/5/2017;11:30:39;Cambio de jugador turno de 1
+8/5/2017;11:30:40;Federico, you rolled 4 and 3
+8/5/2017;11:30:42;Cambio de jugador turno de 0
+8/5/2017;11:30:43;katya, you rolled 5 and 6
+8/5/2017;11:30:44;El jugador katya pasa por el GO y suma 200
+8/5/2017;11:30:45;katya le paga una renta de 8a Federico
+8/5/2017;11:30:45;katya dinero: 193
+8/5/2017;11:30:45;Federico dinero: 1777
+8/5/2017;11:30:45;Cambio de jugador turno de 1
+8/5/2017;11:30:45;Jugador 1 esta en la carcel
+8/5/2017;11:31:4;Federico, you rolled 2 and 4
+8/5/2017;11:31:8;Cambio de jugador turno de 0
+8/5/2017;11:31:15;katya wishes to purchase Connecticut Avenue from Federico for 192.  Federico, do you wish to trade your property?
+8/5/2017;11:31:16;katya, you rolled 6 and 3
+8/5/2017;11:31:18;Cambio de jugador turno de 1
+8/5/2017;11:31:25;Federico wishes to purchase Connecticut Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:31:27;Federico, you rolled 4 and 3
+8/5/2017;11:31:30;Cambio de jugador turno de 0
+8/5/2017;11:31:31;katya, you rolled 5 and 6
+8/5/2017;11:31:33;Cambio de jugador turno de 1
+8/5/2017;11:31:35;Federico, you rolled 4 and 1
+8/5/2017;11:31:39;Cambio de jugador turno de 0
+8/5/2017;11:31:40;katya, you rolled 6 and 1
+8/5/2017;11:31:53;Cambio de jugador turno de 1
+8/5/2017;11:32:0;Federico, you rolled 3 and 1
+8/5/2017;11:32:3;Cambio de jugador turno de 0
+8/5/2017;11:32:4;katya, you rolled 6 and 1
+8/5/2017;11:32:5;El jugador katya pasa por el GO y suma 200
+8/5/2017;11:32:6;katya le paga una renta de 12a Federico
+8/5/2017;11:32:6;katya dinero: 189
+8/5/2017;11:32:6;Federico dinero: 1181
+8/5/2017;11:32:6;Cambio de jugador turno de 1
+8/5/2017;11:32:7;Federico, you rolled 1 and 3
+8/5/2017;11:32:11;Cambio de jugador turno de 0
+8/5/2017;11:32:12;katya, you rolled 1 and 1
+8/5/2017;11:32:21;Cambio de jugador turno de 1
+8/5/2017;11:32:27;Federico wishes to purchase Oriental Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:32:29;Federico, you rolled 5 and 2
+8/5/2017;11:32:29;El jugador Federico pasa por el GO y suma 200
+8/5/2017;11:32:31;Cambio de jugador turno de 0
+8/5/2017;11:32:46;katya, you rolled 3 and 4
+8/5/2017;11:32:48;Cambio de jugador turno de 1
+8/5/2017;11:33:0;Federico, you rolled 3 and 1
+8/5/2017;11:33:5;Cambio de jugador turno de 0
+8/5/2017;11:33:19;katya wishes to purchase St. James Avenue from Federico for 88.  Federico, do you wish to trade your property?
+8/5/2017;11:33:21;katya, you rolled 2 and 2
+8/5/2017;11:33:27;Cambio de jugador turno de 1
+8/5/2017;11:33:35;Federico wishes to purchase St. James Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:33:36;Federico, you rolled 4 and 3
+8/5/2017;11:33:40;Cambio de jugador turno de 0
+8/5/2017;11:33:46;katya wishes to purchase Sarah Avenue from Federico for 50.  Federico, do you wish to trade your property?
+8/5/2017;11:33:47;katya, you rolled 4 and 4
+8/5/2017;11:33:49;Cambio de jugador turno de 1
+8/5/2017;11:33:56;Federico wishes to purchase Sarah Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:33:57;Federico, you rolled 4 and 4
+8/5/2017;11:34:1;Cambio de jugador turno de 0
+8/5/2017;11:34:2;katya, you rolled 1 and 4
+8/5/2017;11:34:5;Cambio de jugador turno de 1
+8/5/2017;11:34:9;Federico, you rolled 2 and 5
+8/5/2017;11:34:14;Cambio de jugador turno de 0
+8/5/2017;11:34:14;Jugador 0 esta en la carcel
+8/5/2017;11:34:31;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:34:36; Comienza el juego!
+8/5/2017;11:34:38;katya, you rolled 5 and 4
+8/5/2017;11:34:43;Cambio de jugador turno de 1
+8/5/2017;11:34:44;Federico, you rolled 3 and 5
+8/5/2017;11:34:47;Cambio de jugador turno de 0
+8/5/2017;11:34:48;katya, you rolled 5 and 6
+8/5/2017;11:34:50;Cambio de jugador turno de 1
+8/5/2017;11:34:51;Federico, you rolled 5 and 5
+8/5/2017;11:34:54;Cambio de jugador turno de 0
+8/5/2017;11:34:55;katya, you rolled 6 and 5
+8/5/2017;11:34:57;Cambio de jugador turno de 1
+8/5/2017;11:34:58;Federico, you rolled 6 and 5
+8/5/2017;11:35:1;Cambio de jugador turno de 0
+8/5/2017;11:35:2;katya, you rolled 5 and 6
+8/5/2017;11:35:3;El jugador katya pasa por el GO y suma 200
+8/5/2017;11:35:7;Cambio de jugador turno de 1
+8/5/2017;11:35:9;Federico, you rolled 5 and 5
+8/5/2017;11:35:13;Cambio de jugador turno de 0
+8/5/2017;11:35:18;katya wishes to purchase Vermont Avenue from Federico for 0.  Federico, do you wish to trade your property?
+8/5/2017;11:35:23;katya wishes to purchase Tennessee Avenue from Federico for 0.  Federico, do you wish to trade your property?
+8/5/2017;11:35:27;katya wishes to purchase Marvin Gardens from Federico for 0.  Federico, do you wish to trade your property?
+8/5/2017;11:35:33;katya wishes to purchase Boardwalk from Federico for 0.  Federico, do you wish to trade your property?
+8/5/2017;11:35:34;katya, you rolled 2 and 2
+8/5/2017;11:35:38;Cambio de jugador turno de 1
+8/5/2017;11:35:42;Federico, you rolled 3 and 1
+8/5/2017;11:35:43;El jugador Federico pasa por el GO y suma 200
+8/5/2017;11:35:46;Cambio de jugador turno de 0
+8/5/2017;11:35:53;katya wishes to purchase Baltic Avenue from Federico for 0.  Federico, do you wish to trade your property?
+8/5/2017;11:35:55;katya, you rolled 6 and 2
+8/5/2017;11:35:58;Cambio de jugador turno de 1
+8/5/2017;11:36:40;Federico wishes to purchase Pacific Avenue from katya for 679.  katya, do you wish to trade your property?
+8/5/2017;11:36:42;Federico, you rolled 2 and 1
+8/5/2017;11:36:45;Federico le paga una renta de 12a katya
+8/5/2017;11:36:45;Federico dinero: -11
+8/5/2017;11:36:45;katya dinero: 1750
+8/5/2017;11:36:45;Cambio de jugador turno de 0
+8/5/2017;11:36:49;katya, you rolled 4 and 2
+8/5/2017;11:36:51;Cambio de jugador turno de 1
+8/5/2017;11:41:31;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:41:37; Comienza el juego!
+8/5/2017;11:41:38;Federico, you rolled 2 and 6
+8/5/2017;11:41:41;Cambio de jugador turno de 1
+8/5/2017;11:41:42;katya, you rolled 5 and 1
+8/5/2017;11:41:45;Cambio de jugador turno de 0
+8/5/2017;11:41:46;Federico, you rolled 4 and 1
+8/5/2017;11:41:48;Cambio de jugador turno de 1
+8/5/2017;11:41:49;katya, you rolled 1 and 6
+8/5/2017;11:41:51;katya le paga una renta de 10a Federico
+8/5/2017;11:41:51;katya dinero: 1390
+8/5/2017;11:41:51;Federico dinero: 1270
+8/5/2017;11:41:51;Cambio de jugador turno de 0
+8/5/2017;11:41:52;Federico, you rolled 3 and 6
+8/5/2017;11:42:0;Cambio de jugador turno de 1
+8/5/2017;11:42:1;katya, you rolled 4 and 1
+8/5/2017;11:42:4;Cambio de jugador turno de 0
+8/5/2017;11:42:5;Federico, you rolled 4 and 1
+8/5/2017;11:42:7;Cambio de jugador turno de 1
+8/5/2017;11:42:8;katya, you rolled 5 and 3
+8/5/2017;11:42:12;Cambio de jugador turno de 0
+8/5/2017;11:42:13;Federico, you rolled 3 and 6
+8/5/2017;11:42:15;Cambio de jugador turno de 1
+8/5/2017;11:42:16;katya, you rolled 1 and 2
+8/5/2017;11:42:19;Cambio de jugador turno de 0
+8/5/2017;11:42:20;Federico, you rolled 1 and 4
+8/5/2017;11:42:21;El jugador Federico pasa por el GO y suma 200
+8/5/2017;11:42:23;Cambio de jugador turno de 1
+8/5/2017;11:42:24;katya, you rolled 4 and 6
+8/5/2017;11:42:26;Cambio de jugador turno de 0
+8/5/2017;11:42:27;Federico, you rolled 1 and 1
+8/5/2017;11:42:33;Cambio de jugador turno de 1
+8/5/2017;11:42:34;katya, you rolled 2 and 1
+8/5/2017;11:42:36;El jugador katya pasa por el GO y suma 200
+8/5/2017;11:42:41;Cambio de jugador turno de 0
+8/5/2017;11:42:43;Federico, you rolled 5 and 1
+8/5/2017;11:42:44;Cambio de jugador turno de 1
+8/5/2017;11:42:59;katya wishes to purchase Vermont Avenue from Federico for 489.  Federico, do you wish to trade your property?
+8/5/2017;11:43:1;katya, you rolled 2 and 4
+8/5/2017;11:43:4;Cambio de jugador turno de 0
+8/5/2017;11:43:9;Federico wishes to purchase Oriental Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:13;Federico wishes to purchase Tennessee Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:18;Federico wishes to purchase Atlantic Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:22;Federico wishes to purchase Marvin Gardens from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:29;Federico wishes to purchase Boardwalk from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:33;Federico wishes to purchase Vermont Avenue from katya for 0.  katya, do you wish to trade your property?
+8/5/2017;11:43:41;Federico, you rolled 5 and 5
+8/5/2017;11:43:44;Cambio de jugador turno de 1
+8/5/2017;11:43:45;katya, you rolled 6 and 1
+8/5/2017;11:43:48;Cambio de jugador turno de 0
+8/5/2017;11:43:50;Federico, you rolled 5 and 3
+8/5/2017;11:43:53;Cambio de jugador turno de 1
+8/5/2017;11:43:54;katya, you rolled 2 and 3
+8/5/2017;11:43:56;Cambio de jugador turno de 0
+8/5/2017;11:43:57;Federico, you rolled 1 and 3
+8/5/2017;11:44:0;Cambio de jugador turno de 1
+8/5/2017;11:44:0;katya, you rolled 4 and 4
+8/5/2017;11:44:7;katya le paga una renta de 16a Federico
+8/5/2017;11:44:7;katya dinero: -15
+8/5/2017;11:44:7;Federico dinero: 930
+8/5/2017;11:44:7;Cambio de jugador turno de 0
+8/5/2017;11:44:11;Federico, you rolled 3 and 5
+8/5/2017;11:44:12;El jugador Federico pasa por el GO y suma 200
+8/5/2017;11:44:13;Cambio de jugador turno de 1
+8/5/2017;11:44:23;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:44:56;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:44:57;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:44:58;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:44:58;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58;Cambio de jugador turno de 1
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58;Cambio de jugador turno de 1
+8/5/2017;11:44:58;Cambio de jugador turno de 0
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58;Player 1, you rolled 2 and 3
+8/5/2017;11:44:58; Comienza el juego!
+8/5/2017;11:44:58;Cambio de jugador turno de 1
+8/5/2017;11:44:58;Player 2 wishes to purchase Mediterranean Avenue from Player 1 for 200.  Player 1, do you wish to trade your property?
+8/5/2017;11:45:0;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:1;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:1;El jugador null pasa por el GO y suma 200
+8/5/2017;11:45:1;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:1; Comienza el juego!
+8/5/2017;11:45:1;Cambio de jugador turno de 0
+8/5/2017;11:45:1;Cambio de jugador turno de 0
+8/5/2017;11:45:1;Cambio de jugador turno de 0
+8/5/2017;11:45:1;Cambio de jugador turno de 1
+8/5/2017;11:45:1;Cambio de jugador turno de 1
+8/5/2017;11:45:1;null le paga una renta de 1600a null
+8/5/2017;11:45:1;null dinero: -100
+8/5/2017;11:45:1;null dinero: 2800
+8/5/2017;11:45:1;Cambio de jugador turno de 0
+8/5/2017;11:45:2;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:2;Cambio de jugador turno de 1
+8/5/2017;11:45:2;null le paga una renta de 10a null
+8/5/2017;11:45:2;null dinero: 1490
+8/5/2017;11:45:2;null dinero: 1390
+8/5/2017;11:45:2;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:2;Cambio de jugador turno de 1
+8/5/2017;11:45:2;null le paga una renta de 25a null
+8/5/2017;11:45:2;null dinero: 1475
+8/5/2017;11:45:2;null dinero: 1325
+8/5/2017;11:45:3;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:4;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;11:45:4;Cambio de jugador turno de 1
+8/5/2017;11:45:4;null le paga una renta de 40a null
+8/5/2017;11:45:4;null dinero: 1460
+8/5/2017;11:45:4;null dinero: 1390

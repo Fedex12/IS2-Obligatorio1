@@ -365,11 +365,11 @@ public class GameMaster {
     }
 
     public void setNumberOfPlayers(int number) {
-        //players.clear();
+        players.clear();
         for (int i = 0; i < number; i++) {
-            // Player player = new Player();
-            players.get(i).setMoney(initAmountOfMoney);
-            // players.add(player);
+            Player player = new Player();
+            player.setMoney(initAmountOfMoney);
+            players.add(player);
         }
     }
 
@@ -398,9 +398,15 @@ public class GameMaster {
 
         if (inGame == 1) {
             gui.showMessage("GAME ENDED: THE WINNER IS " + player.getName());
-            int ind = getRegistredPlayers().indexOf(player);
-            int gamesWon = this.registredPlayers.get(ind).getGamesWon();
-            this.registredPlayers.get(ind).setGamesWon(gamesWon + 1);
+            ArchivoLog archivo = new ArchivoLog();
+            archivo.crearLog("GAME ENDED: THE WINNER IS " + player.getName());
+            for(int i=0;i<registredPlayers.size();i++){
+                if(player.getName().equals(registredPlayers.get(i).getName())){
+                    int gamesWon = this.registredPlayers.get(i).getGamesWon();
+                    this.registredPlayers.get(i).setGamesWon(gamesWon + 1);   
+                }
+            }
+            
             persistPlayers();
             return true;
         }

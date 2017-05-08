@@ -223,25 +223,30 @@ public class GameOptions extends javax.swing.JFrame {
         GameMaster master = GameMaster.instance();
         DefaultListModel<Player> model = new DefaultListModel<>();
 
-        if (selectedPlayerList.getModel().getSize() > 1 && selectedPlayerList.getModel().getSize() < 9) {
-            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
-            ArrayList<Player> players = new ArrayList();
-            for (int i = 0; i < model.getSize(); i++) {
-                
-                players.add(model.get(i));
-                master.addGamePlayed(model.get(i));
-            }
-            master.persistPlayers();
+        
             
-            master.setPlayers(players);
+            
             //Aqui
 
             MainWindow window = new MainWindow();
             GameBoard gameBoard = null;
             gameBoard = new GameBoardFull();
             master.setGameBoard(gameBoard);
-            master.setNumberOfPlayers(players.size());
-            master.setPlayers(players);
+            master.setNumberOfPlayers(selectedPlayerList.getModel().getSize());
+            if (selectedPlayerList.getModel().getSize() > 1 && selectedPlayerList.getModel().getSize() < 9) {
+            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
+            ArrayList<Player> players = new ArrayList();
+            for (int i = 0; i < model.getSize(); i++) {
+                
+                players.add(model.get(i));
+                master.addGamePlayed(model.get(i));
+                GameMaster.instance().getPlayer(i).setName(model.get(i).getName());
+                GameMaster.instance().getPlayer(i).setColor(model.get(i).getColor());
+                
+                
+            }
+            master.persistPlayers();
+            
 
             window.setupGameBoard(gameBoard);
             window.show();

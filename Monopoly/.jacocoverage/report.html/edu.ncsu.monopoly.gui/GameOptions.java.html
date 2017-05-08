@@ -223,56 +223,61 @@ public class GameOptions extends javax.swing.JFrame {
 <span class="nc" id="L223">        GameMaster master = GameMaster.instance();</span>
 <span class="nc" id="L224">        DefaultListModel&lt;Player&gt; model = new DefaultListModel&lt;&gt;();</span>
 
-<span class="nc bnc" id="L226" title="All 4 branches missed.">        if (selectedPlayerList.getModel().getSize() &gt; 1 &amp;&amp; selectedPlayerList.getModel().getSize() &lt; 9) {</span>
-<span class="nc" id="L227">            model = (DefaultListModel&lt;Player&gt;) selectedPlayerList.getModel();</span>
-<span class="nc" id="L228">            ArrayList&lt;Player&gt; players = new ArrayList();</span>
-<span class="nc bnc" id="L229" title="All 2 branches missed.">            for (int i = 0; i &lt; model.getSize(); i++) {</span>
-                
-<span class="nc" id="L231">                players.add(model.get(i));</span>
-<span class="nc" id="L232">                master.addGamePlayed(model.get(i));</span>
-            }
-<span class="nc" id="L234">            master.persistPlayers();</span>
+        
             
-<span class="nc" id="L236">            master.setPlayers(players);</span>
+            
             //Aqui
 
-<span class="nc" id="L239">            MainWindow window = new MainWindow();</span>
-<span class="nc" id="L240">            GameBoard gameBoard = null;</span>
-<span class="nc" id="L241">            gameBoard = new GameBoardFull();</span>
-<span class="nc" id="L242">            master.setGameBoard(gameBoard);</span>
-<span class="nc" id="L243">            master.setNumberOfPlayers(players.size());</span>
-<span class="nc" id="L244">            master.setPlayers(players);</span>
+<span class="nc" id="L231">            MainWindow window = new MainWindow();</span>
+<span class="nc" id="L232">            GameBoard gameBoard = null;</span>
+<span class="nc" id="L233">            gameBoard = new GameBoardFull();</span>
+<span class="nc" id="L234">            master.setGameBoard(gameBoard);</span>
+<span class="nc" id="L235">            master.setNumberOfPlayers(selectedPlayerList.getModel().getSize());</span>
+<span class="nc bnc" id="L236" title="All 4 branches missed.">            if (selectedPlayerList.getModel().getSize() &gt; 1 &amp;&amp; selectedPlayerList.getModel().getSize() &lt; 9) {</span>
+<span class="nc" id="L237">            model = (DefaultListModel&lt;Player&gt;) selectedPlayerList.getModel();</span>
+<span class="nc" id="L238">            ArrayList&lt;Player&gt; players = new ArrayList();</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">            for (int i = 0; i &lt; model.getSize(); i++) {</span>
+                
+<span class="nc" id="L241">                players.add(model.get(i));</span>
+<span class="nc" id="L242">                master.addGamePlayed(model.get(i));</span>
+<span class="nc" id="L243">                GameMaster.instance().getPlayer(i).setName(model.get(i).getName());</span>
+<span class="nc" id="L244">                GameMaster.instance().getPlayer(i).setColor(model.get(i).getColor());</span>
+                
+                
+            }
+<span class="nc" id="L248">            master.persistPlayers();</span>
+            
 
-<span class="nc" id="L246">            window.setupGameBoard(gameBoard);</span>
-<span class="nc" id="L247">            window.show();</span>
-<span class="nc" id="L248">            master.setGUI(window);</span>
+<span class="nc" id="L251">            window.setupGameBoard(gameBoard);</span>
+<span class="nc" id="L252">            window.show();</span>
+<span class="nc" id="L253">            master.setGUI(window);</span>
 		//master.startGame();
 
             //hasta aqui
-<span class="nc" id="L252">            master.startGame();</span>
-<span class="nc" id="L253">            this.dispose();</span>
-<span class="nc" id="L254">        } else {</span>
+<span class="nc" id="L257">            master.startGame();</span>
+<span class="nc" id="L258">            this.dispose();</span>
+<span class="nc" id="L259">        } else {</span>
 
-<span class="nc" id="L256">            JOptionPane.showMessageDialog(null, &quot;Error: You must choose between 2 and 8 players.&quot;);</span>
+<span class="nc" id="L261">            JOptionPane.showMessageDialog(null, &quot;Error: You must choose between 2 and 8 players.&quot;);</span>
         }
 
 
-<span class="nc" id="L260">    }//GEN-LAST:event_startBttActionPerformed</span>
+<span class="nc" id="L265">    }//GEN-LAST:event_startBttActionPerformed</span>
 
     private void removeBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBttActionPerformed
 
-<span class="nc" id="L264">        DefaultListModel&lt;Player&gt; model = new DefaultListModel&lt;&gt;();</span>
-<span class="nc bnc" id="L265" title="All 2 branches missed.">        if (selectedPlayerList.getModel().getSize() &gt; 0 ) {</span>
-<span class="nc" id="L266">            model = (DefaultListModel&lt;Player&gt;) selectedPlayerList.getModel();</span>
+<span class="nc" id="L269">        DefaultListModel&lt;Player&gt; model = new DefaultListModel&lt;&gt;();</span>
+<span class="nc bnc" id="L270" title="All 2 branches missed.">        if (selectedPlayerList.getModel().getSize() &gt; 0 ) {</span>
+<span class="nc" id="L271">            model = (DefaultListModel&lt;Player&gt;) selectedPlayerList.getModel();</span>
                 
         }
-<span class="nc bnc" id="L269" title="All 2 branches missed.">        if(model.contains(registredPlayerList.getSelectedValue())){</span>
-<span class="nc" id="L270">            model.removeElement((Player) registredPlayerList.getSelectedValue());</span>
-<span class="nc" id="L271">            selectedPlayerList.setModel(model);</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">        if(model.contains(registredPlayerList.getSelectedValue())){</span>
+<span class="nc" id="L275">            model.removeElement((Player) registredPlayerList.getSelectedValue());</span>
+<span class="nc" id="L276">            selectedPlayerList.setModel(model);</span>
         }
         
 // TODO add your handling code here:
-<span class="nc" id="L275">    }//GEN-LAST:event_removeBttActionPerformed</span>
+<span class="nc" id="L280">    }//GEN-LAST:event_removeBttActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -284,31 +289,31 @@ public class GameOptions extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L287" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L288" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L289">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L290">                    break;</span>
+<span class="nc bnc" id="L292" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L293" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L294">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L295">                    break;</span>
                 }
             }
-<span class="nc" id="L293">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L294">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L295">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L296">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L297">        } catch (IllegalAccessException ex) {</span>
-<span class="nc" id="L298">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L299">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
-<span class="nc" id="L300">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L301">        }</span>
+<span class="nc" id="L298">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L299">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L300">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L301">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L302">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L303">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L304">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L305">            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L306">        }</span>
         //&lt;/editor-fold&gt;
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L306">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L311">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L308">                new GameOptions().setVisible(true);</span>
-<span class="nc" id="L309">            }</span>
+<span class="nc" id="L313">                new GameOptions().setVisible(true);</span>
+<span class="nc" id="L314">            }</span>
         });
-<span class="nc" id="L311">    }</span>
+<span class="nc" id="L316">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addBtt;

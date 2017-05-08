@@ -36,17 +36,17 @@ public class GameBoard {
 <span class="fc" id="L36">    }</span>
 
     public Card drawCCCard() {
-<span class="nc" id="L39">        Card card = (Card) communityChestCards.get(0);</span>
-<span class="nc" id="L40">        communityChestCards.remove(0);</span>
-<span class="nc" id="L41">        addCard(card);</span>
-<span class="nc" id="L42">        return card;</span>
+<span class="fc" id="L39">        Card card = (Card) communityChestCards.get(0);</span>
+<span class="fc" id="L40">        communityChestCards.remove(0);</span>
+<span class="fc" id="L41">        addCard(card);</span>
+<span class="fc" id="L42">        return card;</span>
     }
 
     public Card drawChanceCard() {
-<span class="nc" id="L46">        Card card = (Card) chanceCards.get(0);</span>
-<span class="nc" id="L47">        chanceCards.remove(0);</span>
-<span class="nc" id="L48">        addCard(card);</span>
-<span class="nc" id="L49">        return card;</span>
+<span class="fc" id="L46">        Card card = (Card) chanceCards.get(0);</span>
+<span class="fc" id="L47">        chanceCards.remove(0);</span>
+<span class="fc" id="L48">        addCard(card);</span>
+<span class="fc" id="L49">        return card;</span>
     }
 
     public Cell getCell(int newIndex) {

@@ -13,7 +13,7 @@
     }
 
     public int getHousePrice() {
-<span class="nc" id="L16">        return housePrice;</span>
+<span class="fc" id="L16">        return housePrice;</span>
     }
 
     public int getNumHouses() {
@@ -25,47 +25,47 @@
     }
 
     public int getRent(int parameter) {
-<span class="nc bnc" id="L28" title="All 2 branches missed.">        if (parameter == 0) {</span>
-<span class="nc" id="L29">            return getParameterlessRent();</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">        if (parameter == 0) {</span>
+<span class="fc" id="L29">            return getParameterlessRent();</span>
         } else {
-<span class="nc" id="L31">            int rentToCharge = rent * Cell.InflationParameter;</span>
-<span class="nc" id="L32">            String[] monopolies = owner.getMonopolies();</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">            for (int i = 0; i &lt; monopolies.length; i++) {</span>
+<span class="fc" id="L31">            int rentToCharge = rent * Cell.InflationParameter;</span>
+<span class="fc" id="L32">            String[] monopolies = owner.getMonopolies();</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">            for (int i = 0; i &lt; monopolies.length; i++) {</span>
 <span class="nc bnc" id="L34" title="All 2 branches missed.">                if (monopolies[i].equals(colorGroup)) {</span>
 <span class="nc" id="L35">                    rentToCharge = rent * 2;</span>
                 }
             }
-<span class="nc bnc" id="L38" title="All 2 branches missed.">            if (numHouses &gt; 0) {</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">            if (numHouses &gt; 0) {</span>
 <span class="nc" id="L39">                rentToCharge = rent * (numHouses + 1);</span>
             }
-<span class="nc" id="L41">            return rentToCharge;</span>
+<span class="fc" id="L41">            return rentToCharge;</span>
         }
 
     }
 
     private int getParameterlessRent() {
-<span class="nc" id="L47">        int rentToCharge = rent;</span>
-<span class="nc" id="L48">        String[] monopolies = owner.getMonopolies();</span>
-<span class="nc bnc" id="L49" title="All 2 branches missed.">        for (int i = 0; i &lt; monopolies.length; i++) {</span>
+<span class="fc" id="L47">        int rentToCharge = rent;</span>
+<span class="fc" id="L48">        String[] monopolies = owner.getMonopolies();</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        for (int i = 0; i &lt; monopolies.length; i++) {</span>
 <span class="nc bnc" id="L50" title="All 2 branches missed.">            if (monopolies[i].equals(colorGroup)) {</span>
 <span class="nc" id="L51">                rentToCharge = rent * 2;</span>
             }
         }
-<span class="nc bnc" id="L54" title="All 2 branches missed.">        if (numHouses &gt; 0) {</span>
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        if (numHouses &gt; 0) {</span>
 <span class="nc" id="L55">            rentToCharge = rent * (numHouses + 1);</span>
         }
-<span class="nc" id="L57">        return rentToCharge;</span>
+<span class="fc" id="L57">        return rentToCharge;</span>
     }
 
     public void playAction() {
-<span class="nc" id="L61">        Player currentPlayer = null;</span>
-<span class="nc bnc" id="L62" title="All 2 branches missed.">        if (!isAvailable()) {</span>
-<span class="nc" id="L63">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">            if (owner != currentPlayer) {</span>
-<span class="nc" id="L65">                currentPlayer.payRentTo(owner, getRent(Cell.InflationParameter));</span>
+<span class="fc" id="L61">        Player currentPlayer = null;</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (!isAvailable()) {</span>
+<span class="fc" id="L63">            currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">            if (owner != currentPlayer) {</span>
+<span class="fc" id="L65">                currentPlayer.payRentTo(owner, getRent(Cell.InflationParameter));</span>
             }
         }
-<span class="nc" id="L68">    }</span>
+<span class="fc" id="L68">    }</span>
 
     public void setColorGroup(String colorGroup) {
 <span class="fc" id="L71">        this.colorGroup = colorGroup;</span>
