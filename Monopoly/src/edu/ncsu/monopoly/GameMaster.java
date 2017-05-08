@@ -16,7 +16,7 @@ public class GameMaster {
     private Die[] dice;
     private GameBoard gameBoard;
     private MonopolyGUI gui;
-    ArchivoLog archivo = new ArchivoLog();
+    private ArchivoLog archivo = new ArchivoLog();
     private int initAmountOfMoney;
     private ArrayList<Player> players;
     private ArrayList<Player> registredPlayers = new ArrayList();

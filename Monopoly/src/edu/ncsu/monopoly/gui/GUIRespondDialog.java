@@ -15,7 +15,7 @@ import javax.swing.JTextArea;
 public class GUIRespondDialog extends JDialog implements RespondDialog {
 
     private boolean response;
-    JTextArea txtMessage = new JTextArea();
+    private JTextArea txtMessage = new JTextArea();
 
     public GUIRespondDialog() {
         JButton btnYes = new JButton("Yes");

@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 
 public class PropertyCellTest extends TestCase {
 
-    GameMaster gameMaster;
+    private GameMaster gameMaster;
 
     protected void setUp() {
         gameMaster = GameMaster.instance();

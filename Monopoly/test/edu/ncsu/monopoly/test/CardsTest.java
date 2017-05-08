@@ -8,9 +8,9 @@ import junit.framework.TestCase;
 
 public class CardsTest extends TestCase {
 
-    Card ccCard, chanceCard;
+    private Card ccCard, chanceCard;
 
-    GameMaster gameMaster;
+    private GameMaster gameMaster;
 
     protected void setUp() {
         gameMaster = GameMaster.instance();
@@ -24,9 +24,7 @@ public class CardsTest extends TestCase {
     }
 
     public void testCardType() {
-        Card card = gameMaster.drawCCCard();
         assertEquals(Card.TYPE_CC, ccCard.getCardType());
-        card = gameMaster.drawChanceCard();
         assertEquals(Card.TYPE_CHANCE, chanceCard.getCardType());
     }
 }

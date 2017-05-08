@@ -2,24 +2,23 @@
 
 public class JailCard extends Card {
 
-    int type;
+    private int type;
 
 <span class="fc" id="L7">    public JailCard(int cardType) {</span>
 <span class="fc" id="L8">        type = cardType;</span>
 <span class="fc" id="L9">    }</span>
 
     public void applyAction() {
-<span class="fc" id="L12">        Player currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
-<span class="fc" id="L13">        JailCell jail = (JailCell) (GameMaster.instance().getGameBoard().queryCell(&quot;Jail&quot;));</span>
-<span class="fc" id="L14">        GameMaster.instance().sendToJail(currentPlayer);</span>
-<span class="fc" id="L15">    }</span>
+<span class="fc" id="L12">        Player currentPlayer = GameMaster.instance().getCurrentPlayer();        </span>
+<span class="fc" id="L13">        GameMaster.instance().sendToJail(currentPlayer);</span>
+<span class="fc" id="L14">    }</span>
 
     public int getCardType() {
-<span class="fc" id="L18">        return type;</span>
+<span class="fc" id="L17">        return type;</span>
     }
 
     public String getLabel() {
-<span class="fc" id="L22">        return &quot;Go to Jail immediately without collecting&quot;</span>
+<span class="fc" id="L21">        return &quot;Go to Jail immediately without collecting&quot;</span>
                 + &quot; $200 when passing the GO cell&quot;;
     }
 }

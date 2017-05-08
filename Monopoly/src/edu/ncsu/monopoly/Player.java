@@ -171,13 +171,11 @@ public class Player implements Serializable {
                 
         if (money < rentValue) {
             owner.money += money;
-            money -= rentValue;
-            
+            money -= rentValue;            
         } else {
             money -= rentValue;
             owner.money += rentValue;
-            
-        }
+            }
         archivo.crearLog(this.getName()+" le paga una renta de "+rentValue+"a "+owner.getName());
         archivo.crearLog(this.getName()+" dinero: "+this.getMoney());
         archivo.crearLog(owner.getName()+" dinero: "+owner.getMoney());

@@ -8,8 +8,8 @@ import junit.framework.TestCase;
 
 public class GameboardTest extends TestCase {
 
-    Cell cell;
-    GameBoard gameBoard;
+    private Cell cell;
+    private GameBoard gameBoard;
 
     protected void setUp() throws Exception {
         gameBoard = new GameBoard();

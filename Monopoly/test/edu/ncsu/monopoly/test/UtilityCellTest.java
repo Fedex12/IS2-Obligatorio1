@@ -8,7 +8,7 @@ import edu.ncsu.monopoly.UtilityCell;
 import junit.framework.TestCase;
 
 public class UtilityCellTest extends TestCase{
-	GameMaster gameMaster;
+	private GameMaster gameMaster;
 	
 	protected void setUp(){
 		gameMaster = GameMaster.instance();

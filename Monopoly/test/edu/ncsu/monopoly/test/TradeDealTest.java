@@ -1,7 +1,6 @@
 package edu.ncsu.monopoly.test;
 
 import edu.ncsu.monopoly.GameMaster;
-import edu.ncsu.monopoly.Player;
 import edu.ncsu.monopoly.TradeDeal;
 import junit.framework.TestCase;
 
@@ -20,7 +19,6 @@ public class TradeDealTest extends TestCase {
         deal.setAmount(200);
         deal.setPropertyName("Blue 1");
         deal.setSellerIndex(1);
-        Player buyer = GameMaster.instance().getPlayer(0);
         String message = "Buyer wishes to purchase Blue 1 from Seller"
                 + " for 200.  Seller, do you wish to trade your property?";
         assertEquals(message, deal.makeMessage());

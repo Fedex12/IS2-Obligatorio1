@@ -28,7 +28,7 @@ public class GameOptions extends javax.swing.JFrame {
         master = GameMaster.instance();
         initComponents();
         DefaultListModel<Player> model = new DefaultListModel<Player>();
-        for (Player p : master.getRegistredPlayers()) {
+        for(Player p : master.getRegistredPlayers()) {
             model.addElement(p);
         }
         //  registredPlayerList.removeAll();
@@ -201,8 +201,7 @@ public class GameOptions extends javax.swing.JFrame {
         DefaultListModel<Player> model = new DefaultListModel<>();
 
         if (selectedPlayerList.getModel().getSize() > 0 ) {
-            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
-                
+            model = (DefaultListModel<Player>) selectedPlayerList.getModel();                
         }
         if(!model.contains(registredPlayerList.getSelectedValue())){
             model.addElement((Player) registredPlayerList.getSelectedValue());
@@ -222,12 +221,6 @@ public class GameOptions extends javax.swing.JFrame {
         // TODO add your handling code here:
         GameMaster master = GameMaster.instance();
         DefaultListModel<Player> model = new DefaultListModel<>();
-
-        
-            
-            
-            //Aqui
-
             MainWindow window = new MainWindow();
             GameBoard gameBoard = null;
             gameBoard = new GameBoardFull();
@@ -236,8 +229,7 @@ public class GameOptions extends javax.swing.JFrame {
             if (selectedPlayerList.getModel().getSize() > 1 && selectedPlayerList.getModel().getSize() < 9) {
             model = (DefaultListModel<Player>) selectedPlayerList.getModel();
             ArrayList<Player> players = new ArrayList();
-            for (int i = 0; i < model.getSize(); i++) {
-                
+            for (int i = 0; i < model.getSize(); i++) {                
                 players.add(model.get(i));
                 master.addGamePlayed(model.get(i));
                 GameMaster.instance().getPlayer(i).setName(model.get(i).getName());
@@ -251,9 +243,6 @@ public class GameOptions extends javax.swing.JFrame {
             window.setupGameBoard(gameBoard);
             window.show();
             master.setGUI(window);
-		//master.startGame();
-
-            //hasta aqui
             master.startGame();
             this.dispose();
         } else {

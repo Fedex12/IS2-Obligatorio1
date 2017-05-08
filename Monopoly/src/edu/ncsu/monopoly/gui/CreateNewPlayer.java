@@ -22,7 +22,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class CreateNewPlayer extends javax.swing.JFrame {
 
-    File picture;
+    private File picture;
 
     /**
      * Creates new form NuevoJugador
@@ -59,8 +59,8 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         colorChoice = new java.awt.Choice();
         jButton1 = new javax.swing.JButton();
         exitBtt = new javax.swing.JButton();
-        ProfilePhoto = new javax.swing.JLabel();
-        CreateBtt = new javax.swing.JButton();
+        profilePhoto = new javax.swing.JLabel();
+        createBtt = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
         jTextArea1.setColumns(20);
@@ -103,24 +103,24 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         getContentPane().add(exitBtt);
         exitBtt.setBounds(280, 220, 110, 25);
 
-        ProfilePhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ProfilePhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil blanco.jpg"))); // NOI18N
-        ProfilePhoto.setLabelFor(this);
-        ProfilePhoto.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        ProfilePhoto.setMaximumSize(new java.awt.Dimension(240, 240));
-        ProfilePhoto.setMinimumSize(new java.awt.Dimension(240, 240));
-        ProfilePhoto.setPreferredSize(new java.awt.Dimension(240, 240));
-        getContentPane().add(ProfilePhoto);
-        ProfilePhoto.setBounds(10, 10, 240, 240);
+        profilePhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        profilePhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Perfil blanco.jpg"))); // NOI18N
+        profilePhoto.setLabelFor(this);
+        profilePhoto.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        profilePhoto.setMaximumSize(new java.awt.Dimension(240, 240));
+        profilePhoto.setMinimumSize(new java.awt.Dimension(240, 240));
+        profilePhoto.setPreferredSize(new java.awt.Dimension(240, 240));
+        getContentPane().add(profilePhoto);
+        profilePhoto.setBounds(10, 10, 240, 240);
 
-        CreateBtt.setText("Create");
-        CreateBtt.addActionListener(new java.awt.event.ActionListener() {
+        createBtt.setText("Create");
+        createBtt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreateBttActionPerformed(evt);
+                createBttActionPerformed(evt);
             }
         });
-        getContentPane().add(CreateBtt);
-        CreateBtt.setBounds(400, 220, 110, 25);
+        getContentPane().add(createBtt);
+        createBtt.setBounds(400, 220, 110, 25);
 
         jPanel1.setMinimumSize(new java.awt.Dimension(520, 260));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -138,21 +138,21 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("JPG y PNG", "jpg", "png");
 
-        windowPC.SelectPicture.setFileFilter(filtro);
+        windowPC.selectPicture.setFileFilter(filtro);
 
-        resultado = windowPC.SelectPicture.showOpenDialog(null);
+        resultado = windowPC.selectPicture.showOpenDialog(null);
 
         if (JFileChooser.APPROVE_OPTION == resultado) {
 
-            picture = windowPC.SelectPicture.getSelectedFile();
+            picture = windowPC.selectPicture.getSelectedFile();
 
             try {
 
                 ImageIcon icon = new ImageIcon(picture.toString());
 
-                Icon icono = new ImageIcon(icon.getImage().getScaledInstance(ProfilePhoto.getWidth(), ProfilePhoto.getHeight(), Image.SCALE_DEFAULT));
+                Icon icono = new ImageIcon(icon.getImage().getScaledInstance(profilePhoto.getWidth(), profilePhoto.getHeight(), Image.SCALE_DEFAULT));
 
-                ProfilePhoto.setIcon(icono);
+                profilePhoto.setIcon(icono);
 
             } catch (Exception ex) {
 
@@ -172,7 +172,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 
     }//GEN-LAST:event_exitBttActionPerformed
 
-    private void CreateBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBttActionPerformed
+    private void createBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBttActionPerformed
 
         GameMaster master = GameMaster.instance();
         boolean unique = true;
@@ -230,7 +230,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         }
 
 // TODO add your handling code here:
-    }//GEN-LAST:event_CreateBttActionPerformed
+    }//GEN-LAST:event_createBttActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,9 +269,8 @@ public class CreateNewPlayer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreateBtt;
-    private javax.swing.JLabel ProfilePhoto;
     private java.awt.Choice colorChoice;
+    private javax.swing.JButton createBtt;
     private javax.swing.JButton exitBtt;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -281,5 +280,6 @@ public class CreateNewPlayer extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField nameText;
+    private javax.swing.JLabel profilePhoto;
     // End of variables declaration//GEN-END:variables
 }

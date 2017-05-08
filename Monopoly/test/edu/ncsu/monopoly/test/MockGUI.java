@@ -49,7 +49,7 @@ public class MockGUI implements MonopolyGUI {
     }
 
     public RespondDialog openRespondDialog(TradeDeal deal) {
-        RespondDialog dialog = new MockRespondDialog(deal);
+        RespondDialog dialog = new MockRespondDialog();
         return dialog;
     }
 

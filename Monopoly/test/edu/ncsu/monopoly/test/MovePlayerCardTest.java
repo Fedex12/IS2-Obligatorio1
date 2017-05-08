@@ -9,8 +9,8 @@ import junit.framework.TestCase;
 
 public class MovePlayerCardTest extends TestCase {
 
-    GameMaster gameMaster;
-    Card movePlayerCard;
+    private GameMaster gameMaster;
+    private Card movePlayerCard;
 
     protected void setUp() {
         gameMaster = GameMaster.instance();

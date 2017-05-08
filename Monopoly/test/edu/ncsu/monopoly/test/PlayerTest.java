@@ -10,7 +10,7 @@ import junit.framework.TestCase;
 
 public class PlayerTest extends TestCase {
 
-    GameMaster gameMaster;
+    private GameMaster gameMaster;
 
     protected void setUp() throws Exception {
         gameMaster = GameMaster.instance();

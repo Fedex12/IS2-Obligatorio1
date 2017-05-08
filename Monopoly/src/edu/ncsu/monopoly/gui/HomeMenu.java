@@ -5,21 +5,17 @@
  */
 package edu.ncsu.monopoly.gui;
 
-import edu.ncsu.monopoly.GameMaster;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Federico
  */
-public class HomeMenu extends javax.swing.JFrame {
-    
-    private GameMaster master;
+public class HomeMenu extends javax.swing.JFrame {    
     /**
      * Creates new form MenuInicial
      */
-    public HomeMenu() {
-        master = GameMaster.instance();
+    public HomeMenu() {      
         initComponents();
     }
 

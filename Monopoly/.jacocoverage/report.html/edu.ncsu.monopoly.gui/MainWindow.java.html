@@ -25,13 +25,13 @@ import javax.swing.border.LineBorder;
 
 public class MainWindow extends JFrame implements MonopolyGUI {
 
-<span class="nc" id="L28">    JPanel eastPanel = new JPanel();</span>
-<span class="nc" id="L29">    ArrayList guiCells = new ArrayList();</span>
+<span class="nc" id="L28">    private JPanel eastPanel = new JPanel();</span>
+<span class="nc" id="L29">    private ArrayList guiCells = new ArrayList();</span>
 
-<span class="nc" id="L31">    JPanel northPanel = new JPanel();</span>
-    PlayerPanel[] playerPanels;
-<span class="nc" id="L33">    JPanel southPanel = new JPanel();</span>
-<span class="nc" id="L34">    JPanel westPanel = new JPanel();</span>
+<span class="nc" id="L31">    private JPanel northPanel = new JPanel();</span>
+    private PlayerPanel[] playerPanels;
+<span class="nc" id="L33">    private JPanel southPanel = new JPanel();</span>
+<span class="nc" id="L34">    private JPanel westPanel = new JPanel();</span>
 
 <span class="nc" id="L36">    public MainWindow() {</span>
 <span class="nc" id="L37">        northPanel.setBorder(new LineBorder(Color.BLACK));</span>

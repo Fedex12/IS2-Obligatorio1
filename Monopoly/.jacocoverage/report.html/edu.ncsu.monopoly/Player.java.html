@@ -171,146 +171,144 @@ public class Player implements Serializable {
                 
 <span class="fc bfc" id="L172" title="All 2 branches covered.">        if (money &lt; rentValue) {</span>
 <span class="fc" id="L173">            owner.money += money;</span>
-<span class="fc" id="L174">            money -= rentValue;</span>
-            
+<span class="fc" id="L174">            money -= rentValue;            </span>
         } else {
-<span class="fc" id="L177">            money -= rentValue;</span>
-<span class="fc" id="L178">            owner.money += rentValue;</span>
-            
+<span class="fc" id="L176">            money -= rentValue;</span>
+<span class="fc" id="L177">            owner.money += rentValue;</span>
+            }
+<span class="fc" id="L179">        archivo.crearLog(this.getName()+&quot; le paga una renta de &quot;+rentValue+&quot;a &quot;+owner.getName());</span>
+<span class="fc" id="L180">        archivo.crearLog(this.getName()+&quot; dinero: &quot;+this.getMoney());</span>
+<span class="fc" id="L181">        archivo.crearLog(owner.getName()+&quot; dinero: &quot;+owner.getMoney());</span>
+<span class="fc bfc" id="L182" title="All 2 branches covered.">        if (isBankrupt()) {</span>
+<span class="fc" id="L183">            money = 0;</span>
+<span class="fc" id="L184">            exchangeProperty(owner);</span>
         }
-<span class="fc" id="L181">        archivo.crearLog(this.getName()+&quot; le paga una renta de &quot;+rentValue+&quot;a &quot;+owner.getName());</span>
-<span class="fc" id="L182">        archivo.crearLog(this.getName()+&quot; dinero: &quot;+this.getMoney());</span>
-<span class="fc" id="L183">        archivo.crearLog(owner.getName()+&quot; dinero: &quot;+owner.getMoney());</span>
-<span class="fc bfc" id="L184" title="All 2 branches covered.">        if (isBankrupt()) {</span>
-<span class="fc" id="L185">            money = 0;</span>
-<span class="fc" id="L186">            exchangeProperty(owner);</span>
-        }
-<span class="fc" id="L188">    }</span>
+<span class="fc" id="L186">    }</span>
 
     public void purchase() {
-<span class="pc bpc" id="L191" title="1 of 2 branches missed.">        if (getPosition().isAvailable()) {</span>
-<span class="fc" id="L192">            Cell c = getPosition();</span>
-<span class="fc" id="L193">            c.setAvailable(false);</span>
-<span class="fc bfc" id="L194" title="All 2 branches covered.">            if (c instanceof PropertyCell) {</span>
-<span class="fc" id="L195">                PropertyCell cell = (PropertyCell) c;</span>
-<span class="fc" id="L196">                purchaseProperty(cell);</span>
+<span class="pc bpc" id="L189" title="1 of 2 branches missed.">        if (getPosition().isAvailable()) {</span>
+<span class="fc" id="L190">            Cell c = getPosition();</span>
+<span class="fc" id="L191">            c.setAvailable(false);</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">            if (c instanceof PropertyCell) {</span>
+<span class="fc" id="L193">                PropertyCell cell = (PropertyCell) c;</span>
+<span class="fc" id="L194">                purchaseProperty(cell);</span>
             }
-<span class="fc bfc" id="L198" title="All 2 branches covered.">            if (c instanceof RailRoadCell) {</span>
-<span class="fc" id="L199">                RailRoadCell cell = (RailRoadCell) c;</span>
-<span class="fc" id="L200">                purchaseRailRoad(cell);</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">            if (c instanceof RailRoadCell) {</span>
+<span class="fc" id="L197">                RailRoadCell cell = (RailRoadCell) c;</span>
+<span class="fc" id="L198">                purchaseRailRoad(cell);</span>
             }
-<span class="fc bfc" id="L202" title="All 2 branches covered.">            if (c instanceof UtilityCell) {</span>
-<span class="fc" id="L203">                UtilityCell cell = (UtilityCell) c;</span>
-<span class="fc" id="L204">                purchaseUtility(cell);</span>
+<span class="fc bfc" id="L200" title="All 2 branches covered.">            if (c instanceof UtilityCell) {</span>
+<span class="fc" id="L201">                UtilityCell cell = (UtilityCell) c;</span>
+<span class="fc" id="L202">                purchaseUtility(cell);</span>
             }
         }
-<span class="fc" id="L207">    }</span>
+<span class="fc" id="L205">    }</span>
 
     public void purchaseHouse(String selectedMonopoly, int houses) {
-<span class="fc" id="L210">        GameBoard gb = GameMaster.instance().getGameBoard();</span>
-<span class="fc" id="L211">        PropertyCell[] cells = gb.getPropertiesInMonopoly(selectedMonopoly);</span>
-<span class="pc bpc" id="L212" title="1 of 2 branches missed.">        if ((money &gt;= (cells.length * (cells[0].getHousePrice() * houses)))) {</span>
-<span class="fc bfc" id="L213" title="All 2 branches covered.">            for (int i = 0; i &lt; cells.length; i++) {</span>
-<span class="fc" id="L214">                int newNumber = cells[i].getNumHouses() + houses;</span>
-<span class="pc bpc" id="L215" title="1 of 2 branches missed.">                if (newNumber &lt;= 5) {</span>
-<span class="fc" id="L216">                    cells[i].setNumHouses(newNumber);</span>
-<span class="fc" id="L217">                    this.setMoney(money - (cells[i].getHousePrice() * houses));</span>
-<span class="fc" id="L218">                    GameMaster.instance().updateGUI();</span>
+<span class="fc" id="L208">        GameBoard gb = GameMaster.instance().getGameBoard();</span>
+<span class="fc" id="L209">        PropertyCell[] cells = gb.getPropertiesInMonopoly(selectedMonopoly);</span>
+<span class="pc bpc" id="L210" title="1 of 2 branches missed.">        if ((money &gt;= (cells.length * (cells[0].getHousePrice() * houses)))) {</span>
+<span class="fc bfc" id="L211" title="All 2 branches covered.">            for (int i = 0; i &lt; cells.length; i++) {</span>
+<span class="fc" id="L212">                int newNumber = cells[i].getNumHouses() + houses;</span>
+<span class="pc bpc" id="L213" title="1 of 2 branches missed.">                if (newNumber &lt;= 5) {</span>
+<span class="fc" id="L214">                    cells[i].setNumHouses(newNumber);</span>
+<span class="fc" id="L215">                    this.setMoney(money - (cells[i].getHousePrice() * houses));</span>
+<span class="fc" id="L216">                    GameMaster.instance().updateGUI();</span>
                 }
             }
         }
-<span class="fc" id="L222">    }</span>
+<span class="fc" id="L220">    }</span>
 
     private void purchaseProperty(PropertyCell cell) {
-<span class="fc" id="L225">        buyProperty(cell, cell.getPrice());</span>
-<span class="fc" id="L226">    }</span>
+<span class="fc" id="L223">        buyProperty(cell, cell.getPrice());</span>
+<span class="fc" id="L224">    }</span>
 
     private void purchaseRailRoad(RailRoadCell cell) {
-<span class="fc" id="L229">        buyProperty(cell, cell.getPrice());</span>
-<span class="fc" id="L230">    }</span>
+<span class="fc" id="L227">        buyProperty(cell, cell.getPrice());</span>
+<span class="fc" id="L228">    }</span>
 
     private void purchaseUtility(UtilityCell cell) {
-<span class="fc" id="L233">        buyProperty(cell, cell.getPrice());</span>
-<span class="fc" id="L234">    }</span>
+<span class="fc" id="L231">        buyProperty(cell, cell.getPrice());</span>
+<span class="fc" id="L232">    }</span>
 
     public void sellProperty(Cell property, int amount) {
-<span class="fc" id="L237">        property.setOwner(null);</span>
+<span class="fc" id="L235">        property.setOwner(null);</span>
         try {
-<span class="pc bpc" id="L239" title="1 of 2 branches missed.">            if (property instanceof PropertyCell) {</span>
-<span class="fc" id="L240">                properties.remove(property);</span>
+<span class="pc bpc" id="L237" title="1 of 2 branches missed.">            if (property instanceof PropertyCell) {</span>
+<span class="fc" id="L238">                properties.remove(property);</span>
             }
-<span class="pc bpc" id="L242" title="1 of 2 branches missed.">            if (property instanceof RailRoadCell) {</span>
-<span class="nc" id="L243">                railroads.remove(property);</span>
+<span class="pc bpc" id="L240" title="1 of 2 branches missed.">            if (property instanceof RailRoadCell) {</span>
+<span class="nc" id="L241">                railroads.remove(property);</span>
             }
-<span class="pc bpc" id="L245" title="1 of 2 branches missed.">            if (property instanceof UtilityCell) {</span>
-<span class="nc" id="L246">                utilities.remove(property);</span>
+<span class="pc bpc" id="L243" title="1 of 2 branches missed.">            if (property instanceof UtilityCell) {</span>
+<span class="nc" id="L244">                utilities.remove(property);</span>
             }
-<span class="nc" id="L248">        } catch (Exception e) {</span>
-<span class="nc" id="L249">            property.setOwner(this);</span>
-<span class="fc" id="L250">        }</span>
-<span class="fc" id="L251">        setMoney(getMoney() + amount);</span>
-<span class="fc" id="L252">    }</span>
+<span class="nc" id="L246">        } catch (Exception e) {</span>
+<span class="nc" id="L247">            property.setOwner(this);</span>
+<span class="fc" id="L248">        }</span>
+<span class="fc" id="L249">        setMoney(getMoney() + amount);</span>
+<span class="fc" id="L250">    }</span>
 
     public void setInJail(boolean inJail) {
-<span class="fc" id="L255">        this.inJail = inJail;</span>
-<span class="fc" id="L256">    }</span>
+<span class="fc" id="L253">        this.inJail = inJail;</span>
+<span class="fc" id="L254">    }</span>
 
     public void setMoney(int money) {
-<span class="fc" id="L259">        this.money = money;</span>
-<span class="fc" id="L260">    }</span>
+<span class="fc" id="L257">        this.money = money;</span>
+<span class="fc" id="L258">    }</span>
 
     public void setName(String name) {
-<span class="fc" id="L263">        this.name = name;</span>
-<span class="fc" id="L264">    }</span>
+<span class="fc" id="L261">        this.name = name;</span>
+<span class="fc" id="L262">    }</span>
 
     public void setPosition(Cell newPosition) {
-<span class="fc" id="L267">        this.position = newPosition;</span>
-<span class="fc" id="L268">    }</span>
+<span class="fc" id="L265">        this.position = newPosition;</span>
+<span class="fc" id="L266">    }</span>
 
     public File getPerfil() {
-<span class="nc" id="L271">        return perfil;</span>
+<span class="nc" id="L269">        return perfil;</span>
     }
 
     public void setPerfil(File perfil) {
-<span class="nc" id="L275">        this.perfil = perfil;</span>
-<span class="nc" id="L276">    }</span>
+<span class="nc" id="L273">        this.perfil = perfil;</span>
+<span class="nc" id="L274">    }</span>
 
     public Color getColor() {
-<span class="nc" id="L279">        return color;</span>
+<span class="nc" id="L277">        return color;</span>
     }
 
     public void setColor(Color color) {
-<span class="nc" id="L283">        this.color = color;</span>
-<span class="nc" id="L284">    }</span>
+<span class="nc" id="L281">        this.color = color;</span>
+<span class="nc" id="L282">    }</span>
 
     public int getGamesPlayed() {
-<span class="nc" id="L287">        return gamesPlayed;</span>
+<span class="nc" id="L285">        return gamesPlayed;</span>
     }
 
     public void setGamesPlayed(int gamesPlayed) {
-<span class="nc" id="L291">        this.gamesPlayed = gamesPlayed;</span>
-<span class="nc" id="L292">    }</span>
+<span class="nc" id="L289">        this.gamesPlayed = gamesPlayed;</span>
+<span class="nc" id="L290">    }</span>
 
     public int getGamesWon() {
-<span class="nc" id="L295">        return gamesWon;</span>
+<span class="nc" id="L293">        return gamesWon;</span>
     }
 
     public void setGamesWon(int gamesWon) {
-<span class="nc" id="L299">        this.gamesWon = gamesWon;</span>
-<span class="nc" id="L300">    }</span>
+<span class="nc" id="L297">        this.gamesWon = gamesWon;</span>
+<span class="nc" id="L298">    }</span>
     
     public String toString() {
-<span class="fc" id="L303">        return name;</span>
+<span class="fc" id="L301">        return name;</span>
     }
 
     public void resetProperty() {
-<span class="fc" id="L307">        properties = new ArrayList();</span>
-<span class="fc" id="L308">        railroads = new ArrayList();</span>
-<span class="fc" id="L309">        utilities = new ArrayList();</span>
-<span class="fc" id="L310">    }</span>
+<span class="fc" id="L305">        properties = new ArrayList();</span>
+<span class="fc" id="L306">        railroads = new ArrayList();</span>
+<span class="fc" id="L307">        utilities = new ArrayList();</span>
+<span class="fc" id="L308">    }</span>
 
     public void payRentToBank(int ammount) {
-<span class="nc" id="L313">        this.money -= ammount;</span>
-<span class="nc" id="L314">    }</span>
+<span class="nc" id="L311">        this.money -= ammount;</span>
+<span class="nc" id="L312">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -19,7 +19,6 @@ public class GameBoardCCMovePlayer extends GameBoard {
 
         Card ccCard1 = new MovePlayerCard("Blue 1", Card.TYPE_CC);
         Card ccCard2 = new MovePlayerCard("Blue 2", Card.TYPE_CC);
-        Card chanceCard1 = new MovePlayerCard("Blue 1", Card.TYPE_CHANCE);
 
         blue1.setName("Blue 1");
         blue2.setName("Blue 2");

@@ -15,7 +15,7 @@ import java.util.Calendar;
  * @author Federico
  */
 public class ArchivoLog {
-    FileWriter archivo; //nuestro archivo log
+    private FileWriter archivo; //nuestro archivo log
 
      public void crearLog(String operacion)  {
 

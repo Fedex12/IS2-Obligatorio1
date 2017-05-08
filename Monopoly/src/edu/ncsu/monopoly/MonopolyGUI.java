@@ -2,49 +2,49 @@ package edu.ncsu.monopoly;
 
 public interface MonopolyGUI {
 
-    public void enableEndTurnBtn(int playerIndex);
+    void enableEndTurnBtn(int playerIndex);
 
-    public void enablePlayerTurn(int playerIndex);
+    void enablePlayerTurn(int playerIndex);
 
-    public void enablePurchaseBtn(int playerIndex);
+    void enablePurchaseBtn(int playerIndex);
 
-    public int[] getDiceRoll();
+    int[] getDiceRoll();
 
-    public boolean isDrawCardButtonEnabled();
+    boolean isDrawCardButtonEnabled();
 
-    public boolean isEndTurnButtonEnabled();
+    boolean isEndTurnButtonEnabled();
 
-    public boolean isGetOutOfJailButtonEnabled();
+    boolean isGetOutOfJailButtonEnabled();
 
-    public boolean isTradeButtonEnabled(int i);
+    boolean isTradeButtonEnabled(int i);
 
-    public void movePlayer(int index, int from, int to);
+    void movePlayer(int index, int from, int to);
 
-    public RespondDialog openRespondDialog(TradeDeal deal);
+    RespondDialog openRespondDialog(TradeDeal deal);
 
-    public TradeDialog openTradeDialog();
+    TradeDialog openTradeDialog();
 
-    public void setBuyHouseEnabled(boolean b);
+    void setBuyHouseEnabled(boolean b);
 
-    public void setDrawCardEnabled(boolean b);
+    void setDrawCardEnabled(boolean b);
 
-    public void setEndTurnEnabled(boolean enabled);
+    void setEndTurnEnabled(boolean enabled);
 
-    public void setGetOutOfJailEnabled(boolean b);
+    void setGetOutOfJailEnabled(boolean b);
 
-    public void setPurchasePropertyEnabled(boolean enabled);
+    void setPurchasePropertyEnabled(boolean enabled);
 
-    public void setRollDiceEnabled(boolean b);
+    void setRollDiceEnabled(boolean b);
 
-    public void setTradeEnabled(int index, boolean b);
+    void setTradeEnabled(int index, boolean b);
 
-    public void showBuyHouseDialog(Player currentPlayer);
+    void showBuyHouseDialog(Player currentPlayer);
 
-    public void showMessage(String string);
+    void showMessage(String string);
 
-    public int showUtilDiceRoll();
+    int showUtilDiceRoll();
 
-    public void startGame();
+    void startGame();
 
-    public void update();
+    void update();
 }

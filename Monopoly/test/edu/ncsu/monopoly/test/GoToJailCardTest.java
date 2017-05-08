@@ -9,8 +9,8 @@ import junit.framework.TestCase;
 
 public class GoToJailCardTest extends TestCase {
 
-    GameMaster gameMaster;
-    Card jailCard = new JailCard(Card.TYPE_CC);
+    private GameMaster gameMaster;
+    private Card jailCard = new JailCard(Card.TYPE_CC);
 
     protected void setUp() {
         gameMaster = GameMaster.instance();

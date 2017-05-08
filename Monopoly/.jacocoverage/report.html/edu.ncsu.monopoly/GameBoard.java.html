@@ -10,7 +10,7 @@ public class GameBoard {
     //the key of colorGroups is the name of the color group.
 <span class="fc" id="L11">    private Hashtable colorGroups = new Hashtable();</span>
 <span class="fc" id="L12">    private ArrayList communityChestCards = new ArrayList();</span>
-    private GameMaster gameMaster;
+    
 
 <span class="fc" id="L15">    public GameBoard() {</span>
 <span class="fc" id="L16">        Cell go = new GoCell();</span>
@@ -43,10 +43,10 @@ public class GameBoard {
     }
 
     public Card drawChanceCard() {
-<span class="fc" id="L46">        Card card = (Card) chanceCards.get(0);</span>
-<span class="fc" id="L47">        chanceCards.remove(0);</span>
-<span class="fc" id="L48">        addCard(card);</span>
-<span class="fc" id="L49">        return card;</span>
+<span class="nc" id="L46">        Card card = (Card) chanceCards.get(0);</span>
+<span class="nc" id="L47">        chanceCards.remove(0);</span>
+<span class="nc" id="L48">        addCard(card);</span>
+<span class="nc" id="L49">        return card;</span>
     }
 
     public Cell getCell(int newIndex) {

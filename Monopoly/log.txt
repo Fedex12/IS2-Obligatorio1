@@ -1179,3 +1179,50 @@
 8/5/2017;11:45:4;null le paga una renta de 40a null
 8/5/2017;11:45:4;null dinero: 1460
 8/5/2017;11:45:4;null dinero: 1390
+8/5/2017;12:16:53;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:53;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:54;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:55;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55;Cambio de jugador turno de 1
+8/5/2017;12:16:55;Player 2 wishes to purchase Mediterranean Avenue from Player 1 for 200.  Player 1, do you wish to trade your property?
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55;Player 1, you rolled 2 and 3
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55;Cambio de jugador turno de 1
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:55;Cambio de jugador turno de 1
+8/5/2017;12:16:55;Cambio de jugador turno de 0
+8/5/2017;12:16:55; Comienza el juego!
+8/5/2017;12:16:56;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:57;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:57;El jugador null pasa por el GO y suma 200
+8/5/2017;12:16:57;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:57;Cambio de jugador turno de 1
+8/5/2017;12:16:57; Comienza el juego!
+8/5/2017;12:16:57;Cambio de jugador turno de 0
+8/5/2017;12:16:57;Cambio de jugador turno de 0
+8/5/2017;12:16:57;Cambio de jugador turno de 0
+8/5/2017;12:16:57;Cambio de jugador turno de 1
+8/5/2017;12:16:57;null le paga una renta de 1600a null
+8/5/2017;12:16:57;null dinero: -100
+8/5/2017;12:16:57;null dinero: 2800
+8/5/2017;12:16:57;Cambio de jugador turno de 0
+8/5/2017;12:16:58;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:58;Cambio de jugador turno de 1
+8/5/2017;12:16:58;null le paga una renta de 10a null
+8/5/2017;12:16:58;null dinero: 1490
+8/5/2017;12:16:58;null dinero: 1390
+8/5/2017;12:16:59;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:16:59;Cambio de jugador turno de 1
+8/5/2017;12:16:59;null le paga una renta de 25a null
+8/5/2017;12:16:59;null dinero: 1475
+8/5/2017;12:16:59;null dinero: 1325
+8/5/2017;12:16:59;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:17:0;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;12:17:0;Cambio de jugador turno de 1
+8/5/2017;12:17:0;null le paga una renta de 40a null
+8/5/2017;12:17:0;null dinero: 1460
+8/5/2017;12:17:0;null dinero: 1390

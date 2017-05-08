@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class TaxiCard extends Card {
 
-    int type;
+    private int type;
 
     public TaxiCard(int cardType) {
         type = cardType;

@@ -2,7 +2,7 @@ package edu.ncsu.monopoly;
 
 public class MockRespondDialog implements RespondDialog {
 
-    public MockRespondDialog(TradeDeal deal) {
+    public MockRespondDialog() {
     }
 
     public boolean getResponse() {

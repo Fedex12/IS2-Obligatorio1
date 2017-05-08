@@ -22,7 +22,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class CreateNewPlayer extends javax.swing.JFrame {
 
-    File picture;
+    private File picture;
 
     /**
      * Creates new form NuevoJugador
@@ -59,8 +59,8 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 <span class="nc" id="L59">        colorChoice = new java.awt.Choice();</span>
 <span class="nc" id="L60">        jButton1 = new javax.swing.JButton();</span>
 <span class="nc" id="L61">        exitBtt = new javax.swing.JButton();</span>
-<span class="nc" id="L62">        ProfilePhoto = new javax.swing.JLabel();</span>
-<span class="nc" id="L63">        CreateBtt = new javax.swing.JButton();</span>
+<span class="nc" id="L62">        profilePhoto = new javax.swing.JLabel();</span>
+<span class="nc" id="L63">        createBtt = new javax.swing.JButton();</span>
 <span class="nc" id="L64">        jPanel1 = new javax.swing.JPanel();</span>
 
 <span class="nc" id="L66">        jTextArea1.setColumns(20);</span>
@@ -103,24 +103,24 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 <span class="nc" id="L103">        getContentPane().add(exitBtt);</span>
 <span class="nc" id="L104">        exitBtt.setBounds(280, 220, 110, 25);</span>
 
-<span class="nc" id="L106">        ProfilePhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
-<span class="nc" id="L107">        ProfilePhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/Perfil blanco.jpg&quot;))); // NOI18N</span>
-<span class="nc" id="L108">        ProfilePhoto.setLabelFor(this);</span>
-<span class="nc" id="L109">        ProfilePhoto.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);</span>
-<span class="nc" id="L110">        ProfilePhoto.setMaximumSize(new java.awt.Dimension(240, 240));</span>
-<span class="nc" id="L111">        ProfilePhoto.setMinimumSize(new java.awt.Dimension(240, 240));</span>
-<span class="nc" id="L112">        ProfilePhoto.setPreferredSize(new java.awt.Dimension(240, 240));</span>
-<span class="nc" id="L113">        getContentPane().add(ProfilePhoto);</span>
-<span class="nc" id="L114">        ProfilePhoto.setBounds(10, 10, 240, 240);</span>
+<span class="nc" id="L106">        profilePhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);</span>
+<span class="nc" id="L107">        profilePhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/Imagenes/Perfil blanco.jpg&quot;))); // NOI18N</span>
+<span class="nc" id="L108">        profilePhoto.setLabelFor(this);</span>
+<span class="nc" id="L109">        profilePhoto.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);</span>
+<span class="nc" id="L110">        profilePhoto.setMaximumSize(new java.awt.Dimension(240, 240));</span>
+<span class="nc" id="L111">        profilePhoto.setMinimumSize(new java.awt.Dimension(240, 240));</span>
+<span class="nc" id="L112">        profilePhoto.setPreferredSize(new java.awt.Dimension(240, 240));</span>
+<span class="nc" id="L113">        getContentPane().add(profilePhoto);</span>
+<span class="nc" id="L114">        profilePhoto.setBounds(10, 10, 240, 240);</span>
 
-<span class="nc" id="L116">        CreateBtt.setText(&quot;Create&quot;);</span>
-<span class="nc" id="L117">        CreateBtt.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="nc" id="L116">        createBtt.setText(&quot;Create&quot;);</span>
+<span class="nc" id="L117">        createBtt.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L119">                CreateBttActionPerformed(evt);</span>
+<span class="nc" id="L119">                createBttActionPerformed(evt);</span>
 <span class="nc" id="L120">            }</span>
         });
-<span class="nc" id="L122">        getContentPane().add(CreateBtt);</span>
-<span class="nc" id="L123">        CreateBtt.setBounds(400, 220, 110, 25);</span>
+<span class="nc" id="L122">        getContentPane().add(createBtt);</span>
+<span class="nc" id="L123">        createBtt.setBounds(400, 220, 110, 25);</span>
 
 <span class="nc" id="L125">        jPanel1.setMinimumSize(new java.awt.Dimension(520, 260));</span>
 <span class="nc" id="L126">        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());</span>
@@ -138,21 +138,21 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 
 <span class="nc" id="L139">        FileNameExtensionFilter filtro = new FileNameExtensionFilter(&quot;JPG y PNG&quot;, &quot;jpg&quot;, &quot;png&quot;);</span>
 
-<span class="nc" id="L141">        windowPC.SelectPicture.setFileFilter(filtro);</span>
+<span class="nc" id="L141">        windowPC.selectPicture.setFileFilter(filtro);</span>
 
-<span class="nc" id="L143">        resultado = windowPC.SelectPicture.showOpenDialog(null);</span>
+<span class="nc" id="L143">        resultado = windowPC.selectPicture.showOpenDialog(null);</span>
 
 <span class="nc bnc" id="L145" title="All 2 branches missed.">        if (JFileChooser.APPROVE_OPTION == resultado) {</span>
 
-<span class="nc" id="L147">            picture = windowPC.SelectPicture.getSelectedFile();</span>
+<span class="nc" id="L147">            picture = windowPC.selectPicture.getSelectedFile();</span>
 
             try {
 
 <span class="nc" id="L151">                ImageIcon icon = new ImageIcon(picture.toString());</span>
 
-<span class="nc" id="L153">                Icon icono = new ImageIcon(icon.getImage().getScaledInstance(ProfilePhoto.getWidth(), ProfilePhoto.getHeight(), Image.SCALE_DEFAULT));</span>
+<span class="nc" id="L153">                Icon icono = new ImageIcon(icon.getImage().getScaledInstance(profilePhoto.getWidth(), profilePhoto.getHeight(), Image.SCALE_DEFAULT));</span>
 
-<span class="nc" id="L155">                ProfilePhoto.setIcon(icono);</span>
+<span class="nc" id="L155">                profilePhoto.setIcon(icono);</span>
 
 <span class="nc" id="L157">            } catch (Exception ex) {</span>
 
@@ -172,7 +172,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 
 <span class="nc" id="L173">    }//GEN-LAST:event_exitBttActionPerformed</span>
 
-    private void CreateBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBttActionPerformed
+    private void createBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBttActionPerformed
 
 <span class="nc" id="L177">        GameMaster master = GameMaster.instance();</span>
 <span class="nc" id="L178">        boolean unique = true;</span>
@@ -230,7 +230,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         }
 
 // TODO add your handling code here:
-<span class="nc" id="L233">    }//GEN-LAST:event_CreateBttActionPerformed</span>
+<span class="nc" id="L233">    }//GEN-LAST:event_createBttActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -269,9 +269,8 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 <span class="nc" id="L269">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreateBtt;
-    private javax.swing.JLabel ProfilePhoto;
     private java.awt.Choice colorChoice;
+    private javax.swing.JButton createBtt;
     private javax.swing.JButton exitBtt;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -281,6 +280,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField nameText;
+    private javax.swing.JLabel profilePhoto;
     // End of variables declaration//GEN-END:variables
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
