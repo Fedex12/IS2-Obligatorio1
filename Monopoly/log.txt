@@ -455,3 +455,4 @@
 8/5/2017;0:27:31;Cambio de jugador turno de 1
 8/5/2017;0:27:32;katya, you rolled 6 and 2
 8/5/2017;0:27:37;Cambio de jugador turno de 0
+8/5/2017;1:10:40;Excepcion al levantar datos persistidos: java.io.EOFException

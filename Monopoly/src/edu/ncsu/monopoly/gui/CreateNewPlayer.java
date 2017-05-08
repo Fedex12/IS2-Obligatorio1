@@ -29,7 +29,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
      */
     public CreateNewPlayer() {
         initComponents();
-        picture= new File(("/Imagenes/Perfil blanco.jpg"));
+        picture = new File(("/Imagenes/Perfil blanco.jpg"));
         colorChoice.addItem("RED");
         colorChoice.addItem("BLUE");
         colorChoice.addItem("GREEN");
@@ -169,51 +169,65 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         // TODO add your handling code here:
         new GameOptions().setVisible(true);
         this.dispose();
-          
+
     }//GEN-LAST:event_exitBttActionPerformed
 
     private void CreateBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateBttActionPerformed
 
         GameMaster master = GameMaster.instance();
-        Player player = new Player();
-        player.setName(nameText.getText());
-        player.setPerfil(picture);
-        player.setGamesPlayed(0);
-        player.setGamesWon(0);
+        boolean unique = true;
 
-        switch (colorChoice.getSelectedItem()) {
-            case "RED":
-                player.setColor(Color.RED);
-                break;
-            case "BLUE":
-                player.setColor(Color.BLUE);
-                break;
-            case "GREEN":
-                player.setColor(Color.GREEN);
-                break;
-            case "PINK":
-                player.setColor(Color.PINK);
-                break;
-            case "GRAY":
-                player.setColor(Color.GRAY);
-                break;
-            case "ORANGE":
-                player.setColor(Color.ORANGE);
-                break;
-            case "YELLOW":
-                player.setColor(Color.YELLOW);
-                break;
-            case "WHITE":
-                player.setColor(Color.WHITE);
-                break;
-            default:
-                player.setColor(Color.GREEN);
-                break;
+        for (int i = 0; i < master.getRegistredPlayers().size(); i++) {
+
+            if (master.getRegistredPlayers().get(i).getName().equals(nameText.getText())) {
+                unique = false;
+            }
         }
-        
-        master.newPlayer(player);
-        new GameOptions().setVisible(true);
-        this.dispose();
+
+        if (unique) {
+            Player player = new Player();
+            player.setName(nameText.getText());
+            player.setPerfil(picture);
+            player.setGamesPlayed(0);
+            player.setGamesWon(0);
+
+            switch (colorChoice.getSelectedItem()) {
+                case "RED":
+                    player.setColor(Color.RED);
+                    break;
+                case "BLUE":
+                    player.setColor(Color.BLUE);
+                    break;
+                case "GREEN":
+                    player.setColor(Color.GREEN);
+                    break;
+                case "PINK":
+                    player.setColor(Color.PINK);
+                    break;
+                case "GRAY":
+                    player.setColor(Color.GRAY);
+                    break;
+                case "ORANGE":
+                    player.setColor(Color.ORANGE);
+                    break;
+                case "YELLOW":
+                    player.setColor(Color.YELLOW);
+                    break;
+                case "WHITE":
+                    player.setColor(Color.WHITE);
+                    break;
+                default:
+                    player.setColor(Color.GREEN);
+                    break;
+            }
+
+            master.newPlayer(player);
+            new GameOptions().setVisible(true);
+            this.dispose();
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Error: The name entered is already being used.");
+        }
 
 // TODO add your handling code here:
     }//GEN-LAST:event_CreateBttActionPerformed
