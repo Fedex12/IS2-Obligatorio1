@@ -65,14 +65,16 @@ public class GameMaster {
     public void persistPlayers(){
         
         FileOutputStream fos = null;
-        ObjectOutputStream salida = null;        
+        ObjectOutputStream salida = null;
+        
         try {
             fos = new FileOutputStream("persisted-Players.file");
             salida = new ObjectOutputStream(fos);
             for(Player p: registredPlayers){
                 salida.writeObject(p);
             }
-                   } catch (FileNotFoundException e) {
+           
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -87,6 +89,7 @@ public class GameMaster {
     }
     
     public void btnBuyHouseClicked() {
+
         gui.showBuyHouseDialog(getCurrentPlayer());
     }
 
@@ -120,9 +123,11 @@ public class GameMaster {
         } else {
             
             switchTurn();
-            updateGUI();            
+            updateGUI();
+            
         }
     }
+
     public void btnGetOutOfJailClicked() {
         getCurrentPlayer().getOutOfJail();
         if (getCurrentPlayer().isBankrupt()) {
@@ -254,11 +259,11 @@ public class GameMaster {
         return this.utilDiceRoll;
     }
 
-    public ArrayList<Player> getPlayers() {
+    public ArrayList getPlayers() {
         return players;
     }
 
-    public void setPlayers(ArrayList player) {
+    public void setPlayers(ArrayList players) {
         this.players = players;
         for(int i=0;i<players.size();i++){
             this.players.get(i).setMoney(initAmountOfMoney);
@@ -333,7 +338,8 @@ public class GameMaster {
         gui.movePlayer(
                 getPlayerIndex(player),
                 oldPosition,
-                jailIndex);        
+                jailIndex);
+        
     }
 
     private void setAllButtonEnabled(boolean enabled) {
@@ -361,9 +367,9 @@ public class GameMaster {
     public void setNumberOfPlayers(int number) {
         //players.clear();
         for (int i = 0; i < number; i++) {
-            
+           // Player player = new Player();
             players.get(i).setMoney(initAmountOfMoney);
-            
+           // players.add(player);
         }
     }
 
@@ -375,7 +381,8 @@ public class GameMaster {
 
         archivo.crearLog(" Comienza el juego!");
         gui.startGame();
-        gui.enablePlayerTurn(0);        
+        gui.enablePlayerTurn(0);
+        
         gui.setTradeEnabled(0, true);
     }
 

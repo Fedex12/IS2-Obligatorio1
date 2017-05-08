@@ -227,6 +227,7 @@ public class GameOptions extends javax.swing.JFrame {
             model = (DefaultListModel<Player>) selectedPlayerList.getModel();
             ArrayList<Player> players = new ArrayList();
             for (int i = 0; i < model.getSize(); i++) {
+                
                 players.add(model.get(i));
                 master.addGamePlayed(model.get(i));
             }
@@ -237,12 +238,10 @@ public class GameOptions extends javax.swing.JFrame {
 
             MainWindow window = new MainWindow();
             GameBoard gameBoard = null;
-
             gameBoard = new GameBoardFull();
-
             master.setGameBoard(gameBoard);
             master.setNumberOfPlayers(players.size());
-            
+            master.setPlayers(players);
 
             window.setupGameBoard(gameBoard);
             window.show();

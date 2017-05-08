@@ -3,106 +3,106 @@
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-public class GameBoard {
+public class GameBoard{
 
-<span class="fc" id="L8">    private ArrayList cells = new ArrayList();</span>
+<span class="fc" id="L8">	private ArrayList cells = new ArrayList();</span>
 <span class="fc" id="L9">    private ArrayList chanceCards = new ArrayList();</span>
-    //the key of colorGroups is the name of the color group.
-<span class="fc" id="L11">    private Hashtable colorGroups = new Hashtable();</span>
-<span class="fc" id="L12">    private ArrayList communityChestCards = new ArrayList();</span>
-    private GameMaster gameMaster;
+	//the key of colorGroups is the name of the color group.
+<span class="fc" id="L11">	private Hashtable colorGroups = new Hashtable();</span>
+<span class="fc" id="L12">	private ArrayList communityChestCards = new ArrayList();</span>
+	private GameMaster gameMaster;
+	
+<span class="fc" id="L15">	public GameBoard(){</span>
+<span class="fc" id="L16">		Cell go = new GoCell();</span>
+<span class="fc" id="L17">		addCell(go);</span>
+<span class="fc" id="L18">	}</span>
 
-<span class="fc" id="L15">    public GameBoard() {</span>
-<span class="fc" id="L16">        Cell go = new GoCell();</span>
-<span class="fc" id="L17">        addCell(go);</span>
-<span class="fc" id="L18">    }</span>
-
-    public void addCard(Card card) {
-<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (card.getCardType() == Card.TYPE_CC) {</span>
+    public void addCard(Card card){
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if(card.getCardType() == Card.TYPE_CC){</span>
 <span class="fc" id="L22">            communityChestCards.add(card);</span>
-        } else {
+        } else{
 <span class="fc" id="L24">            chanceCards.add(card);</span>
         }
 <span class="fc" id="L26">    }</span>
+	
+	public void addCell(Cell cell){
+<span class="fc" id="L29">		cells.add(cell);</span>
+<span class="fc" id="L30">	}</span>
+            
+	public void addCell(PropertyCell cell){
+<span class="fc" id="L33">            int propertyNumber = getPropertyNumberForColor(cell.getColorGroup());</span>
+<span class="fc" id="L34">            colorGroups.put(cell.getColorGroup(), new Integer(propertyNumber + 1));</span>
+<span class="fc" id="L35">            cells.add(cell);</span>
+<span class="fc" id="L36">	}</span>
 
-    public void addCell(Cell cell) {
-<span class="fc" id="L29">        cells.add(cell);</span>
-<span class="fc" id="L30">    }</span>
-
-    public void addCell(PropertyCell cell) {
-<span class="fc" id="L33">        int propertyNumber = getPropertyNumberForColor(cell.getColorGroup());</span>
-<span class="fc" id="L34">        colorGroups.put(cell.getColorGroup(), new Integer(propertyNumber + 1));</span>
-<span class="fc" id="L35">        cells.add(cell);</span>
-<span class="fc" id="L36">    }</span>
-
-    public Card drawCCCard() {
-<span class="fc" id="L39">        Card card = (Card) communityChestCards.get(0);</span>
+    public Card drawCCCard(){
+<span class="fc" id="L39">        Card card = (Card)communityChestCards.get(0);</span>
 <span class="fc" id="L40">        communityChestCards.remove(0);</span>
 <span class="fc" id="L41">        addCard(card);</span>
 <span class="fc" id="L42">        return card;</span>
     }
 
-    public Card drawChanceCard() {
-<span class="fc" id="L46">        Card card = (Card) chanceCards.get(0);</span>
+    public Card drawChanceCard(){
+<span class="fc" id="L46">        Card card = (Card)chanceCards.get(0);</span>
 <span class="fc" id="L47">        chanceCards.remove(0);</span>
 <span class="fc" id="L48">        addCard(card);</span>
 <span class="fc" id="L49">        return card;</span>
     }
 
-    public Cell getCell(int newIndex) {
-<span class="fc" id="L53">        return (Cell) cells.get(newIndex);</span>
-    }
+	public Cell getCell(int newIndex){
+<span class="fc" id="L53">		return (Cell)cells.get(newIndex);</span>
+	}
+	
+	public int getCellNumber(){
+<span class="fc" id="L57">		return cells.size();</span>
+	}
+	
+	public PropertyCell[] getPropertiesInMonopoly(String color){
+<span class="fc" id="L61">		PropertyCell[] monopolyCells = </span>
+<span class="fc" id="L62">			new PropertyCell[getPropertyNumberForColor(color)];</span>
+<span class="fc" id="L63">		int counter = 0;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">		for (int i = 0; i &lt; getCellNumber(); i++){</span>
+<span class="fc" id="L65">			Cell c = getCell(i);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">			if(c instanceof PropertyCell){</span>
+<span class="fc" id="L67">				PropertyCell pc = (PropertyCell)c;</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">				if(pc.getColorGroup().equals(color)){</span>
+<span class="fc" id="L69">					monopolyCells[counter] = pc;</span>
+<span class="fc" id="L70">					counter++;</span>
+				}
+			}
+		}
+<span class="fc" id="L74">		return monopolyCells;</span>
+	}
+	
+	public int getPropertyNumberForColor(String name){
+<span class="fc" id="L78">		Integer number = (Integer)colorGroups.get(name);</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">		if(number != null){</span>
+<span class="fc" id="L80">			return number.intValue();</span>
+		}
+<span class="fc" id="L82">		return 0;</span>
+	}
 
-    public int getCellNumber() {
-<span class="fc" id="L57">        return cells.size();</span>
-    }
+	public Cell queryCell(String string){
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">		for(int i = 0; i &lt; cells.size(); i++){</span>
+<span class="fc" id="L87">			Cell temp = (Cell)cells.get(i); </span>
+<span class="fc bfc" id="L88" title="All 2 branches covered.">			if(temp.getName().equals(string)){</span>
+<span class="fc" id="L89">				return temp;</span>
+			}
+		}
+<span class="nc" id="L92">		return null;</span>
+	}
+	
+	public int queryCellIndex(String string){
+<span class="pc bpc" id="L96" title="1 of 2 branches missed.">		for(int i = 0; i &lt; cells.size(); i++){</span>
+<span class="fc" id="L97">			Cell temp = (Cell)cells.get(i); </span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">			if(temp.getName().equals(string)){</span>
+<span class="fc" id="L99">				return i;</span>
+			}
+		}
+<span class="nc" id="L102">		return -1;</span>
+	}
 
-    public PropertyCell[] getPropertiesInMonopoly(String color) {
-<span class="fc" id="L61">        PropertyCell[] monopolyCells</span>
-<span class="fc" id="L62">                = new PropertyCell[getPropertyNumberForColor(color)];</span>
-<span class="fc" id="L63">        int counter = 0;</span>
-<span class="fc bfc" id="L64" title="All 2 branches covered.">        for (int i = 0; i &lt; getCellNumber(); i++) {</span>
-<span class="fc" id="L65">            Cell c = getCell(i);</span>
-<span class="fc bfc" id="L66" title="All 2 branches covered.">            if (c instanceof PropertyCell) {</span>
-<span class="fc" id="L67">                PropertyCell pc = (PropertyCell) c;</span>
-<span class="fc bfc" id="L68" title="All 2 branches covered.">                if (pc.getColorGroup().equals(color)) {</span>
-<span class="fc" id="L69">                    monopolyCells[counter] = pc;</span>
-<span class="fc" id="L70">                    counter++;</span>
-                }
-            }
-        }
-<span class="fc" id="L74">        return monopolyCells;</span>
-    }
-
-    public int getPropertyNumberForColor(String name) {
-<span class="fc" id="L78">        Integer number = (Integer) colorGroups.get(name);</span>
-<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (number != null) {</span>
-<span class="fc" id="L80">            return number.intValue();</span>
-        }
-<span class="fc" id="L82">        return 0;</span>
-    }
-
-    public Cell queryCell(String string) {
-<span class="pc bpc" id="L86" title="1 of 2 branches missed.">        for (int i = 0; i &lt; cells.size(); i++) {</span>
-<span class="fc" id="L87">            Cell temp = (Cell) cells.get(i);</span>
-<span class="fc bfc" id="L88" title="All 2 branches covered.">            if (temp.getName().equals(string)) {</span>
-<span class="fc" id="L89">                return temp;</span>
-            }
-        }
-<span class="nc" id="L92">        return null;</span>
-    }
-
-    public int queryCellIndex(String string) {
-<span class="pc bpc" id="L96" title="1 of 2 branches missed.">        for (int i = 0; i &lt; cells.size(); i++) {</span>
-<span class="fc" id="L97">            Cell temp = (Cell) cells.get(i);</span>
-<span class="fc bfc" id="L98" title="All 2 branches covered.">            if (temp.getName().equals(string)) {</span>
-<span class="fc" id="L99">                return i;</span>
-            }
-        }
-<span class="nc" id="L102">        return -1;</span>
-    }
-
-    public void removeCards() {
+    public void removeCards(){
 <span class="fc" id="L106">        communityChestCards.clear();</span>
 <span class="fc" id="L107">    }</span>
 }

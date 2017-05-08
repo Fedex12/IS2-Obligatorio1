@@ -1,50 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>InfoFormatter.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Monopoly&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">edu.ncsu.monopoly.gui</a> &gt; <span class="el_source">InfoFormatter.java</span></div><h1>InfoFormatter.java</h1><pre class="source lang-java linenums">package edu.ncsu.monopoly.gui;
 
-import edu.ncsu.monopoly.CardCell;
-import edu.ncsu.monopoly.Cell;
-import edu.ncsu.monopoly.FreeParkingCell;
-import edu.ncsu.monopoly.GoCell;
-import edu.ncsu.monopoly.GoToJailCell;
-import edu.ncsu.monopoly.JailCell;
-import edu.ncsu.monopoly.PropertyCell;
-import edu.ncsu.monopoly.RailRoadCell;
-import edu.ncsu.monopoly.UtilityCell;
 import java.util.Hashtable;
 
-<span class="nc" id="L14">public class InfoFormatter {</span>
+import edu.ncsu.monopoly.*;
 
-<span class="fc" id="L16">    static Hashtable cellInfoFormatters = null;</span>
-
-    static {
-<span class="pc bpc" id="L19" title="1 of 2 branches missed.">        if (cellInfoFormatters == null) {</span>
-<span class="fc" id="L20">            cellInfoFormatters = new Hashtable();</span>
-<span class="fc" id="L21">            addFormatters();</span>
+<span class="nc" id="L7">public class InfoFormatter{</span>
+<span class="fc" id="L8">    static Hashtable cellInfoFormatters = null;</span>
+    
+    static{
+<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if (cellInfoFormatters == null){</span>
+<span class="fc" id="L12">            cellInfoFormatters = new Hashtable();</span>
+<span class="fc" id="L13">            addFormatters();</span>
         }
-<span class="fc" id="L23">    }</span>
-
-    private static void addFormatters() {
-<span class="fc" id="L26">        cellInfoFormatters.put(</span>
+<span class="fc" id="L15">    }</span>
+    
+    private static void addFormatters(){
+<span class="fc" id="L18">        cellInfoFormatters.put(</span>
                 PropertyCell.class, new PropertyCellInfoFormatter());
-<span class="fc" id="L28">        cellInfoFormatters.put(</span>
+<span class="fc" id="L20">        cellInfoFormatters.put(</span>
                 GoCell.class, new GoCellInfoFormatter());
-<span class="fc" id="L30">        cellInfoFormatters.put(</span>
-                JailCell.class, new JailCellInfoFormatter());
-<span class="fc" id="L32">        cellInfoFormatters.put(</span>
-                GoToJailCell.class, new GotoJailCellInfoFormatter());
-<span class="fc" id="L34">        cellInfoFormatters.put(</span>
-                FreeParkingCell.class, new FreeParkingCellInfoFormatter());
-<span class="fc" id="L36">        cellInfoFormatters.put(</span>
+<span class="fc" id="L22">        cellInfoFormatters.put(</span>
+        		JailCell.class, new JailCellInfoFormatter());
+<span class="fc" id="L24">        cellInfoFormatters.put(</span>
+        		GoToJailCell.class, new GotoJailCellInfoFormatter());
+<span class="fc" id="L26">        cellInfoFormatters.put(</span>
+        		FreeParkingCell.class, new FreeParkingCellInfoFormatter());
+<span class="fc" id="L28">        cellInfoFormatters.put(</span>
                 RailRoadCell.class, new RRCellInfoFormatter());
-<span class="fc" id="L38">        cellInfoFormatters.put(</span>
+<span class="fc" id="L30">        cellInfoFormatters.put(</span>
                 UtilityCell.class, new UtilCellInfoFormatter());
-<span class="fc" id="L40">        cellInfoFormatters.put(</span>
+<span class="fc" id="L32">        cellInfoFormatters.put(</span>
                 CardCell.class, new CCCellInfoFormatter());
-<span class="fc" id="L42">    }</span>
+<span class="fc" id="L34">    }</span>
 
-    public static String cellInfo(Cell cell) {
-<span class="fc" id="L45">        CellInfoFormatter formatter</span>
-<span class="fc" id="L46">                = (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());</span>
-<span class="fc" id="L47">        return formatter.format(cell);</span>
+    public static String cellInfo(Cell cell){
+<span class="fc" id="L37">        CellInfoFormatter formatter =</span>
+<span class="fc" id="L38">                (CellInfoFormatter) cellInfoFormatters.get(cell.getClass());</span>
+<span class="fc" id="L39">        return formatter.format(cell);</span>
     }
 
 }

@@ -2,11 +2,16 @@
 
 public class FreeParkingCell extends Cell{
 
-<span class="fc" id="L5">    public FreeParkingCell(){</span>
-<span class="fc" id="L6">        setName(&quot;Free Parking&quot;);</span>
-<span class="fc" id="L7">    }</span>
+<span class="fc" id="L5">	public FreeParkingCell(){</span>
+<span class="fc" id="L6">		setName(&quot;Free Parking&quot;);</span>
+<span class="fc" id="L7">	}</span>
 
-    public void playAction(){        
-<span class="nc" id="L10">    }</span>
+	public void playAction(){
+<span class="nc" id="L10">		Player currentPlayer = GameMaster.instance().getCurrentPlayer();</span>
+<span class="nc" id="L11">		int rentToCharge = 32;</span>
+<span class="nc" id="L12">		currentPlayer.payRentToBank(rentToCharge);</span>
+		;
+<span class="nc" id="L14">		return;</span>
+	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

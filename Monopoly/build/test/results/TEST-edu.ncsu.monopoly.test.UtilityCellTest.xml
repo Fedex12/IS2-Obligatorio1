@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="2" hostname="Alienware" name="edu.ncsu.monopoly.test.UtilityCellTest" skipped="0" tests="4" time="0.137" timestamp="2017-05-08T07:15:43">
+<testsuite errors="0" failures="0" hostname="Alienware" name="edu.ncsu.monopoly.test.UtilityCellTest" skipped="0" tests="4" time="0.072" timestamp="2017-05-05T22:24:59">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
-    <property name="javac.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
+    <property name="javac.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
     <property name="libs.junit.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\docs\junit-3.8.2-api.zip" />
     <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="user.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly" />
+    <property name="user.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly" />
     <property name="java.vm.version" value="25.92-b14" />
     <property name="libs.MyLibrary.src" value="" />
     <property name="libs.MySQLDriver.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\mysql-connector-java-5.1.23-bin.jar" />
@@ -39,7 +39,7 @@
     <property name="user.name" value="Federico" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner edu.ncsu.monopoly.test.UtilityCellTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\test\results\TEST-edu.ncsu.monopoly.test.UtilityCellTest.xml crashfile=C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\junitvmwatcher7503240631177556943.properties propsfile=C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\junit8840891333910573805.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner edu.ncsu.monopoly.test.UtilityCellTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\test\results\TEST-edu.ncsu.monopoly.test.UtilityCellTest.xml crashfile=C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\junitvmwatcher2331457911920764943.properties propsfile=C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\junit8232679066138967844.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -49,7 +49,7 @@
     <property name="user.country" value="US" />
     <property name="manifest.file" value="manifest.mf" />
     <property name="javadoc.encoding" value="UTF-8" />
-    <property name="javac.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar" />
+    <property name="javac.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
     <property name="libs.spring-framework400.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-aop-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-aspects-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-beans-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-build-src-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-context-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-context-support-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-core-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-expression-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-framework-bom-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-instrument-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-instrument-tomcat-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-jdbc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-jms-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-messaging-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-orm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-oxm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-test-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-tx-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-web-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-webmvc-portlet-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-4\spring-websocket-4.0.1.RELEASE.jar" />
     <property name="debug-transport" value="dt_shmem" />
     <property name="netbeans.home" value="C:\Program Files\NetBeans 8.0.2\platform" />
@@ -71,7 +71,7 @@
     <property name="file.separator" value="\" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
-    <property name="javac.test.processorpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
+    <property name="javac.test.processorpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
     <property name="netbeans.buildnumber" value="201411181905" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="build.generated.sources.dir" value="build/generated-sources" />
@@ -81,7 +81,6 @@
     <property name="libs.junit.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\junit-3.8.2.jar" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.0.2\ide\docs\jaxb-api-doc.zip" />
-    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.0.2\extide\ant" />
     <property name="libs.junit_4.src" value="C:\Program Files\NetBeans 8.0.2\java\docs\junit-4.10-sources.jar" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\testng-6.8.1-dist.jar" />
@@ -93,7 +92,7 @@
     <property name="libs.spring-framework400.src" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly" />
+    <property name="basedir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="path.separator" value=";" />
@@ -110,7 +109,7 @@
     <property name="test.binaryincludes" value="&lt;nothing&gt;" />
     <property name="manifest.available" value="true" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="run.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/test/classes" />
+    <property name="run.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/test/classes" />
     <property name="ant.project.invoked-targets" value="test" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="C:\Program Files\NetBeans 8.0.2\platform\docs\swing-layout-1.0.4-doc.zip" />
@@ -129,7 +128,7 @@
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
     <property name="libs.JWSAntTasks.classpath" value="C:\Program Files\NetBeans 8.0.2\java\ant\extra\org-netbeans-modules-javawebstart-anttasks.jar" />
     <property name="libs.spring-framework300.src" value="" />
-    <property name="empty.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\empty" />
+    <property name="empty.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\empty" />
     <property name="version-output" value="java version &quot;1.8" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
@@ -137,7 +136,7 @@
     <property name="libs.jpa20-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="nbplatform.default.harness.dir" value="C:\Program Files\NetBeans 8.0.2/harness" />
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_92\jre" />
-    <property name="debug.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/test/classes" />
+    <property name="debug.test.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/test/classes" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
     <property name="ant.project.default-target" value="default" />
     <property name="annotation.processing.run.all.processors" value="true" />
@@ -147,7 +146,7 @@
     <property name="libs.hibernate4-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="http.nonProxyHosts" value="localhost|127.0.0.1|Alienware" />
     <property name="libs.junit_4.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\docs\junit-4.10-javadoc.jar" />
-    <property name="run.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes" />
+    <property name="run.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes" />
     <property name="jna.boot.library.name" value="jnidispatch-410" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
     <property name="libs.jpa2-persistence.maven-pom" value="" />
@@ -158,19 +157,18 @@
     <property name="javac.deprecation" value="false" />
     <property name="javadoc.use" value="true" />
     <property name="sun.java2d.noddraw" value="true" />
-    <property name="javac.processorpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar" />
+    <property name="javac.processorpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build.xml" />
+    <property name="ant.file" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
-    <property name="ant.file.Monopoly-impl" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\nbproject\build-impl.xml" />
+    <property name="ant.file.Monopoly-impl" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\nbproject\build-impl.xml" />
     <property name="libs.beans-binding.src" value="" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="libs.swing-layout.src" value="C:\Program Files\NetBeans 8.0.2\platform\docs\swing-layout-1.0.4-src.zip" />
     <property name="org.openide.major.version" value="IDE/1" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="netbeans.user" value="C:\Users\Fede_\AppData\Roaming\NetBeans\8.0.2" />
-    <property name="tests.failed" value="true" />
     <property name="javadoc.additionalparam" value="" />
     <property name="java.io.tmpdir" value="C:\Users\Fede_\AppData\Local\Temp\" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -179,7 +177,7 @@
     <property name="org.openide.awt.ActionReference.completion" value="org.netbeans.modules.apisupport.project.layers.PathCompletions" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_92\jre\bin" />
     <property name="have.sources" value="true" />
-    <property name="debug.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar:build/classes" />
+    <property name="debug.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar:build/classes" />
     <property name="javadoc.private" value="false" />
     <property name="test.src.dir" value="test" />
     <property name="libs.MyLibrary.javadoc" value="" />
@@ -188,7 +186,6 @@
     <property name="javadoc.encoding.used" value="UTF-8" />
     <property name="dist.jar" value="dist/Monopoly.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
-    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="Monopoly" />
     <property name="netbeans.hash.code" value="unique=NB_EXTIDE_JAVA015a14a35-6e85-4918-a85e-fa3a79806be4_ff4d0fe6-b0b2-47b6-b292-a072d2ef620c" />
@@ -205,7 +202,6 @@
     <property name="libs.CopyLibs.maven-pom" value="" />
     <property name="libs.spring-framework300.javadoc" value="" />
     <property name="libs.absolutelayout.javadoc" value="" />
-    <property name="guice.disable.misplaced.annotation.check" value="true" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="do.archive+main.class.available" value="true" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
@@ -225,7 +221,7 @@
     <property name="annotation.processing.processor.options" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="libs.jaxb.src" value="" />
-    <property name="work.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly" />
+    <property name="work.dir" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
@@ -241,7 +237,7 @@
     <property name="user.country.format" value="419" />
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_92\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_92\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_92\jre\classes" />
     <property name="javac.target" value="1.8" />
-    <property name="built-jar.properties" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\built-jar.properties" />
+    <property name="built-jar.properties" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
     <property name="annotation.processing.enabled" value="true" />
@@ -271,9 +267,9 @@
     <property name="endorsed.classpath" value="" />
     <property name="libs.absolutelayout.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="ant.file.Monopoly" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build.xml" />
+    <property name="ant.file.Monopoly" value="C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build.xml" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\classes;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\build\test\classes;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit4.jar;C:\Users\Fede_\AppData\Roaming\NetBeans\8.0.2\modules\ext\jacocoagent.jar" />
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\junit-4.10.jar;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\classes;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\build\test\classes;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit4.jar;C:\Users\Fede_\AppData\Roaming\NetBeans\8.0.2\modules\ext\jacocoagent.jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
@@ -292,7 +288,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="libs.CopyLibs.classpath" value="C:\Program Files\NetBeans 8.0.2\java\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-aop-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-aspects-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-beans-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-build-src-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-context-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-context-support-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-core-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-expression-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-framework-bom-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-instrument-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-jdbc-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-jms-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-orm-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-oxm-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-struts-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-test-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-tx-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-web-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.7.RELEASE.jar" />
-    <property name="run.jvmargs" value="  -javaagent:&quot;C:\Users\Fede_\AppData\Roaming\NetBeans\8.0.2\modules\ext\jacocoagent.jar&quot;=includes=edu.*:Imagenes.*:edu.ncsu.*:edu.ncsu.monopoly.*:edu.ncsu.monopoly.gui.*:edu.ncsu.monopoly.test.*:edu.ncsu.monopoly.test.boardScenarios.*,destfile=&quot;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Obligatorio 1. Mantenimiento\IS2-Obligatorio1\Monopoly\jacoco.exec-241449954477328&quot;" />
+    <property name="run.jvmargs" value="  -javaagent:&quot;C:\Users\Fede_\AppData\Roaming\NetBeans\8.0.2\modules\ext\jacocoagent.jar&quot;=includes=edu.*:edu.ncsu.*:edu.ncsu.monopoly.*:edu.ncsu.monopoly.gui.*:edu.ncsu.monopoly.test.*:edu.ncsu.monopoly.test.boardScenarios.*,destfile=&quot;C:\Users\Fede_\OneDrive\Documentos\Ingeniería de Software 2\Monopoly\jacoco.exec-36785789141608&quot;" />
     <property name="libs.hibernate4-persistence.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\antlr-2.7.7.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\c3p0-0.9.2.1.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-c3p0-4.3.1.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\mchange-commons-java-0.2.3.4.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\dom4j-1.6.1.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\ehcache-core-2.4.3.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-ehcache-4.3.1.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-core-4.3.1.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\jboss-logging-3.1.3.GA.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-commons-annotations-4.0.4.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-entitymanager-4.3.1.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\javassist-3.18.1-GA.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\slf4j-api-1.6.1.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\slf4j-simple-1.6.1.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-jpa-2.1-api-1.0.0.Final.jar" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="dist.archive.excludes" value="" />
@@ -303,8 +299,8 @@
     <property name="libs.junit.src" value="" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="main.class" value="edu.ncsu.monopoly.gui.Main" />
-    <property name="build.dir" value="build" />
     <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
     <property name="file.encoding" value="Cp1252" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
@@ -313,18 +309,10 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testPurchaseUtility" time="0.087" />
+  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testPlayerAction" time="0.031" />
   <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testMonopoly" time="0.001" />
-  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testPlayerAction" time="0.011">
-    <failure message="expected:&lt;1450&gt; but was:&lt;1000&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;1450&gt; but was:&lt;1000&gt;
-	at edu.ncsu.monopoly.test.UtilityCellTest.testPlayerAction(UtilityCellTest.java:43)
-</failure>
-  </testcase>
-  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testRent" time="0.001">
-    <failure message="expected:&lt;40&gt; but was:&lt;100&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;40&gt; but was:&lt;100&gt;
-	at edu.ncsu.monopoly.test.UtilityCellTest.testRent(UtilityCellTest.java:63)
-</failure>
-  </testcase>
+  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testRent" time="0.001" />
+  <testcase classname="edu.ncsu.monopoly.test.UtilityCellTest" name="testPurchaseUtility" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

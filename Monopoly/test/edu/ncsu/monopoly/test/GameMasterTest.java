@@ -13,7 +13,6 @@ import junit.framework.TestCase;
 public class GameMasterTest extends TestCase {
 
     GameMaster gameMaster;
-    
 
     protected void setUp() throws Exception {
         gameMaster = GameMaster.instance();

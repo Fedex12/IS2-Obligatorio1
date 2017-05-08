@@ -5,73 +5,75 @@ import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class TestDiceRollDialog extends JDialog {
 
+public class TestDiceRollDialog extends JDialog{
     private JButton btnOK, btnCancel;
     private JTextField txtDiceRoll;
     private int[] diceRoll;
-
-    public TestDiceRollDialog(Frame parent) {
-<span class="nc" id="L21">        super(parent);</span>
-
-<span class="nc" id="L23">        setTitle(&quot;Dice Roll Dialog&quot;);</span>
-<span class="nc" id="L24">        txtDiceRoll = new JTextField(2);</span>
-<span class="nc" id="L25">        btnOK = new JButton(&quot;OK&quot;);</span>
-<span class="nc" id="L26">        btnCancel = new JButton(&quot;Cancel&quot;);</span>
-
-<span class="nc" id="L28">        setModal(true);</span>
-
-<span class="nc" id="L30">        Container contentPane = getContentPane();</span>
-<span class="nc" id="L31">        contentPane.setLayout(new GridLayout(2, 2));</span>
-<span class="nc" id="L32">        contentPane.add(new JLabel(&quot;Amount&quot;));</span>
-<span class="nc" id="L33">        contentPane.add(txtDiceRoll);</span>
-<span class="nc" id="L34">        contentPane.add(btnOK);</span>
-<span class="nc" id="L35">        contentPane.add(btnCancel);</span>
-
-<span class="nc" id="L37">        btnCancel.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L39">                TestDiceRollDialog.this.hide();</span>
-<span class="nc" id="L40">                diceRoll = new int[2];</span>
-<span class="nc" id="L41">                diceRoll[0] = 0;</span>
-<span class="nc" id="L42">                diceRoll[1] = 0;</span>
-<span class="nc" id="L43">            }</span>
+    
+    public TestDiceRollDialog(Frame parent){
+<span class="nc" id="L22">        super(parent);</span>
+        
+<span class="nc" id="L24">        setTitle(&quot;Dice Roll Dialog&quot;);</span>
+<span class="nc" id="L25">        txtDiceRoll = new JTextField(2);</span>
+<span class="nc" id="L26">        btnOK = new JButton(&quot;OK&quot;);</span>
+<span class="nc" id="L27">        btnCancel = new JButton(&quot;Cancel&quot;);</span>
+        
+<span class="nc" id="L29">        setModal(true);</span>
+             
+<span class="nc" id="L31">        Container contentPane = getContentPane();</span>
+<span class="nc" id="L32">        contentPane.setLayout(new GridLayout(2, 2));</span>
+<span class="nc" id="L33">        contentPane.add(new JLabel(&quot;Amount&quot;));</span>
+<span class="nc" id="L34">        contentPane.add(txtDiceRoll);</span>
+<span class="nc" id="L35">        contentPane.add(btnOK);</span>
+<span class="nc" id="L36">        contentPane.add(btnCancel);</span>
+        
+<span class="nc" id="L38">        btnCancel.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
+<span class="nc" id="L40">                TestDiceRollDialog.this.hide();</span>
+<span class="nc" id="L41">                diceRoll = new int[2];</span>
+<span class="nc" id="L42">                diceRoll[0] = 0;</span>
+<span class="nc" id="L43">                diceRoll[1] = 0;</span>
+<span class="nc" id="L44">            }</span>
         });
-
-<span class="nc" id="L46">        btnOK.addActionListener(new ActionListener() {</span>
-            public void actionPerformed(ActionEvent e) {
-<span class="nc" id="L48">                int amount = 0;</span>
-                try {
-<span class="nc" id="L50">                    amount = Integer.parseInt(txtDiceRoll.getText());</span>
-<span class="nc" id="L51">                } catch (NumberFormatException nfe) {</span>
-<span class="nc" id="L52">                    JOptionPane.showMessageDialog(TestDiceRollDialog.this,</span>
+        
+<span class="nc" id="L47">        btnOK.addActionListener(new ActionListener(){</span>
+            public void actionPerformed(ActionEvent e){
+<span class="nc" id="L49">                int amount = 0;</span>
+                try{
+<span class="nc" id="L51">                    amount = Integer.parseInt(txtDiceRoll.getText());</span>
+<span class="nc" id="L52">                } catch(NumberFormatException nfe){</span>
+<span class="nc" id="L53">                    JOptionPane.showMessageDialog(TestDiceRollDialog.this,</span>
                             &quot;Amount should be an integer&quot;, &quot;Error&quot;, JOptionPane.ERROR_MESSAGE);
-<span class="nc" id="L54">                    return;</span>
-<span class="nc" id="L55">                }</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">                if (amount &gt; 0) {</span>
-<span class="nc" id="L57">                    diceRoll = new int[2];</span>
-<span class="nc bnc" id="L58" title="All 2 branches missed.">                    if ((amount % 2) == 0) {</span>
-<span class="nc" id="L59">                        diceRoll[0] = amount / 2;</span>
-<span class="nc" id="L60">                        diceRoll[1] = amount / 2;</span>
-                    } else {
-<span class="nc" id="L62">                        diceRoll[0] = amount / 2;</span>
-<span class="nc" id="L63">                        diceRoll[1] = (amount / 2) + 1;</span>
-                    }
+<span class="nc" id="L55">                    return;</span>
+<span class="nc" id="L56">                }</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">                if(amount &gt; 0){</span>
+<span class="nc" id="L58">	                diceRoll = new int[2];</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">	                if((amount % 2) == 0){</span>
+<span class="nc" id="L60">	                	diceRoll[0] = amount / 2;</span>
+<span class="nc" id="L61">	                	diceRoll[1] = amount / 2;</span>
+	                }
+	                else{
+<span class="nc" id="L64">	                	diceRoll[0] = amount / 2;</span>
+<span class="nc" id="L65">	                	diceRoll[1] = (amount / 2) + 1;</span>
+	                }
                 }
-<span class="nc" id="L66">                hide();</span>
-<span class="nc" id="L67">            }</span>
+<span class="nc" id="L68">                hide();</span>
+<span class="nc" id="L69">            }</span>
         });
+        
+<span class="nc" id="L72">        this.pack();</span>
+<span class="nc" id="L73">    }</span>
 
-<span class="nc" id="L70">        this.pack();</span>
-<span class="nc" id="L71">    }</span>
-
-    public int[] getDiceRoll() {
-<span class="nc" id="L74">        return diceRoll;</span>
+    public int[] getDiceRoll(){
+<span class="nc" id="L76">        return diceRoll;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

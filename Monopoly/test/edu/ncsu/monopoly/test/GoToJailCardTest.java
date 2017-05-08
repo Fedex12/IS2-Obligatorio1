@@ -11,8 +11,6 @@ public class GoToJailCardTest extends TestCase {
 
     GameMaster gameMaster;
     Card jailCard = new JailCard(Card.TYPE_CC);
-    
-    
 
     protected void setUp() {
         gameMaster = GameMaster.instance();
