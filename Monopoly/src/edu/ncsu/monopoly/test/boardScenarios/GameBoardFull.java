@@ -11,6 +11,7 @@ import edu.ncsu.monopoly.MoneyCard;
 import edu.ncsu.monopoly.MovePlayerCard;
 import edu.ncsu.monopoly.PropertyCell;
 import edu.ncsu.monopoly.RailRoadCell;
+import edu.ncsu.monopoly.TaxiCard;
 import edu.ncsu.monopoly.UtilityCell;
 
 public class GameBoardFull extends GameBoard {
@@ -258,9 +259,20 @@ public class GameBoardFull extends GameBoard {
         addCard(new MoneyCard("Lose $100", -100, Card.TYPE_CC));
         addCard(new MoneyCard("Lose $50", -50, Card.TYPE_CC));
         addCard(new JailCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
+        addCard(new TaxiCard(Card.TYPE_CC));
         addCard(new MovePlayerCard("St. Charles Place", Card.TYPE_CC));
         addCard(new MovePlayerCard("Boardwalk", Card.TYPE_CC));
-
+        
         addCard(new MoneyCard("Win $50", 50, Card.TYPE_CHANCE));
         addCard(new MoneyCard("Win $20", 20, Card.TYPE_CHANCE));
         addCard(new MoneyCard("Win $10", 10, Card.TYPE_CHANCE));

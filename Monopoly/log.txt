@@ -181,3 +181,179 @@
 7/5/2017;20:23:30;Excepcion al levantar datos persistidos: java.io.EOFException
 7/5/2017;20:24:38;Excepcion al levantar datos persistidos: java.io.EOFException
 7/5/2017;20:40:16;Excepcion al levantar datos persistidos: java.io.InvalidClassException: edu.ncsu.monopoly.Player; local class incompatible: stream classdesc serialVersionUID = -8933082823526444819, local class serialVersionUID = 8886990711338053622
+7/5/2017;21:9:33;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:10:23;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:17:38;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:18:46;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:22:3;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:26:2;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:32:26;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:33:56;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:34:2; Comienza el juego!
+7/5/2017;21:34:44;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:34:53; Comienza el juego!
+7/5/2017;21:34:57;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:35:44;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:40:55;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:41:37; Comienza el juego!
+7/5/2017;21:41:42;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:57:3;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;21:57:8; Comienza el juego!
+7/5/2017;21:57:58;Federico, you rolled 4 and 1
+7/5/2017;22:8:39;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:8:45; Comienza el juego!
+7/5/2017;22:8:46;Federico, you rolled 3 and 5
+7/5/2017;22:9:38;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:9:52; Comienza el juego!
+7/5/2017;22:10:23;Federico, you rolled 1 and 2
+7/5/2017;22:14:13;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:14:21; Comienza el juego!
+7/5/2017;22:14:23;Federico, you rolled 1 and 3
+7/5/2017;22:16:37;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:16:42; Comienza el juego!
+7/5/2017;22:16:43;Federico, you rolled 2 and 5
+7/5/2017;22:17:14;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:17:23; Comienza el juego!
+7/5/2017;22:17:24;Federico, you rolled 4 and 2
+7/5/2017;22:24:37;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:24:43; Comienza el juego!
+7/5/2017;22:24:44;Federico, you rolled 5 and 3
+7/5/2017;22:42:38;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:45:54;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;22:46:0; Comienza el juego!
+7/5/2017;22:46:2;Federico, you rolled 6 and 1
+7/5/2017;22:46:14;Cambio de jugador turno de 1
+7/5/2017;22:46:15;katya, you rolled 5 and 2
+7/5/2017;22:46:23;Cambio de jugador turno de 0
+7/5/2017;22:46:24;Federico, you rolled 1 and 1
+7/5/2017;22:46:29;Cambio de jugador turno de 1
+7/5/2017;22:46:47;katya wishes to purchase Connecticut Avenue from Federico for 1500.  Federico, do you wish to trade your property?
+7/5/2017;22:46:55;katya, you rolled 5 and 3
+7/5/2017;22:46:59;Cambio de jugador turno de 0
+7/5/2017;22:47:0;Federico, you rolled 5 and 5
+7/5/2017;22:47:3;Cambio de jugador turno de 1
+7/5/2017;22:47:4;katya, you rolled 6 and 5
+7/5/2017;22:47:6;Cambio de jugador turno de 0
+7/5/2017;22:47:8;Federico, you rolled 4 and 2
+7/5/2017;22:47:11;Cambio de jugador turno de 1
+7/5/2017;22:47:13;katya, you rolled 1 and 1
+7/5/2017;22:47:15;Cambio de jugador turno de 0
+7/5/2017;22:47:16;Federico, you rolled 3 and 3
+7/5/2017;22:47:18;Cambio de jugador turno de 1
+7/5/2017;22:47:21;katya, you rolled 2 and 4
+7/5/2017;22:47:24;Cambio de jugador turno de 0
+7/5/2017;22:47:25;Federico, you rolled 5 and 4
+7/5/2017;22:47:26;El jugador Federico pasa por el GO y suma 200
+7/5/2017;22:47:26;Cambio de jugador turno de 1
+7/5/2017;22:47:28;katya, you rolled 3 and 1
+7/5/2017;22:47:30;Cambio de jugador turno de 0
+7/5/2017;22:47:31;Federico, you rolled 1 and 6
+7/5/2017;22:47:35;Cambio de jugador turno de 1
+7/5/2017;22:47:37;katya, you rolled 4 and 3
+7/5/2017;22:47:38;El jugador katya pasa por el GO y suma 200
+7/5/2017;22:47:47;Cambio de jugador turno de 0
+7/5/2017;22:47:48;Federico, you rolled 6 and 6
+7/5/2017;22:47:50;Cambio de jugador turno de 1
+7/5/2017;22:47:52;katya, you rolled 3 and 1
+7/5/2017;22:47:54;Cambio de jugador turno de 0
+7/5/2017;22:47:56;Federico, you rolled 6 and 2
+7/5/2017;22:47:58;Cambio de jugador turno de 1
+7/5/2017;22:47:59;katya, you rolled 3 and 4
+7/5/2017;22:48:2;Cambio de jugador turno de 0
+7/5/2017;22:48:3;Federico, you rolled 5 and 5
+7/5/2017;22:48:5;Cambio de jugador turno de 1
+7/5/2017;22:48:6;katya, you rolled 5 and 3
+7/5/2017;22:48:9;Cambio de jugador turno de 0
+7/5/2017;22:48:10;Federico, you rolled 6 and 2
+7/5/2017;22:48:10;El jugador Federico pasa por el GO y suma 200
+7/5/2017;22:48:12;Federico le paga una renta de 50a katya
+7/5/2017;22:48:12;Federico dinero: 1980
+7/5/2017;22:48:12;katya dinero: 70
+7/5/2017;22:48:12;Cambio de jugador turno de 1
+7/5/2017;22:48:14;katya, you rolled 6 and 2
+7/5/2017;22:48:16;Cambio de jugador turno de 0
+7/5/2017;22:48:18;Federico, you rolled 6 and 3
+7/5/2017;22:48:21;Cambio de jugador turno de 1
+7/5/2017;22:48:23;katya, you rolled 4 and 1
+7/5/2017;22:48:25;katya le paga una renta de 35a Federico
+7/5/2017;22:48:25;katya dinero: 35
+7/5/2017;22:48:25;Federico dinero: 1855
+7/5/2017;22:48:25;Cambio de jugador turno de 0
+7/5/2017;22:48:27;Federico, you rolled 4 and 2
+7/5/2017;22:48:33;Cambio de jugador turno de 1
+7/5/2017;23:52:11;Excepcion al levantar datos persistidos: java.io.EOFException
+7/5/2017;23:52:19; Comienza el juego!
+7/5/2017;23:52:21;Federico, you rolled 3 and 1
+7/5/2017;23:52:24;Cambio de jugador turno de 1
+7/5/2017;23:52:25;katya, you rolled 1 and 6
+7/5/2017;23:52:30;Cambio de jugador turno de 0
+7/5/2017;23:52:31;Federico, you rolled 3 and 5
+7/5/2017;23:52:34;Cambio de jugador turno de 1
+7/5/2017;23:52:35;katya, you rolled 3 and 4
+7/5/2017;23:52:38;Cambio de jugador turno de 0
+7/5/2017;23:52:39;Federico, you rolled 2 and 3
+7/5/2017;23:52:45;Cambio de jugador turno de 1
+7/5/2017;23:52:47;katya, you rolled 6 and 5
+7/5/2017;23:52:50;Cambio de jugador turno de 0
+7/5/2017;23:52:51;Federico, you rolled 6 and 3
+7/5/2017;23:52:54;Cambio de jugador turno de 1
+7/5/2017;23:52:55;katya, you rolled 2 and 6
+7/5/2017;23:52:59;Cambio de jugador turno de 0
+7/5/2017;23:52:59;Federico, you rolled 6 and 3
+7/5/2017;23:53:2;Cambio de jugador turno de 1
+7/5/2017;23:53:3;katya, you rolled 5 and 2
+7/5/2017;23:53:5;El jugador katya pasa por el GO y suma 200
+7/5/2017;23:53:5;Cambio de jugador turno de 0
+7/5/2017;23:53:6;Federico, you rolled 3 and 3
+7/5/2017;23:53:7;El jugador Federico pasa por el GO y suma 200
+7/5/2017;23:53:8;Cambio de jugador turno de 1
+7/5/2017;23:53:9;katya, you rolled 1 and 1
+7/5/2017;23:53:14;Cambio de jugador turno de 0
+7/5/2017;23:53:14;Federico, you rolled 6 and 1
+7/5/2017;23:53:16;Cambio de jugador turno de 1
+7/5/2017;23:53:17;katya, you rolled 5 and 4
+7/5/2017;23:53:18;Cambio de jugador turno de 0
+7/5/2017;23:53:20;Federico, you rolled 1 and 4
+7/5/2017;23:53:21;Cambio de jugador turno de 1
+7/5/2017;23:53:22;katya, you rolled 1 and 1
+7/5/2017;23:53:24;Cambio de jugador turno de 0
+7/5/2017;23:53:25;Federico, you rolled 3 and 5
+7/5/2017;23:53:26;Cambio de jugador turno de 1
+7/5/2017;23:53:27;katya, you rolled 6 and 1
+7/5/2017;23:53:29;Cambio de jugador turno de 0
+7/5/2017;23:53:30;Federico, you rolled 5 and 3
+7/5/2017;23:53:32;Cambio de jugador turno de 1
+7/5/2017;23:53:33;katya, you rolled 1 and 5
+7/5/2017;23:53:36;katya le paga una renta de 22a Federico
+7/5/2017;23:53:36;katya dinero: 1398
+7/5/2017;23:53:36;Federico dinero: 1302
+7/5/2017;23:53:36;Cambio de jugador turno de 0
+7/5/2017;23:53:36;Federico, you rolled 1 and 5
+7/5/2017;23:53:39;Cambio de jugador turno de 1
+7/5/2017;23:53:40;katya, you rolled 3 and 3
+7/5/2017;23:53:42;Cambio de jugador turno de 0
+7/5/2017;23:53:43;Federico, you rolled 6 and 2
+7/5/2017;23:53:44;El jugador Federico pasa por el GO y suma 200
+7/5/2017;23:53:47;Cambio de jugador turno de 1
+7/5/2017;23:53:49;katya, you rolled 6 and 3
+7/5/2017;23:53:49;El jugador katya pasa por el GO y suma 200
+7/5/2017;23:53:51;Cambio de jugador turno de 0
+7/5/2017;23:53:52;Federico, you rolled 1 and 1
+7/5/2017;23:53:54;Cambio de jugador turno de 1
+7/5/2017;23:53:55;katya, you rolled 6 and 4
+7/5/2017;23:53:57;Cambio de jugador turno de 0
+7/5/2017;23:53:58;Federico, you rolled 5 and 1
+7/5/2017;23:53:59;Cambio de jugador turno de 1
+7/5/2017;23:54:0;katya, you rolled 6 and 2
+7/5/2017;23:54:2;Cambio de jugador turno de 0
+7/5/2017;23:54:3;Federico, you rolled 4 and 3
+7/5/2017;23:54:5;Cambio de jugador turno de 1
+7/5/2017;23:54:6;katya, you rolled 2 and 4
+7/5/2017;23:54:8;Cambio de jugador turno de 0
+7/5/2017;23:54:9;Federico, you rolled 2 and 2
+7/5/2017;23:54:14;Cambio de jugador turno de 1
+7/5/2017;23:54:15;katya, you rolled 4 and 1
+7/5/2017;23:54:17;Cambio de jugador turno de 0
+7/5/2017;23:54:19;Federico, you rolled 1 and 5
+7/5/2017;23:54:20;Cambio de jugador turno de 1
+7/5/2017;23:54:20;Jugador 1 esta en la carcel

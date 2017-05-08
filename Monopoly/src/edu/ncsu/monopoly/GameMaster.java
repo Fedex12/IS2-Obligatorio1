@@ -46,6 +46,7 @@ public class GameMaster {
             p = (Player) ois.readObject();
             while(p!=null){
                 registredPlayers.add(p);
+                
                 p = (Player) ois.readObject();
             }
             ois.close();
@@ -229,6 +230,12 @@ public class GameMaster {
 
     public int getPlayerIndex(Player player) {
         return players.indexOf(player);
+    }
+    
+     public void addGamePlayed(Player player) {
+         int pos= registredPlayers.indexOf(player);
+         int gamesPlayed=registredPlayers.get(pos).getGamesPlayed();
+         registredPlayers.get(pos).setGamesPlayed(gamesPlayed+1);
     }
 
     public ArrayList getSellerList() {

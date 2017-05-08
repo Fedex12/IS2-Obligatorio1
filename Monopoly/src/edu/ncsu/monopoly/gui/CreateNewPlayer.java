@@ -167,7 +167,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
 
     private void exitBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBttActionPerformed
         // TODO add your handling code here:
-        new opcionesJuego().setVisible(true);
+        new GameOptions().setVisible(true);
         this.dispose();
           
     }//GEN-LAST:event_exitBttActionPerformed
@@ -212,7 +212,7 @@ public class CreateNewPlayer extends javax.swing.JFrame {
         }
         
         master.newPlayer(player);
-        new opcionesJuego().setVisible(true);
+        new GameOptions().setVisible(true);
         this.dispose();
 
 // TODO add your handling code here:

@@ -140,7 +140,10 @@ public class Profiles extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void returnBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnBttActionPerformed
-        // TODO add your handling code here:
+        new HomeMenu().setVisible(true);
+        this.dispose();
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_returnBttActionPerformed
 
     private void loadBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadBttActionPerformed

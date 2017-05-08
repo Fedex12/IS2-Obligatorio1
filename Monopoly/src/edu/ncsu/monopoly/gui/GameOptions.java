@@ -17,14 +17,14 @@ import javax.swing.JOptionPane;
  *
  * @author Federico
  */
-public class opcionesJuego extends javax.swing.JFrame {
+public class GameOptions extends javax.swing.JFrame {
 
     private GameMaster master;
 
     /**
      * Creates new form opcionesJuego
      */
-    public opcionesJuego() {
+    public GameOptions() {
         master = GameMaster.instance();
         initComponents();
         DefaultListModel<Player> model = new DefaultListModel<Player>();
@@ -54,11 +54,11 @@ public class opcionesJuego extends javax.swing.JFrame {
         registredPlayerList = new javax.swing.JList();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        addBtt = new javax.swing.JButton();
+        removeBtt = new javax.swing.JButton();
         bttNewPlayer = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        cancelBtt = new javax.swing.JButton();
+        startBtt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,14 +73,19 @@ public class opcionesJuego extends javax.swing.JFrame {
 
         jLabel4.setText("Selected Players");
 
-        jButton1.setText(">");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addBtt.setText(">");
+        addBtt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addBttActionPerformed(evt);
             }
         });
 
-        jButton2.setText("<");
+        removeBtt.setText("<");
+        removeBtt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeBttActionPerformed(evt);
+            }
+        });
 
         bttNewPlayer.setText("New Player");
         bttNewPlayer.addActionListener(new java.awt.event.ActionListener() {
@@ -89,17 +94,17 @@ public class opcionesJuego extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("CANCEL");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        cancelBtt.setText("CANCEL");
+        cancelBtt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                cancelBttActionPerformed(evt);
             }
         });
 
-        jButton4.setText("START");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        startBtt.setText("START");
+        startBtt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                startBttActionPerformed(evt);
             }
         });
 
@@ -118,8 +123,8 @@ public class opcionesJuego extends javax.swing.JFrame {
                 .addComponent(registredPlayerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(addBtt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(removeBtt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bttNewPlayer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(selectedPlayerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,12 +135,12 @@ public class opcionesJuego extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cancelBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(209, 209, 209))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(473, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(startBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(56, 56, 56)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -153,18 +158,18 @@ public class opcionesJuego extends javax.swing.JFrame {
                     .addComponent(registredPlayerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(jButton1)
+                        .addComponent(addBtt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
+                        .addComponent(removeBtt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bttNewPlayer)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cancelBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(431, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(400, Short.MAX_VALUE)
+                    .addComponent(startBtt, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(23, 23, 23)))
         );
 
@@ -172,11 +177,13 @@ public class opcionesJuego extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 447, Short.MAX_VALUE))
         );
 
         pack();
@@ -190,25 +197,28 @@ public class opcionesJuego extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_bttNewPlayerActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBttActionPerformed
         DefaultListModel<Player> model = new DefaultListModel<>();
 
-        if (selectedPlayerList.getModel().getSize() > 0) {
+        if (selectedPlayerList.getModel().getSize() > 0 ) {
             model = (DefaultListModel<Player>) selectedPlayerList.getModel();
+                
         }
-        model.addElement((Player) registredPlayerList.getSelectedValue());
-        selectedPlayerList.setModel(model);
+        if(!model.contains(registredPlayerList.getSelectedValue())){
+            model.addElement((Player) registredPlayerList.getSelectedValue());
+            selectedPlayerList.setModel(model);
+        }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addBttActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void cancelBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelBttActionPerformed
         new HomeMenu().setVisible(true);
         this.dispose();
 
 // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_cancelBttActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void startBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startBttActionPerformed
         // TODO add your handling code here:
         GameMaster master = GameMaster.instance();
         DefaultListModel<Player> model = new DefaultListModel<>();
@@ -217,29 +227,28 @@ public class opcionesJuego extends javax.swing.JFrame {
             model = (DefaultListModel<Player>) selectedPlayerList.getModel();
             ArrayList<Player> players = new ArrayList();
             for (int i = 0; i < model.getSize(); i++) {
+                
                 players.add(model.get(i));
+                master.addGamePlayed(model.get(i));
             }
+            master.persistPlayers();
+            
             master.setPlayers(players);
             //Aqui
-           
+
             MainWindow window = new MainWindow();
-		GameBoard gameBoard = null;
-	
-			gameBoard = new GameBoardFull();
-		
+            GameBoard gameBoard = null;
+            gameBoard = new GameBoardFull();
+            master.setGameBoard(gameBoard);
+            master.setNumberOfPlayers(players.size());
+            master.setPlayers(players);
 
-		master.setGameBoard(gameBoard);
-		master.setNumberOfPlayers(players.size());
-                master.setPlayers(players);
-		
-		window.setupGameBoard(gameBoard);
-		window.show();
-		master.setGUI(window);
+            window.setupGameBoard(gameBoard);
+            window.show();
+            master.setGUI(window);
 		//master.startGame();
-            
-            
-            //hasta aqui
 
+            //hasta aqui
             master.startGame();
             this.dispose();
         } else {
@@ -248,7 +257,22 @@ public class opcionesJuego extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_startBttActionPerformed
+
+    private void removeBttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBttActionPerformed
+
+        DefaultListModel<Player> model = new DefaultListModel<>();
+        if (selectedPlayerList.getModel().getSize() > 0 ) {
+            model = (DefaultListModel<Player>) selectedPlayerList.getModel();
+                
+        }
+        if(model.contains(registredPlayerList.getSelectedValue())){
+            model.removeElement((Player) registredPlayerList.getSelectedValue());
+            selectedPlayerList.setModel(model);
+        }
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_removeBttActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,37 +291,38 @@ public class opcionesJuego extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(opcionesJuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(opcionesJuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(opcionesJuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(opcionesJuego.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GameOptions.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new opcionesJuego().setVisible(true);
+                new GameOptions().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addBtt;
     private javax.swing.JButton bttNewPlayer;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton cancelBtt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JList registredPlayerList;
     private javax.swing.JScrollPane registredPlayerPanel;
+    private javax.swing.JButton removeBtt;
     private javax.swing.JList selectedPlayerList;
     private javax.swing.JScrollPane selectedPlayerPanel;
+    private javax.swing.JButton startBtt;
     // End of variables declaration//GEN-END:variables
 }

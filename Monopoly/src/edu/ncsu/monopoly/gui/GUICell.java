@@ -43,8 +43,11 @@ public class GUICell extends JPanel {
     public void addPlayer(int index) {;
         GameMaster master = GameMaster.instance();
         Player player = GameMaster.instance().getPlayer(index);
+        player.setPosition(cell);
         lblPlayers[index].setText(player.getName().substring(0, 1));
+        lblPlayers[index].setBackground(player.getColor());
         lblPlayers[index].setOpaque(true);
+        
     }
 
     private void createPlayerLabels(JPanel pnlPlayer) {
