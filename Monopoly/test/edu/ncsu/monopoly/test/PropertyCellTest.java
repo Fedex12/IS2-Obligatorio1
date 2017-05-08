@@ -10,6 +10,8 @@ import junit.framework.TestCase;
 public class PropertyCellTest extends TestCase {
 
     GameMaster gameMaster;
+    
+    
 
     protected void setUp() {
         gameMaster = GameMaster.instance();

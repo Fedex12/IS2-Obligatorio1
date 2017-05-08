@@ -10,7 +10,7 @@
  *    
  *******************************************************************************/
 
-(function (){
+(function () {
 
   /**
    * Sets the initial sorting derived from the hash.
@@ -19,22 +19,22 @@
    *          list of element ids to search for links to add sort inidcator
    *          hash links   
    */  
-  function initialSort(linkelementids){
+  function initialSort(linkelementids) {
     window.linkelementids = linkelementids;
     var hash = window.location.hash;
-    if (hash){
+    if (hash) {
       var m = hash.match(/up-./);
-      if (m){
+      if (m) {
         var header = window.document.getElementById(m[0].charAt(3));
-        if (header){
+        if (header) {
           sortColumn(header, true);
         }
         return;
       }
       var m = hash.match(/dn-./);
-      if (m){
+      if (m) {
         var header = window.document.getElementById(m[0].charAt(3));
-        if (header){
+        if (header) {
           sortColumn(header, false);
         }
         return
@@ -45,7 +45,7 @@
   /**
    * Sorts the columns with the given header dependening on the current sort state.
    */  
-  function toggleSort(header){
+  function toggleSort(header) {
     var sortup = header.className.indexOf('down ') == 0;
     sortColumn(header, sortup);
   }
@@ -53,7 +53,7 @@
   /**
    * Sorts the columns with the given header in the given direction.
    */  
-  function sortColumn(header, sortup){
+  function sortColumn(header, sortup) {
     var table = header.parentNode.parentNode.parentNode;
     var body = table.tBodies[0];
     var colidx = getNodePosition(header);
@@ -62,21 +62,21 @@
     
     var rows = body.rows;
     var sortedrows = [];
-    for (var i = 0; i < rows.length; i++){
+    for (var i = 0; i < rows.length; i++) {
       r = rows[i];
       sortedrows[parseInt(r.childNodes[colidx].id.slice(1))] = r;
     }
     
     var hash;
     
-    if (sortup){
-      for (var i = sortedrows.length - 1; i >= 0; i--){
+    if (sortup) {
+      for (var i = sortedrows.length - 1; i >= 0; i--) {
         body.appendChild(sortedrows[i]);
       }
       header.className = 'up ' + header.className;
       hash = 'up-' + header.id;
-    } else{
-      for (var i = 0; i < sortedrows.length; i++){
+    } else {
+      for (var i = 0; i < sortedrows.length; i++) {
         body.appendChild(sortedrows[i]);
       }
       header.className = 'down ' + header.className;
@@ -89,10 +89,10 @@
   /**
    * Adds the sort indicator as a hash to the document URL and all links.
    */
-  function setHash(hash){
+  function setHash(hash) {
     window.document.location.hash = hash;
     ids = window.linkelementids;
-    for (var i = 0; i < ids.length; i++){
+    for (var i = 0; i < ids.length; i++) {
         setHashOnAllLinks(document.getElementById(ids[i]), hash);
     }
   }
@@ -100,13 +100,13 @@
   /**
    * Extend all links within the given tag with the given hash.
    */
-  function setHashOnAllLinks(tag, hash){
+  function setHashOnAllLinks(tag, hash) {
     links = tag.getElementsByTagName("a");
-    for (var i = 0; i < links.length; i++){
+    for (var i = 0; i < links.length; i++) {
         var a = links[i];
         var href = a.href;
         var hashpos = href.indexOf("#");
-        if (hashpos != -1){
+        if (hashpos != -1) {
             href = href.substring(0, hashpos);
         } 
         a.href = href + "#" + hash;
@@ -116,9 +116,9 @@
   /**
    * Calculates the position of a element within its parent.
    */  
-  function getNodePosition(element){
+  function getNodePosition(element) {
     var pos = -1;
-    while (element){
+    while (element) {
       element = element.previousSibling;
       pos++;
     }
@@ -128,13 +128,13 @@
   /**
    * Remove the sorting indicator style from all headers.
    */
-  function resetSortedStyle(table){
-    for (var c = table.tHead.firstChild.firstChild; c; c = c.nextSibling){
-      if (c.className){
-        if (c.className.indexOf('down ') == 0){
+  function resetSortedStyle(table) {
+    for (var c = table.tHead.firstChild.firstChild; c; c = c.nextSibling) {
+      if (c.className) {
+        if (c.className.indexOf('down ') == 0) {
           c.className = c.className.slice(5);
         }
-        if (c.className.indexOf('up ') == 0){
+        if (c.className.indexOf('up ') == 0) {
           c.className = c.className.slice(3);
         }
       }

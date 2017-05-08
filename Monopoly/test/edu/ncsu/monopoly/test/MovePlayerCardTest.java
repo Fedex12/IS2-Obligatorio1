@@ -11,6 +11,8 @@ public class MovePlayerCardTest extends TestCase {
 
     GameMaster gameMaster;
     Card movePlayerCard;
+    
+    
 
     protected void setUp() {
         gameMaster = GameMaster.instance();

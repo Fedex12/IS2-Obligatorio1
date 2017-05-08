@@ -9,6 +9,7 @@ public class RailRoadCellTest extends TestCase {
 
     GameMaster gameMaster;
 
+    
     protected void setUp() {
         gameMaster = GameMaster.instance();
         gameMaster.setGameBoard(new GameBoardRailRoad());

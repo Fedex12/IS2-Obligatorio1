@@ -5,54 +5,55 @@ import edu.ncsu.monopoly.GoToJailCell;
 import edu.ncsu.monopoly.JailCell;
 import edu.ncsu.monopoly.PropertyCell;
 
-public class GameBoardJail extends GameBoard{
-	public GameBoardJail(){
-<span class="nc" id="L10">		super();</span>
-<span class="nc" id="L11">		PropertyCell blue1 = new PropertyCell();</span>
-<span class="nc" id="L12">		PropertyCell blue2 = new PropertyCell();</span>
-<span class="nc" id="L13">		PropertyCell blue3 = new PropertyCell();</span>
-<span class="nc" id="L14">		PropertyCell green1 = new PropertyCell();</span>
-<span class="nc" id="L15">		PropertyCell green2 = new PropertyCell();</span>
-<span class="nc" id="L16">		JailCell jail = new JailCell();</span>
-<span class="nc" id="L17">		GoToJailCell goToJail = new GoToJailCell();</span>
-		
-<span class="nc" id="L19">		blue1.setName(&quot;Blue 1&quot;);</span>
-<span class="nc" id="L20">		blue2.setName(&quot;Blue 2&quot;);</span>
-<span class="nc" id="L21">		blue3.setName(&quot;Blue 3&quot;);</span>
-<span class="nc" id="L22">		green1.setName(&quot;Green 1&quot;);</span>
-<span class="nc" id="L23">		green2.setName(&quot;Green 2&quot;);</span>
-		
-<span class="nc" id="L25">		blue1.setColorGroup(&quot;blue&quot;);</span>
-<span class="nc" id="L26">		blue2.setColorGroup(&quot;blue&quot;);</span>
-<span class="nc" id="L27">		blue3.setColorGroup(&quot;blue&quot;);</span>
-<span class="nc" id="L28">		green1.setColorGroup(&quot;green&quot;);</span>
-<span class="nc" id="L29">		green2.setColorGroup(&quot;green&quot;);</span>
-		
-<span class="nc" id="L31">		blue1.setPrice(100);</span>
-<span class="nc" id="L32">		blue2.setPrice(100);</span>
-<span class="nc" id="L33">		blue3.setPrice(1450);</span>
-<span class="nc" id="L34">		green1.setPrice(200);</span>
-<span class="nc" id="L35">		green2.setPrice(240);</span>
-		
-<span class="nc" id="L37">		blue1.setRent(10);</span>
-<span class="nc" id="L38">		blue2.setRent(10);</span>
-<span class="nc" id="L39">		blue3.setRent(10);</span>
-<span class="nc" id="L40">		green1.setRent(20);</span>
-<span class="nc" id="L41">		green2.setRent(20);</span>
-		
-<span class="nc" id="L43">		blue1.setHousePrice(50);</span>
-<span class="nc" id="L44">		blue2.setHousePrice(50);</span>
-<span class="nc" id="L45">		blue3.setHousePrice(50);</span>
-<span class="nc" id="L46">		green1.setHousePrice(70);</span>
-<span class="nc" id="L47">		green2.setHousePrice(70);</span>
-		
-<span class="nc" id="L49">		addCell(blue1);</span>
-<span class="nc" id="L50">		addCell(jail);</span>
-<span class="nc" id="L51">		addCell(blue2);</span>
-<span class="nc" id="L52">		addCell(blue3);</span>
-<span class="nc" id="L53">		addCell(green1);</span>
-<span class="nc" id="L54">		addCell(goToJail);</span>
-<span class="nc" id="L55">		addCell(green2);</span>
-<span class="nc" id="L56">	}</span>
+public class GameBoardJail extends GameBoard {
+
+    public GameBoardJail() {
+<span class="nc" id="L11">        super();</span>
+<span class="nc" id="L12">        PropertyCell blue1 = new PropertyCell();</span>
+<span class="nc" id="L13">        PropertyCell blue2 = new PropertyCell();</span>
+<span class="nc" id="L14">        PropertyCell blue3 = new PropertyCell();</span>
+<span class="nc" id="L15">        PropertyCell green1 = new PropertyCell();</span>
+<span class="nc" id="L16">        PropertyCell green2 = new PropertyCell();</span>
+<span class="nc" id="L17">        JailCell jail = new JailCell();</span>
+<span class="nc" id="L18">        GoToJailCell goToJail = new GoToJailCell();</span>
+
+<span class="nc" id="L20">        blue1.setName(&quot;Blue 1&quot;);</span>
+<span class="nc" id="L21">        blue2.setName(&quot;Blue 2&quot;);</span>
+<span class="nc" id="L22">        blue3.setName(&quot;Blue 3&quot;);</span>
+<span class="nc" id="L23">        green1.setName(&quot;Green 1&quot;);</span>
+<span class="nc" id="L24">        green2.setName(&quot;Green 2&quot;);</span>
+
+<span class="nc" id="L26">        blue1.setColorGroup(&quot;blue&quot;);</span>
+<span class="nc" id="L27">        blue2.setColorGroup(&quot;blue&quot;);</span>
+<span class="nc" id="L28">        blue3.setColorGroup(&quot;blue&quot;);</span>
+<span class="nc" id="L29">        green1.setColorGroup(&quot;green&quot;);</span>
+<span class="nc" id="L30">        green2.setColorGroup(&quot;green&quot;);</span>
+
+<span class="nc" id="L32">        blue1.setPrice(100);</span>
+<span class="nc" id="L33">        blue2.setPrice(100);</span>
+<span class="nc" id="L34">        blue3.setPrice(1450);</span>
+<span class="nc" id="L35">        green1.setPrice(200);</span>
+<span class="nc" id="L36">        green2.setPrice(240);</span>
+
+<span class="nc" id="L38">        blue1.setRent(10);</span>
+<span class="nc" id="L39">        blue2.setRent(10);</span>
+<span class="nc" id="L40">        blue3.setRent(10);</span>
+<span class="nc" id="L41">        green1.setRent(20);</span>
+<span class="nc" id="L42">        green2.setRent(20);</span>
+
+<span class="nc" id="L44">        blue1.setHousePrice(50);</span>
+<span class="nc" id="L45">        blue2.setHousePrice(50);</span>
+<span class="nc" id="L46">        blue3.setHousePrice(50);</span>
+<span class="nc" id="L47">        green1.setHousePrice(70);</span>
+<span class="nc" id="L48">        green2.setHousePrice(70);</span>
+
+<span class="nc" id="L50">        addCell(blue1);</span>
+<span class="nc" id="L51">        addCell(jail);</span>
+<span class="nc" id="L52">        addCell(blue2);</span>
+<span class="nc" id="L53">        addCell(blue3);</span>
+<span class="nc" id="L54">        addCell(green1);</span>
+<span class="nc" id="L55">        addCell(goToJail);</span>
+<span class="nc" id="L56">        addCell(green2);</span>
+<span class="nc" id="L57">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

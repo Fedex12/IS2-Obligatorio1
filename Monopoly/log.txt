@@ -1287,3 +1287,113 @@
 8/5/2017;3:23:57;Mayte le paga una renta de 200a katya
 8/5/2017;3:23:57;Mayte dinero: -153
 8/5/2017;3:23:57;katya dinero: 515
+8/5/2017;3:58:43;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:43;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:44;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:45;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:47;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:47;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:48;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:49;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:50;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:50;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;3:58:51;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:11;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:11;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:12;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:13;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:15;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:15;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:16;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:17;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:18;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:18;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:19;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:33;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:34;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:34;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:35;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:36;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:36;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:37;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:37;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:38;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:38;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:1:39;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:11;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:12;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:13;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:13;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:15;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:16;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:17;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:18;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:19;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:19;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:4:20;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:5:39;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:44;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:45;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:45;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:46;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:48;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:49;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:49;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:50;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:51;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:51;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:12:52;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:22;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:35;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:36;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:36;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:37;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37;Cambio de jugador turno de 1
+8/5/2017;4:15:37;Player 2 wishes to purchase Mediterranean Avenue from Player 1 for 200.  Player 1, do you wish to trade your property?
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37;Player 1, you rolled 2 and 3
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37;Cambio de jugador turno de 1
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:37;Cambio de jugador turno de 1
+8/5/2017;4:15:37;Cambio de jugador turno de 2
+8/5/2017;4:15:37; Comienza el juego!
+8/5/2017;4:15:39;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:40;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:40;El jugador null pasa por el GO y suma 200
+8/5/2017;4:15:40;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:40; Comienza el juego!
+8/5/2017;4:15:40;Cambio de jugador turno de 1
+8/5/2017;4:15:40;Cambio de jugador turno de 0
+8/5/2017;4:15:40;Cambio de jugador turno de 1
+8/5/2017;4:15:40;Cambio de jugador turno de 1
+8/5/2017;4:15:40;Cambio de jugador turno de 1
+8/5/2017;4:15:40;null le paga una renta de 1600a null
+8/5/2017;4:15:40;null dinero: -400
+8/5/2017;4:15:40;null dinero: 1940
+8/5/2017;4:15:41;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:41;Cambio de jugador turno de 1
+8/5/2017;4:15:41;null le paga una renta de 10a null
+8/5/2017;4:15:41;null dinero: 1490
+8/5/2017;4:15:41;null dinero: 1390
+8/5/2017;4:15:42;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:42;Cambio de jugador turno de 1
+8/5/2017;4:15:42;null le paga una renta de 50a null
+8/5/2017;4:15:42;null dinero: 1450
+8/5/2017;4:15:42;null dinero: 1150
+8/5/2017;4:15:42;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:43;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:15:43;Cambio de jugador turno de 1
+8/5/2017;4:15:43;null le paga una renta de 100a null
+8/5/2017;4:15:43;null dinero: 1400
+8/5/2017;4:15:43;null dinero: 1000
+8/5/2017;4:17:34;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:20:23;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:20:29; Comienza el juego!
+8/5/2017;4:21:48;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:23:2;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:25:8;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:25:26;Excepcion al levantar datos persistidos: java.io.EOFException

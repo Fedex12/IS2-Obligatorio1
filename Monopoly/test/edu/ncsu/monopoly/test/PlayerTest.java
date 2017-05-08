@@ -12,6 +12,8 @@ public class PlayerTest extends TestCase {
 
     GameMaster gameMaster;
 
+    
+    
     protected void setUp() throws Exception {
         gameMaster = GameMaster.instance();
         gameMaster.setGameBoard(new SimpleGameBoard());
