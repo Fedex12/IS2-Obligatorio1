@@ -121,8 +121,10 @@ public class GameMaster {
             gui.setTradeEnabled(getCurrentPlayerIndex(), false);
             updateGUI();
         } else {
+            
             switchTurn();
             updateGUI();
+            
         }
     }
 
@@ -329,6 +331,7 @@ public class GameMaster {
 
     public void sendToJail(Player player) {
         int oldPosition = gameBoard.queryCellIndex(getCurrentPlayer().getPosition().getName());
+        
         player.setPosition(gameBoard.queryCell("Jail"));
         player.setInJail(true);
         int jailIndex = gameBoard.queryCellIndex("Jail");
@@ -336,6 +339,7 @@ public class GameMaster {
                 getPlayerIndex(player),
                 oldPosition,
                 jailIndex);
+        
     }
 
     private void setAllButtonEnabled(boolean enabled) {
@@ -383,6 +387,7 @@ public class GameMaster {
     }
 
     public void switchTurn() {
+        
         turn = (turn + 1) % getNumberOfPlayers();
         archivo.crearLog("Cambio de jugador turno de " + turn);
         if (!getCurrentPlayer().isInJail()) {
@@ -392,6 +397,7 @@ public class GameMaster {
 
         } else {
             gui.setGetOutOfJailEnabled(true);
+            gui.setEndTurnEnabled(true);
             archivo.crearLog("Jugador " + turn + " esta en la carcel");
         }
 

@@ -243,7 +243,7 @@ public class Player implements Serializable {
                 railroads.remove(property);
             }
             if (property instanceof UtilityCell) {
-                railroads.remove(property);
+                utilities.remove(property);
             }
         } catch (Exception e) {
             property.setOwner(this);

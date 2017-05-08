@@ -22,6 +22,7 @@ public class PropertyCellInfoFormatter implements CellInfoFormatter {
                 .append("$").append(c.getPrice())
                 .append("<br>Owner: ").append(ownerName)
                 .append("<br>* ").append(c.getNumHouses())
+                
                 .append("</html>");
         return buf.toString();
     }

@@ -18,7 +18,7 @@ public class UtilCellInfoFormatter implements CellInfoFormatter{
                 .append(cell.getName())
                 .append("</font></b><br>")
                 .append("$").append(c.getPrice())
-				.append("<br>Owner: ").append(ownerName)
+		.append("<br>Owner: ").append(ownerName)
                 .append("</html>");
         return buf.toString();
 	}
