@@ -7,43 +7,43 @@ import edu.ncsu.monopoly.JailCell;
 import edu.ncsu.monopoly.MoneyCard;
 import edu.ncsu.monopoly.PropertyCell;
 
+public class GameBoardCCGainMoney extends GameBoard {
 
-public class GameBoardCCGainMoney extends GameBoard{
-    public GameBoardCCGainMoney(){
-<span class="fc" id="L13">		super();</span>
-<span class="fc" id="L14">		PropertyCell blue1 = new PropertyCell();</span>
-<span class="fc" id="L15">		PropertyCell blue2 = new PropertyCell();</span>
-<span class="fc" id="L16">		CardCell cc1 = new CardCell(Card.TYPE_CC, &quot;Community Chest 1&quot;);</span>
-<span class="fc" id="L17">		JailCell jail = new JailCell();</span>
-<span class="fc" id="L18">		CardCell chance1 = new CardCell(Card.TYPE_CHANCE, &quot;Chance 1&quot;);</span>
-		
-<span class="fc" id="L20">		Card ccCard1 = new MoneyCard(&quot;Win $50&quot;, 50, Card.TYPE_CC);</span>
+    public GameBoardCCGainMoney() {
+<span class="fc" id="L13">        super();</span>
+<span class="fc" id="L14">        PropertyCell blue1 = new PropertyCell();</span>
+<span class="fc" id="L15">        PropertyCell blue2 = new PropertyCell();</span>
+<span class="fc" id="L16">        CardCell cc1 = new CardCell(Card.TYPE_CC, &quot;Community Chest 1&quot;);</span>
+<span class="fc" id="L17">        JailCell jail = new JailCell();</span>
+<span class="fc" id="L18">        CardCell chance1 = new CardCell(Card.TYPE_CHANCE, &quot;Chance 1&quot;);</span>
+
+<span class="fc" id="L20">        Card ccCard1 = new MoneyCard(&quot;Win $50&quot;, 50, Card.TYPE_CC);</span>
 <span class="fc" id="L21">        Card chanceCard1 = new MoneyCard(&quot;Win $30&quot;, 30, Card.TYPE_CHANCE);</span>
-		
-<span class="fc" id="L23">		blue1.setName(&quot;Blue 1&quot;);</span>
-<span class="fc" id="L24">		blue2.setName(&quot;Blue 2&quot;);</span>
-		
-<span class="fc" id="L26">		blue1.setColorGroup(&quot;blue&quot;);</span>
-<span class="fc" id="L27">		blue2.setColorGroup(&quot;blue&quot;);</span>
-		
-<span class="fc" id="L29">		blue1.setPrice(100);</span>
-<span class="fc" id="L30">		blue2.setPrice(100);</span>
-		
-<span class="fc" id="L32">		blue1.setRent(10);</span>
-<span class="fc" id="L33">		blue2.setRent(10);</span>
-		
-<span class="fc" id="L35">		blue1.setHousePrice(50);</span>
-<span class="fc" id="L36">		blue2.setHousePrice(50);</span>
-		
-<span class="fc" id="L38">		addCard(ccCard1);</span>
+
+<span class="fc" id="L23">        blue1.setName(&quot;Blue 1&quot;);</span>
+<span class="fc" id="L24">        blue2.setName(&quot;Blue 2&quot;);</span>
+
+<span class="fc" id="L26">        blue1.setColorGroup(&quot;blue&quot;);</span>
+<span class="fc" id="L27">        blue2.setColorGroup(&quot;blue&quot;);</span>
+
+<span class="fc" id="L29">        blue1.setPrice(100);</span>
+<span class="fc" id="L30">        blue2.setPrice(100);</span>
+
+<span class="fc" id="L32">        blue1.setRent(10);</span>
+<span class="fc" id="L33">        blue2.setRent(10);</span>
+
+<span class="fc" id="L35">        blue1.setHousePrice(50);</span>
+<span class="fc" id="L36">        blue2.setHousePrice(50);</span>
+
+<span class="fc" id="L38">        addCard(ccCard1);</span>
 <span class="fc" id="L39">        addCard(chanceCard1);</span>
-		
-<span class="fc" id="L41">		addCell(cc1);</span>
-<span class="fc" id="L42">		addCell(blue1);</span>
-<span class="fc" id="L43">		addCell(jail);</span>
-<span class="fc" id="L44">		addCell(blue2);</span>
-<span class="fc" id="L45">		addCell(chance1);</span>
-		
+
+<span class="fc" id="L41">        addCell(cc1);</span>
+<span class="fc" id="L42">        addCell(blue1);</span>
+<span class="fc" id="L43">        addCell(jail);</span>
+<span class="fc" id="L44">        addCell(blue2);</span>
+<span class="fc" id="L45">        addCell(chance1);</span>
+
 <span class="fc" id="L47">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

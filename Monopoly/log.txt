@@ -456,3 +456,482 @@
 8/5/2017;0:27:32;katya, you rolled 6 and 2
 8/5/2017;0:27:37;Cambio de jugador turno de 0
 8/5/2017;1:10:40;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:19;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:20;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:21;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:21;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:23;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:24;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:25;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:26;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:26;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:27;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:28;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:44;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:33:50; Comienza el juego!
+8/5/2017;4:33:52;Federico, you rolled 2 and 3
+8/5/2017;4:57:24;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;4:57:59; Comienza el juego!
+8/5/2017;4:58:1;katya, you rolled 1 and 2
+8/5/2017;4:58:3;Cambio de jugador turno de 1
+8/5/2017;4:58:4;Federico, you rolled 3 and 3
+8/5/2017;4:58:7;Cambio de jugador turno de 2
+8/5/2017;4:58:8;Mayte, you rolled 6 and 5
+8/5/2017;4:58:12;Cambio de jugador turno de 0
+8/5/2017;4:58:14;katya, you rolled 2 and 5
+8/5/2017;4:58:16;Cambio de jugador turno de 1
+8/5/2017;4:58:17;Federico, you rolled 4 and 1
+8/5/2017;4:58:19;Federico le paga una renta de 10a Mayte
+8/5/2017;4:58:19;Federico dinero: 1490
+8/5/2017;4:58:19;Mayte dinero: 1370
+8/5/2017;4:58:19;Cambio de jugador turno de 2
+8/5/2017;4:58:21;Mayte, you rolled 2 and 5
+8/5/2017;4:58:25;Cambio de jugador turno de 0
+8/5/2017;4:58:41;katya wishes to purchase St. Charles Place from Mayte for 1499.  Mayte, do you wish to trade your property?
+8/5/2017;4:58:46;katya, you rolled 6 and 3
+8/5/2017;4:58:48;Cambio de jugador turno de 1
+8/5/2017;4:59:1;Federico wishes to purchase St. Charles Place from katya for 1489.  katya, do you wish to trade your property?
+8/5/2017;4:59:2;Federico, you rolled 4 and 2
+8/5/2017;4:59:6;Cambio de jugador turno de 2
+8/5/2017;4:59:8;Mayte, you rolled 3 and 5
+8/5/2017;4:59:11;Cambio de jugador turno de 0
+8/5/2017;4:59:12;katya, you rolled 2 and 3
+8/5/2017;4:59:14;Cambio de jugador turno de 1
+8/5/2017;4:59:15;Federico, you rolled 1 and 6
+8/5/2017;4:59:18;Federico le paga una renta de 20a katya
+8/5/2017;4:59:18;Federico dinero: 31
+8/5/2017;4:59:18;katya dinero: 1270
+8/5/2017;4:59:18;Cambio de jugador turno de 2
+8/5/2017;4:59:19;Mayte, you rolled 4 and 4
+8/5/2017;4:59:22;Cambio de jugador turno de 0
+8/5/2017;4:59:24;katya, you rolled 6 and 6
+8/5/2017;4:59:32;Cambio de jugador turno de 1
+8/5/2017;4:59:38;Federico, you rolled 1 and 3
+8/5/2017;4:59:40;Cambio de jugador turno de 2
+8/5/2017;4:59:44;Mayte, you rolled 5 and 3
+8/5/2017;4:59:45;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;4:59:49;Cambio de jugador turno de 0
+8/5/2017;5:0:3;katya wishes to purchase Pennsylvania Avenue from Mayte for 919.  Mayte, do you wish to trade your property?
+8/5/2017;5:0:4;katya, you rolled 3 and 4
+8/5/2017;5:0:5;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:0:7;Cambio de jugador turno de 1
+8/5/2017;5:0:10;Federico, you rolled 2 and 3
+8/5/2017;5:0:16;Cambio de jugador turno de 2
+8/5/2017;5:0:18;Mayte, you rolled 6 and 1
+8/5/2017;5:0:22;Cambio de jugador turno de 0
+8/5/2017;5:0:24;katya, you rolled 1 and 4
+8/5/2017;5:0:25;katya le paga una renta de 8a Mayte
+8/5/2017;5:0:25;katya dinero: 133
+8/5/2017;5:0:25;Mayte dinero: 3136
+8/5/2017;5:0:25;Cambio de jugador turno de 1
+8/5/2017;5:0:27;Federico, you rolled 3 and 4
+8/5/2017;5:0:28;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:0:29;Cambio de jugador turno de 2
+8/5/2017;5:0:31;Mayte, you rolled 5 and 4
+8/5/2017;5:0:33;Cambio de jugador turno de 0
+8/5/2017;5:0:34;katya, you rolled 6 and 4
+8/5/2017;5:0:36;Cambio de jugador turno de 1
+8/5/2017;5:0:37;Federico, you rolled 1 and 1
+8/5/2017;5:0:42;Cambio de jugador turno de 2
+8/5/2017;5:0:43;Mayte, you rolled 3 and 5
+8/5/2017;5:0:45;Cambio de jugador turno de 0
+8/5/2017;5:0:47;katya, you rolled 3 and 4
+8/5/2017;5:0:49;katya le paga una renta de 22a Mayte
+8/5/2017;5:0:49;katya dinero: 111
+8/5/2017;5:0:49;Mayte dinero: 3158
+8/5/2017;5:0:49;Cambio de jugador turno de 1
+8/5/2017;5:0:50;Federico, you rolled 3 and 1
+8/5/2017;5:0:53;Cambio de jugador turno de 2
+8/5/2017;5:0:54;Mayte, you rolled 6 and 5
+8/5/2017;5:0:57;Mayte le paga una renta de 35a katya
+8/5/2017;5:0:57;Mayte dinero: 3123
+8/5/2017;5:0:57;katya dinero: 146
+8/5/2017;5:0:57;Cambio de jugador turno de 0
+8/5/2017;5:0:59;katya, you rolled 2 and 1
+8/5/2017;5:1:1;Cambio de jugador turno de 1
+8/5/2017;5:1:2;Federico, you rolled 6 and 2
+8/5/2017;5:1:5;Cambio de jugador turno de 2
+8/5/2017;5:1:6;Mayte, you rolled 4 and 6
+8/5/2017;5:1:7;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:1:10;Cambio de jugador turno de 0
+8/5/2017;5:1:12;katya, you rolled 1 and 5
+8/5/2017;5:1:14;Cambio de jugador turno de 1
+8/5/2017;5:1:15;Federico, you rolled 2 and 3
+8/5/2017;5:1:18;Cambio de jugador turno de 2
+8/5/2017;5:1:19;Mayte, you rolled 5 and 4
+8/5/2017;5:1:23;Cambio de jugador turno de 0
+8/5/2017;5:1:25;katya, you rolled 1 and 5
+8/5/2017;5:1:25;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:1:27;Cambio de jugador turno de 1
+8/5/2017;5:1:28;Federico, you rolled 6 and 3
+8/5/2017;5:1:31;Cambio de jugador turno de 2
+8/5/2017;5:1:36;Mayte wishes to purchase Illinois Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:1:45;Mayte wishes to purchase Pennsylvania Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:1:53;Mayte wishes to purchase Sarah Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:2:1;Mayte wishes to purchase Mediterranean Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:2:8;Mayte wishes to purchase Park Place from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:2:16;Mayte wishes to purchase St. Charles Place from Federico for 1.  Federico, do you wish to trade your property?
+8/5/2017;5:2:25;Mayte wishes to purchase Oriental Avenue from Federico for 1.  Federico, do you wish to trade your property?
+8/5/2017;5:2:29;Mayte, you rolled 4 and 2
+8/5/2017;5:2:33;Cambio de jugador turno de 0
+8/5/2017;5:2:34;katya, you rolled 6 and 3
+8/5/2017;5:2:37;Cambio de jugador turno de 1
+8/5/2017;5:2:38;Federico, you rolled 3 and 4
+8/5/2017;5:2:40;Cambio de jugador turno de 2
+8/5/2017;5:2:41;Mayte, you rolled 6 and 4
+8/5/2017;5:2:44;Cambio de jugador turno de 0
+8/5/2017;5:2:45;katya, you rolled 2 and 4
+8/5/2017;5:2:47;katya le paga una renta de 14a Mayte
+8/5/2017;5:2:47;katya dinero: 277
+8/5/2017;5:2:47;Mayte dinero: 2920
+8/5/2017;5:2:47;Cambio de jugador turno de 1
+8/5/2017;5:2:48;Federico, you rolled 1 and 6
+8/5/2017;5:2:49;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:2:53;Cambio de jugador turno de 2
+8/5/2017;5:3:12;Mayte, you rolled 2 and 1
+8/5/2017;5:3:16;Cambio de jugador turno de 0
+8/5/2017;5:3:17;katya, you rolled 5 and 2
+8/5/2017;5:3:23;Cambio de jugador turno de 1
+8/5/2017;5:3:25;Federico, you rolled 3 and 2
+8/5/2017;5:3:29;Cambio de jugador turno de 2
+8/5/2017;5:3:35;Mayte, you rolled 2 and 3
+8/5/2017;5:3:36;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:3:38;Cambio de jugador turno de 0
+8/5/2017;5:3:39;katya, you rolled 2 and 1
+8/5/2017;5:3:40;katya le paga una renta de 22a Mayte
+8/5/2017;5:3:40;katya dinero: 35
+8/5/2017;5:3:40;Mayte dinero: 542
+8/5/2017;5:3:40;Cambio de jugador turno de 1
+8/5/2017;5:3:41;Federico, you rolled 5 and 5
+8/5/2017;5:3:46;Cambio de jugador turno de 2
+8/5/2017;5:3:48;Mayte, you rolled 2 and 4
+8/5/2017;5:3:50;Cambio de jugador turno de 0
+8/5/2017;5:3:51;katya, you rolled 2 and 1
+8/5/2017;5:3:53;Cambio de jugador turno de 1
+8/5/2017;5:3:53;Jugador 1 esta en la carcel
+8/5/2017;5:3:56;Federico, you rolled 3 and 4
+8/5/2017;5:4:4;Federico le paga una renta de 14a Mayte
+8/5/2017;5:4:4;Federico dinero: 139
+8/5/2017;5:4:4;Mayte dinero: 556
+8/5/2017;5:4:4;Cambio de jugador turno de 2
+8/5/2017;5:4:8;Mayte, you rolled 3 and 6
+8/5/2017;5:4:10;Cambio de jugador turno de 0
+8/5/2017;5:4:11;katya, you rolled 5 and 2
+8/5/2017;5:4:17;Cambio de jugador turno de 1
+8/5/2017;5:4:17;Federico, you rolled 5 and 4
+8/5/2017;5:4:20;Cambio de jugador turno de 2
+8/5/2017;5:4:23;Mayte, you rolled 3 and 4
+8/5/2017;5:4:28;Cambio de jugador turno de 0
+8/5/2017;5:10:52;Excepcion al levantar datos persistidos: java.io.EOFException
+8/5/2017;5:10:59; Comienza el juego!
+8/5/2017;5:11:1;Federico, you rolled 2 and 3
+8/5/2017;5:11:4;Cambio de jugador turno de 1
+8/5/2017;5:11:5;katya, you rolled 1 and 4
+8/5/2017;5:11:7;katya le paga una renta de 50a Federico
+8/5/2017;5:11:7;katya dinero: 1450
+8/5/2017;5:11:7;Federico dinero: 1350
+8/5/2017;5:11:7;Cambio de jugador turno de 2
+8/5/2017;5:11:8;Mayte, you rolled 3 and 1
+8/5/2017;5:11:10;Cambio de jugador turno de 0
+8/5/2017;5:11:11;Federico, you rolled 2 and 6
+8/5/2017;5:11:15;Cambio de jugador turno de 1
+8/5/2017;5:11:16;katya, you rolled 5 and 1
+8/5/2017;5:11:18;Cambio de jugador turno de 2
+8/5/2017;5:11:19;Mayte, you rolled 2 and 4
+8/5/2017;5:11:21;Cambio de jugador turno de 0
+8/5/2017;5:11:22;Federico, you rolled 5 and 6
+8/5/2017;5:11:25;Cambio de jugador turno de 1
+8/5/2017;5:11:26;katya, you rolled 6 and 5
+8/5/2017;5:11:35;Cambio de jugador turno de 2
+8/5/2017;5:11:36;Mayte, you rolled 1 and 1
+8/5/2017;5:11:38;Cambio de jugador turno de 0
+8/5/2017;5:11:39;Federico, you rolled 6 and 3
+8/5/2017;5:11:43;Cambio de jugador turno de 1
+8/5/2017;5:11:45;katya, you rolled 5 and 4
+8/5/2017;5:11:47;Cambio de jugador turno de 2
+8/5/2017;5:11:49;Mayte, you rolled 3 and 6
+8/5/2017;5:11:52;Cambio de jugador turno de 0
+8/5/2017;5:11:53;Federico, you rolled 2 and 6
+8/5/2017;5:11:54;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:11:56;Cambio de jugador turno de 1
+8/5/2017;5:11:57;katya, you rolled 4 and 1
+8/5/2017;5:11:59;Cambio de jugador turno de 2
+8/5/2017;5:12:0;Mayte, you rolled 4 and 5
+8/5/2017;5:12:2;Cambio de jugador turno de 0
+8/5/2017;5:12:3;Federico, you rolled 5 and 5
+8/5/2017;5:12:5;Cambio de jugador turno de 1
+8/5/2017;5:12:6;katya, you rolled 2 and 4
+8/5/2017;5:12:7;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:12:8;Cambio de jugador turno de 2
+8/5/2017;5:12:8;Jugador 2 esta en la carcel
+8/5/2017;5:12:11;Mayte, you rolled 2 and 5
+8/5/2017;5:12:14;Cambio de jugador turno de 0
+8/5/2017;5:12:15;Federico, you rolled 1 and 1
+8/5/2017;5:12:17;Cambio de jugador turno de 1
+8/5/2017;5:12:18;katya, you rolled 4 and 3
+8/5/2017;5:12:20;Cambio de jugador turno de 2
+8/5/2017;5:12:21;Mayte, you rolled 3 and 1
+8/5/2017;5:12:23;Cambio de jugador turno de 0
+8/5/2017;5:12:24;Federico, you rolled 5 and 3
+8/5/2017;5:12:26;Federico le paga una renta de 18a Mayte
+8/5/2017;5:12:26;Federico dinero: 1002
+8/5/2017;5:12:26;Mayte dinero: 1058
+8/5/2017;5:12:26;Cambio de jugador turno de 1
+8/5/2017;5:12:27;katya, you rolled 5 and 1
+8/5/2017;5:12:30;Cambio de jugador turno de 2
+8/5/2017;5:12:31;Mayte, you rolled 4 and 2
+8/5/2017;5:12:34;Cambio de jugador turno de 0
+8/5/2017;5:12:35;Federico, you rolled 1 and 5
+8/5/2017;5:12:37;Federico le paga una renta de 22a Mayte
+8/5/2017;5:12:37;Federico dinero: 980
+8/5/2017;5:12:37;Mayte dinero: 820
+8/5/2017;5:12:37;Cambio de jugador turno de 1
+8/5/2017;5:12:38;katya, you rolled 4 and 5
+8/5/2017;5:12:40;Cambio de jugador turno de 2
+8/5/2017;5:12:43;Mayte, you rolled 4 and 1
+8/5/2017;5:12:45;Mayte le paga una renta de 26a katya
+8/5/2017;5:12:45;Mayte dinero: 794
+8/5/2017;5:12:45;katya dinero: 426
+8/5/2017;5:12:45;Cambio de jugador turno de 0
+8/5/2017;5:12:47;Federico, you rolled 4 and 6
+8/5/2017;5:12:49;Federico le paga una renta de 35a katya
+8/5/2017;5:12:49;Federico dinero: 945
+8/5/2017;5:12:49;katya dinero: 461
+8/5/2017;5:12:49;Cambio de jugador turno de 1
+8/5/2017;5:12:50;katya, you rolled 2 and 6
+8/5/2017;5:12:53;Cambio de jugador turno de 2
+8/5/2017;5:12:55;Mayte, you rolled 3 and 3
+8/5/2017;5:12:59;Cambio de jugador turno de 0
+8/5/2017;5:12:59;Federico, you rolled 4 and 6
+8/5/2017;5:13:1;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:13:5;Cambio de jugador turno de 1
+8/5/2017;5:13:6;katya, you rolled 2 and 3
+8/5/2017;5:13:8;katya le paga una renta de 35a Mayte
+8/5/2017;5:13:8;katya dinero: 436
+8/5/2017;5:13:8;Mayte dinero: 479
+8/5/2017;5:13:8;Cambio de jugador turno de 2
+8/5/2017;5:13:9;Mayte, you rolled 1 and 3
+8/5/2017;5:13:10;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:13:13;Cambio de jugador turno de 0
+8/5/2017;5:13:14;Federico, you rolled 1 and 4
+8/5/2017;5:13:19;Federico le paga una renta de 12a Mayte
+8/5/2017;5:13:19;Federico dinero: 1183
+8/5/2017;5:13:19;Mayte dinero: 591
+8/5/2017;5:13:19;Cambio de jugador turno de 1
+8/5/2017;5:13:21;katya, you rolled 2 and 6
+8/5/2017;5:13:22;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:13:23;Cambio de jugador turno de 2
+8/5/2017;5:13:25;Mayte, you rolled 5 and 3
+8/5/2017;5:13:27;Cambio de jugador turno de 0
+8/5/2017;5:13:33;Federico wishes to purchase Indiana Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:13:39;Federico wishes to purchase North Carolina Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:13:44;Federico wishes to purchase Park Place from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:13:49;Federico wishes to purchase St. James Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:13:54;Federico wishes to purchase Oriental Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:13:59;Federico wishes to purchase B. & O. RailRoad from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:14:6;Federico wishes to purchase Sarah Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:14:13;Federico wishes to purchase Kentucky Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:14:21;Federico wishes to purchase Ventnor Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:14:29;Federico wishes to purchase Electric Company from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:14:37;Federico wishes to purchase Dright Place from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:14:38;Federico, you rolled 1 and 5
+8/5/2017;5:14:43;Cambio de jugador turno de 1
+8/5/2017;5:14:44;katya, you rolled 4 and 6
+8/5/2017;5:14:46;katya le paga una renta de 14a Federico
+8/5/2017;5:14:46;katya dinero: 528
+8/5/2017;5:14:46;Federico dinero: 1006
+8/5/2017;5:14:46;Cambio de jugador turno de 2
+8/5/2017;5:14:47;Mayte, you rolled 6 and 3
+8/5/2017;5:14:50;Cambio de jugador turno de 0
+8/5/2017;5:14:58;Federico, you rolled 1 and 1
+8/5/2017;5:15:0;Cambio de jugador turno de 1
+8/5/2017;5:15:1;katya, you rolled 6 and 5
+8/5/2017;5:15:4;katya le paga una renta de 22a Federico
+8/5/2017;5:15:4;katya dinero: 506
+8/5/2017;5:15:4;Federico dinero: 128
+8/5/2017;5:15:4;Cambio de jugador turno de 2
+8/5/2017;5:15:5;Mayte, you rolled 5 and 2
+8/5/2017;5:15:7;Cambio de jugador turno de 0
+8/5/2017;5:15:8;Federico, you rolled 5 and 3
+8/5/2017;5:15:11;Cambio de jugador turno de 1
+8/5/2017;5:15:12;katya, you rolled 1 and 4
+8/5/2017;5:15:14;katya le paga una renta de 26a Federico
+8/5/2017;5:15:14;katya dinero: 480
+8/5/2017;5:15:14;Federico dinero: 154
+8/5/2017;5:15:14;Cambio de jugador turno de 2
+8/5/2017;5:15:15;Mayte, you rolled 5 and 6
+8/5/2017;5:15:17;Mayte le paga una renta de 35a Federico
+8/5/2017;5:15:17;Mayte dinero: 101
+8/5/2017;5:15:17;Federico dinero: 189
+8/5/2017;5:15:17;Cambio de jugador turno de 0
+8/5/2017;5:15:18;Federico, you rolled 1 and 6
+8/5/2017;5:15:21;Cambio de jugador turno de 1
+8/5/2017;5:15:22;katya, you rolled 5 and 4
+8/5/2017;5:15:23;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:15:24;katya le paga una renta de 2a Federico
+8/5/2017;5:15:24;katya dinero: 678
+8/5/2017;5:15:24;Federico dinero: 191
+8/5/2017;5:15:24;Cambio de jugador turno de 2
+8/5/2017;5:15:25;Mayte, you rolled 6 and 5
+8/5/2017;5:15:27;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:15:29;Cambio de jugador turno de 0
+8/5/2017;5:15:37;Federico wishes to purchase New York Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:15:47;Federico wishes to purchase Atlantic Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:15:54;Federico wishes to purchase Vermont Avenue from Mayte for 1.  Mayte, do you wish to trade your property?
+8/5/2017;5:15:56;Federico, you rolled 5 and 6
+8/5/2017;5:15:57;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:15:58;Cambio de jugador turno de 1
+8/5/2017;5:15:59;katya, you rolled 6 and 1
+8/5/2017;5:16:1;katya le paga una renta de 6a Federico
+8/5/2017;5:16:1;katya dinero: 672
+8/5/2017;5:16:1;Federico dinero: 394
+8/5/2017;5:16:1;Cambio de jugador turno de 2
+8/5/2017;5:16:3;Mayte, you rolled 3 and 1
+8/5/2017;5:16:7;Mayte le paga una renta de 40a Federico
+8/5/2017;5:16:7;Mayte dinero: 164
+8/5/2017;5:16:7;Federico dinero: 434
+8/5/2017;5:16:7;Cambio de jugador turno de 0
+8/5/2017;5:16:8;Federico, you rolled 1 and 2
+8/5/2017;5:16:11;Cambio de jugador turno de 1
+8/5/2017;5:16:12;katya, you rolled 5 and 3
+8/5/2017;5:16:14;katya le paga una renta de 28a Federico
+8/5/2017;5:16:14;katya dinero: 644
+8/5/2017;5:16:14;Federico dinero: 342
+8/5/2017;5:16:14;Cambio de jugador turno de 2
+8/5/2017;5:16:15;Mayte, you rolled 5 and 1
+8/5/2017;5:16:17;Mayte le paga una renta de 28a Federico
+8/5/2017;5:16:17;Mayte dinero: 136
+8/5/2017;5:16:17;Federico dinero: 370
+8/5/2017;5:16:17;Cambio de jugador turno de 0
+8/5/2017;5:16:19;Federico, you rolled 3 and 4
+8/5/2017;5:16:21;Cambio de jugador turno de 1
+8/5/2017;5:16:22;katya, you rolled 2 and 4
+8/5/2017;5:16:26;Cambio de jugador turno de 2
+8/5/2017;5:16:28;Mayte, you rolled 3 and 5
+8/5/2017;5:16:30;Mayte le paga una renta de 22a Federico
+8/5/2017;5:16:30;Mayte dinero: 114
+8/5/2017;5:16:30;Federico dinero: 392
+8/5/2017;5:16:30;Cambio de jugador turno de 0
+8/5/2017;5:16:32;Federico, you rolled 1 and 4
+8/5/2017;5:16:34;Cambio de jugador turno de 1
+8/5/2017;5:16:35;katya, you rolled 4 and 4
+8/5/2017;5:16:37;Cambio de jugador turno de 2
+8/5/2017;5:16:38;Mayte, you rolled 4 and 4
+8/5/2017;5:16:40;Cambio de jugador turno de 0
+8/5/2017;5:16:42;Federico, you rolled 2 and 4
+8/5/2017;5:16:44;Cambio de jugador turno de 1
+8/5/2017;5:16:44;Jugador 1 esta en la carcel
+8/5/2017;5:16:46;katya, you rolled 6 and 4
+8/5/2017;5:16:48;Cambio de jugador turno de 2
+8/5/2017;5:16:49;Mayte, you rolled 6 and 5
+8/5/2017;5:16:51;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:16:52;Mayte le paga una renta de 100a Federico
+8/5/2017;5:16:52;Mayte dinero: 214
+8/5/2017;5:16:52;Federico dinero: 492
+8/5/2017;5:16:52;Cambio de jugador turno de 0
+8/5/2017;5:16:53;Federico, you rolled 4 and 4
+8/5/2017;5:16:57;Cambio de jugador turno de 1
+8/5/2017;5:16:58;katya, you rolled 4 and 4
+8/5/2017;5:17:0;Cambio de jugador turno de 2
+8/5/2017;5:17:2;Mayte, you rolled 6 and 2
+8/5/2017;5:17:5;Mayte le paga una renta de 10a Federico
+8/5/2017;5:17:5;Mayte dinero: 204
+8/5/2017;5:17:5;Federico dinero: 302
+8/5/2017;5:17:5;Cambio de jugador turno de 0
+8/5/2017;5:17:11;Federico wishes to purchase Water Works from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:17:12;Federico, you rolled 5 and 4
+8/5/2017;5:17:13;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:17:14;Cambio de jugador turno de 1
+8/5/2017;5:17:15;katya, you rolled 6 and 6
+8/5/2017;5:17:16;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:17:17;Cambio de jugador turno de 2
+8/5/2017;5:17:18;Mayte, you rolled 5 and 1
+8/5/2017;5:17:20;Mayte le paga una renta de 32a Federico
+8/5/2017;5:17:20;Mayte dinero: 172
+8/5/2017;5:17:20;Federico dinero: 533
+8/5/2017;5:17:20;Cambio de jugador turno de 0
+8/5/2017;5:17:21;Federico, you rolled 2 and 5
+8/5/2017;5:17:24;Cambio de jugador turno de 1
+8/5/2017;5:17:25;katya, you rolled 4 and 2
+8/5/2017;5:17:28;katya le paga una renta de 12a Federico
+8/5/2017;5:17:28;katya dinero: 653
+8/5/2017;5:17:28;Federico dinero: 545
+8/5/2017;5:17:28;Cambio de jugador turno de 2
+8/5/2017;5:17:30;Mayte, you rolled 3 and 1
+8/5/2017;5:17:33;Mayte le paga una renta de 54a Federico
+8/5/2017;5:17:33;Mayte dinero: 118
+8/5/2017;5:17:33;Federico dinero: 599
+8/5/2017;5:17:33;Cambio de jugador turno de 0
+8/5/2017;5:17:34;Federico, you rolled 5 and 6
+8/5/2017;5:17:39;Cambio de jugador turno de 1
+8/5/2017;5:17:39;katya, you rolled 1 and 3
+8/5/2017;5:17:41;Cambio de jugador turno de 2
+8/5/2017;5:17:42;Mayte, you rolled 4 and 5
+8/5/2017;5:17:44;Mayte le paga una renta de 26a Federico
+8/5/2017;5:17:44;Mayte dinero: 92
+8/5/2017;5:17:44;Federico dinero: 635
+8/5/2017;5:17:44;Cambio de jugador turno de 0
+8/5/2017;5:17:46;Federico, you rolled 2 and 5
+8/5/2017;5:17:49;Cambio de jugador turno de 1
+8/5/2017;5:17:50;katya, you rolled 1 and 3
+8/5/2017;5:17:53;Cambio de jugador turno de 2
+8/5/2017;5:17:54;Mayte, you rolled 4 and 4
+8/5/2017;5:17:55;El jugador Mayte pasa por el GO y suma 200
+8/5/2017;5:17:56;Cambio de jugador turno de 0
+8/5/2017;5:18:2;Federico wishes to purchase Virginia Avenue from katya for 1.  katya, do you wish to trade your property?
+8/5/2017;5:18:3;Federico, you rolled 4 and 4
+8/5/2017;5:18:5;Cambio de jugador turno de 1
+8/5/2017;5:18:6;katya, you rolled 3 and 6
+8/5/2017;5:18:8;katya le paga una renta de 54a Federico
+8/5/2017;5:18:8;katya dinero: 440
+8/5/2017;5:18:8;Federico dinero: 408
+8/5/2017;5:18:8;Cambio de jugador turno de 2
+8/5/2017;5:18:10;Mayte, you rolled 4 and 5
+8/5/2017;5:18:12;Mayte le paga una renta de 16a Federico
+8/5/2017;5:18:12;Mayte dinero: 276
+8/5/2017;5:18:12;Federico dinero: 424
+8/5/2017;5:18:12;Cambio de jugador turno de 0
+8/5/2017;5:18:13;Federico, you rolled 4 and 5
+8/5/2017;5:18:15;El jugador Federico pasa por el GO y suma 200
+8/5/2017;5:18:17;Cambio de jugador turno de 1
+8/5/2017;5:18:18;katya, you rolled 5 and 2
+8/5/2017;5:18:21;Cambio de jugador turno de 2
+8/5/2017;5:18:36;Mayte wishes to purchase States Avenue from Federico for 275.  Federico, do you wish to trade your property?
+8/5/2017;5:18:37;Mayte, you rolled 3 and 5
+8/5/2017;5:18:44;Cambio de jugador turno de 0
+8/5/2017;5:18:46;Federico, you rolled 4 and 6
+8/5/2017;5:18:48;Cambio de jugador turno de 1
+8/5/2017;5:18:48;Jugador 1 esta en la carcel
+8/5/2017;5:18:50;katya, you rolled 2 and 6
+8/5/2017;5:18:53;katya le paga una renta de 28a Federico
+8/5/2017;5:18:53;katya dinero: 362
+8/5/2017;5:18:53;Federico dinero: 927
+8/5/2017;5:18:53;Cambio de jugador turno de 2
+8/5/2017;5:18:53;Cambio de jugador turno de 0
+8/5/2017;5:18:59;Federico, you rolled 3 and 1
+8/5/2017;5:19:1;Cambio de jugador turno de 1
+8/5/2017;5:19:13;katya wishes to purchase Illinois Avenue from Federico for 361.  Federico, do you wish to trade your property?
+8/5/2017;5:19:15;katya, you rolled 2 and 4
+8/5/2017;5:19:17;Cambio de jugador turno de 2
+8/5/2017;5:19:17;Cambio de jugador turno de 0
+8/5/2017;5:19:20;Federico, you rolled 3 and 4
+8/5/2017;5:19:22;Cambio de jugador turno de 1
+8/5/2017;5:19:24;katya, you rolled 3 and 4
+8/5/2017;5:19:26;Cambio de jugador turno de 2
+8/5/2017;5:19:26;Cambio de jugador turno de 0
+8/5/2017;5:19:28;Federico, you rolled 1 and 2
+8/5/2017;5:19:34;Cambio de jugador turno de 1
+8/5/2017;5:19:35;katya, you rolled 4 and 5
+8/5/2017;5:19:36;El jugador katya pasa por el GO y suma 200
+8/5/2017;5:19:38;Cambio de jugador turno de 2
+8/5/2017;5:19:38;Cambio de jugador turno de 0
+8/5/2017;5:19:38;Jugador 0 esta en la carcel
+8/5/2017;5:19:40;Federico, you rolled 5 and 1
+8/5/2017;5:19:43;Cambio de jugador turno de 1
+8/5/2017;5:19:54;katya wishes to purchase Mediterranean Avenue from Federico for 200.  Federico, do you wish to trade your property?
+8/5/2017;5:19:55;katya, you rolled 6 and 5
+8/5/2017;5:19:57;katya le paga una renta de 20a Federico
+8/5/2017;5:19:57;katya dinero: -19
+8/5/2017;5:19:57;Federico dinero: 1439
+8/5/2017;5:19:57;Cambio de jugador turno de 2
+8/5/2017;5:20:10;Excepcion al levantar datos persistidos: java.io.EOFException

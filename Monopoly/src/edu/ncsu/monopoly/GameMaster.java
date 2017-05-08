@@ -19,7 +19,7 @@ public class GameMaster {
     ArchivoLog archivo = new ArchivoLog();
     private int initAmountOfMoney;
     private ArrayList<Player> players;
-    private ArrayList<Player> registredPlayers= new ArrayList();
+    private ArrayList<Player> registredPlayers = new ArrayList();
     private int turn = 0;
     private int utilDiceRoll;
     private boolean testMode;
@@ -34,7 +34,7 @@ public class GameMaster {
     public GameMaster() {
         FileInputStream fis = null;
         try {
-            players= new ArrayList();
+            players = new ArrayList();
             initAmountOfMoney = 1500;
             dice = new Die[]{new Die(), new Die()};
             Player p;
@@ -42,11 +42,11 @@ public class GameMaster {
             fis = new FileInputStream("persisted-Players.file");
             ObjectInputStream ois = new ObjectInputStream(fis);
             //lee el objeto del archivo
-            
+
             p = (Player) ois.readObject();
-            while(p!=null){
+            while (p != null) {
                 registredPlayers.add(p);
-                
+
                 p = (Player) ois.readObject();
             }
             ois.close();
@@ -57,37 +57,40 @@ public class GameMaster {
             archivo.crearLog("Excepcion al levantar datos persistidos: " + ex.toString());
         } catch (ClassNotFoundException ex) {
             archivo.crearLog("Excepcion al levantar datos persistidos: " + ex.toString());
-        } 
-        
+        }
 
     }
 
-    public void persistPlayers(){
-        
+    public void persistPlayers() {
+
         FileOutputStream fos = null;
         ObjectOutputStream salida = null;
-        
+
         try {
             fos = new FileOutputStream("persisted-Players.file");
             salida = new ObjectOutputStream(fos);
-            for(Player p: registredPlayers){
+            for (Player p : registredPlayers) {
                 salida.writeObject(p);
             }
-           
+
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         } finally {
             try {
-                if(fos!=null) fos.close();
-                if(salida!=null) salida.close();
+                if (fos != null) {
+                    fos.close();
+                }
+                if (salida != null) {
+                    salida.close();
+                }
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         }
     }
-    
+
     public void btnBuyHouseClicked() {
 
         gui.showBuyHouseDialog(getCurrentPlayer());
@@ -119,6 +122,7 @@ public class GameMaster {
             gui.setPurchasePropertyEnabled(false);
             gui.setRollDiceEnabled(false);
             gui.setTradeEnabled(getCurrentPlayerIndex(), false);
+            switchTurn();
             updateGUI();
         } else {
             switchTurn();
@@ -231,11 +235,11 @@ public class GameMaster {
     public int getPlayerIndex(Player player) {
         return players.indexOf(player);
     }
-    
-     public void addGamePlayed(Player player) {
-         int pos= registredPlayers.indexOf(player);
-         int gamesPlayed=registredPlayers.get(pos).getGamesPlayed();
-         registredPlayers.get(pos).setGamesPlayed(gamesPlayed+1);
+
+    public void addGamePlayed(Player player) {
+        int pos = registredPlayers.indexOf(player);
+        int gamesPlayed = registredPlayers.get(pos).getGamesPlayed();
+        registredPlayers.get(pos).setGamesPlayed(gamesPlayed + 1);
     }
 
     public ArrayList getSellerList() {
@@ -263,10 +267,10 @@ public class GameMaster {
 
     public void setPlayers(ArrayList players) {
         this.players = players;
-        for(int i=0;i<players.size();i++){
+        for (int i = 0; i < players.size(); i++) {
             this.players.get(i).setMoney(initAmountOfMoney);
         }
-        
+
     }
 
     public void movePlayer(int playerIndex, int diceValue) {
@@ -363,9 +367,9 @@ public class GameMaster {
     public void setNumberOfPlayers(int number) {
         //players.clear();
         for (int i = 0; i < number; i++) {
-           // Player player = new Player();
+            // Player player = new Player();
             players.get(i).setMoney(initAmountOfMoney);
-           // players.add(player);
+            // players.add(player);
         }
     }
 
@@ -378,25 +382,53 @@ public class GameMaster {
         archivo.crearLog(" Comienza el juego!");
         gui.startGame();
         gui.enablePlayerTurn(0);
-        
+
         gui.setTradeEnabled(0, true);
+    }
+
+    public boolean gameEnded() {
+        int inGame = 0;
+        Player player = getPlayer(0);
+        for (Player p : players) {
+            if (!p.isBankrupt()) {
+                inGame++;
+                player = p;
+            }
+        }
+
+        if (inGame == 1) {
+            gui.showMessage("GAME ENDED: THE WINNER IS " + player.getName());
+            int ind = getRegistredPlayers().indexOf(player);
+            int gamesWon = this.registredPlayers.get(ind).getGamesWon();
+            this.registredPlayers.get(ind).setGamesWon(gamesWon + 1);
+            persistPlayers();
+            return true;
+        }
+        return false;
     }
 
     public void switchTurn() {
         turn = (turn + 1) % getNumberOfPlayers();
         archivo.crearLog("Cambio de jugador turno de " + turn);
-        if (!getCurrentPlayer().isInJail()) {
+        if (getCurrentPlayer().isInJail()) {
+            gui.setGetOutOfJailEnabled(true);
+            archivo.crearLog("Jugador " + turn + " esta en la carcel");
+            
+            
+
+        } else if (getCurrentPlayer().isBankrupt()) {
+            if (!gameEnded()) {
+                switchTurn();
+            }
+        } else {
             gui.enablePlayerTurn(turn);
             gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
             gui.setTradeEnabled(turn, true);
-
-        } else {
-            gui.setGetOutOfJailEnabled(true);
-            archivo.crearLog("Jugador " + turn + " esta en la carcel");
         }
 
     }
-    public void newPlayer(Player player){
+
+    public void newPlayer(Player player) {
         registredPlayers.add(player);
         persistPlayers();
     }
@@ -420,5 +452,5 @@ public class GameMaster {
     public void setRegistredPlayers(ArrayList registredPlayers) {
         this.registredPlayers = registredPlayers;
     }
-    
+
 }
